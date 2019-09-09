@@ -141,7 +141,6 @@ vendor/bin/batterysecret
 vendor/bin/battery_stats
 vendor/bin/boringssl_self_test32
 vendor/bin/boringssl_self_test64
-vendor/bin/btconfig
 vendor/bin/ccid_daemon_nr
 vendor/bin/cdsprpcd
 vendor/bin/charge_logger
@@ -284,8 +283,6 @@ vendor/bin/init.qti.display_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/init.qti.qcv.sh
 vendor/bin/init.qti.write.sh
-vendor/bin/ipacm
-vendor/bin/ipacm-diag
 vendor/bin/iperf
 vendor/bin/iperf3
 vendor/bin/irsc_util
