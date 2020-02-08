@@ -51,6 +51,10 @@
     <string name="pick_up_gesture_title">Pick-up</string>
     <string name="pick_up_gesture_summary">Pulse notifications on pick-up</string>
 
+    <!-- Pick-up to wake gesture-->
+    <string name="wake_gesture_title">Wake up</string>
+    <string name="wake_gesture_summary">Wake up the device instead of pulsing notifications</string>
+
     <!-- Pocket gesture -->
     <string name="pocket_gesture_title">Pocket</string>
     <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
