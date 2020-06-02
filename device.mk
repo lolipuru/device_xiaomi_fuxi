@@ -38,6 +38,10 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/prebuilts/dtb:dtb.img
 
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-Fuxi
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
