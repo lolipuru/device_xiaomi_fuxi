@@ -18,6 +18,7 @@ android_app {
     srcs: ["src/**/*.java"],
     platform_apis: true,
     privileged: true,
+    system_ext_specific: true,
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
