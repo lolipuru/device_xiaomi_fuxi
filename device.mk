@@ -153,6 +153,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
+# DebugFS
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
