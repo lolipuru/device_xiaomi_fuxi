@@ -22,5 +22,6 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
+        "SettingsLib",
     ],
 }

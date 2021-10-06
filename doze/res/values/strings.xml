@@ -20,18 +20,13 @@
     <!-- DO NOT TRANSLATE Empty summary for dynamic preferences -->
     <string name="summary_empty" translatable="false"></string>
 
-    <!-- Label for feature switch [CHAR LIMIT=30] -->
-    <string name="switch_bar_on">On</string>
-
-    <!-- Label for feature switch [CHAR LIMIT=30] -->
-    <string name="switch_bar_off">Off</string>
-
     <!-- App Name -->
     <string name="doze_settings_app_name">Doze settings</string>
 
     <!-- Ambient Display -->
+    <string name="ambient_display_enable">Use ambient display</string>
     <string name="ambient_display_title">Ambient display</string>
-    <string name="ambient_display_summary">Wake screen when you receive notifications</string>
+    <string name="ambient_display_summary">Additional gestures to wake the screen</string>
 
     <!-- Always on -->
     <string name="ambient_display_always_on_title">Always on</string>
