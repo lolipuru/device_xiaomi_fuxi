@@ -1523,6 +1523,9 @@ vendor/lib64/libgralloccore.so
 vendor/lib64/libgrallocutils.so
 vendor/lib64/libqservice.so
 
+# Display (Config)
+product/etc/displayconfig/display_id_4630947006070067843.xml:vendor/etc/displayconfig/display_id_4630947006070067843.xml
+
 # Displayfeature
 odm/etc/df_default.xml
 odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/ClstcLut0.txt
