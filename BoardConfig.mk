@@ -6,9 +6,6 @@
 
 DEVICE_PATH := device/xiaomi/fuxi
 
-# Inherit from the proprietary version
--include vendor/xiaomi/fuxi/BoardConfigVendor.mk
-
 BUILD_BROKEN_DUP_RULES := true
 
 # A/B

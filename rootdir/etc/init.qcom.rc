@@ -1,10 +1,6 @@
 on early-init
     start set_permissive
 
-on post-fs
-    mount none /product/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service /odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service bind
-    mount none /product/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml /product/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml bind
-
 on fs
     # qcom-haptics
     chmod 0666 /sys/class/qcom-haptics/lra_calibration
@@ -12,6 +8,8 @@ on fs
 
     # cal-file directory
     mkdir /mnt/vendor/persist/haptics 0755 system system
+    start vibratorfeature-fuxi
+    start lights-fuxi
 
 on property:dev.bootcomplete=1
     chmod 0666 /dev/xiaomi-touch
@@ -19,8 +17,41 @@ on property:dev.bootcomplete=1
 on property:dev.bootcomplete=1 && property:persist.sys.fuxi.dt2w=*
     exec /system/bin/xiaomi-touch 14 ${persist.sys.fuxi.dt2w}
 
+on boot
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+    chown system system /sys/class/backlight/panel0-backlight/max_brightness
+    chmod 0644 /sys/class/backlight/panel0-backlight/brightness
+    chmod 0644 /sys/class/backlight/panel0-backlight/max_brightness
+
 service set_permissive /system/bin/set_permissive.sh
     class main
     user root
     seclabel u:r:su:s0
     disabled
+
+service lights-fuxi /system/bin/hw/android.hardware.lights-service.fuxi
+    class hal
+    user system
+    group system
+    shutdown critical
+
+service vendor.qti.light /vendor/bin/hw/vendor.qti.hardware.lights.service
+    class hal
+    user system
+    group system
+    shutdown critical
+    disabled
+    override
+
+service vibratorfeature-hal-service /odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
+    class hal
+    user system
+    group system input audio
+    disabled
+    override
+
+service vibratorfeature-fuxi /product/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
+    class hal
+    user system
+    group system input audio
+    onrestart restart vibratorfeature

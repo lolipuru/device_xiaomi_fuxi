@@ -60,9 +60,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
-# Light
+# Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.fuxi
+    android.hardware.lights-service.fuxi
 
 # Overlays
 PRODUCT_PACKAGES += \

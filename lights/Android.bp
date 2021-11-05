@@ -14,7 +14,6 @@
 
 cc_binary {
     name: "android.hardware.lights-service.fuxi",
-    init_rc: ["android.hardware.lights-service.fuxi.rc"],
     relative_install_path: "hw",
     shared_libs: [
         "libbase",

@@ -1,3 +1,1 @@
-# Vibrator
-odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml:product/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
-odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service:product/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
+Just an empty file
