@@ -2,7 +2,8 @@ on early-init
     start set_permissive
 
 on property:dev.bootcomplete=1
-    chmod 0666 /dev/xiaomi-touch
+    chown system system /dev/xiaomi-touch
+    chmod 0660 /dev/xiaomi-touch
 
 service set_permissive /system/bin/set_permissive.sh
     class main

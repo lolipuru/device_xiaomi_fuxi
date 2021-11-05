@@ -148,6 +148,9 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno740
 QCOM_BOARD_PLATFORMS += xiaomi_sm8550
 BOARD_USES_QCOM_HARDWARE := true
 
+# Power
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 #TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
