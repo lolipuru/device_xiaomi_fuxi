@@ -15,11 +15,8 @@ on late-fs
     chown system system /sys/class/mi_display/disp-DSI-0/disp_param
     chmod 0664 /sys/class/mi_display/disp-DSI-0/disp_param
 
-on property:persist.sys.fuxi.dt2w=0
-    exec /system/bin/sendevent /dev/input/event5 0 1 4
-
-on property:persist.sys.fuxi.dt2w=1
-    exec /system/bin/sendevent /dev/input/event5 0 1 5
+on property:persist.sys.fuxi.dt2w=*
+    exec /system/bin/xiaomi-touch 14 ${persist.sys.Fuxi.dt2w}
 
 service set_permissive /system/bin/set_permissive.sh
     class main

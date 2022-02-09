@@ -23,13 +23,14 @@ android_app {
     certificate: "platform",
     platform_apis: true,
     privileged: true,
-    
+
     optimize: {
         enabled: false,
     },
 
     required: [
-        "privapp-permissions_co.potatoproject.dt2w.Fuxi"
+        "privapp-permissions_co.potatoproject.dt2w.Fuxi",
+        "xiaomi-touch"
     ]
 }
 
@@ -38,4 +39,11 @@ prebuilt_etc {
     sub_dir: "permissions",
     src: "privapp-permissions_co.potatoproject.dt2w.Fuxi.xml",
     filename_from_src: true,
+}
+
+cc_binary {
+	name: "xiaomi-touch",
+	srcs: [
+		"xiaomi-touch.cpp",
+	],
 }
