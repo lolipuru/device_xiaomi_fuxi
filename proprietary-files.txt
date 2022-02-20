@@ -1991,7 +1991,6 @@ vendor/etc/selinux/vndservice_contexts
 vendor/etc/sensor_diag.cfg
 vendor/etc/sensors/config/kailua_qsh_ble_0.json
 vendor/etc/sensors/config/qsh_ble.json
-vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/etc/sla/slad.conf
 vendor/etc/smomo_setting.xml
