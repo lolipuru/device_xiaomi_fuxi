@@ -3564,7 +3564,7 @@ odm/lib64/libmi_hdr_raw.so
 odm/lib64/libmi_llhdr_raw.so
 
 # Misc.
--odm/etc/vintf/manifest/face-default.xml
+odm/etc/vintf/manifest/face-default.xml
 
 # Misc (to be nuke)
 odm/etc/init.panel_info.sh
@@ -3573,35 +3573,35 @@ odm/etc/init/init.cirrus.rc
 odm/lib64/libmiphone_preview_mdbokeh.so
 
 # vendor
--vendor/etc/vintf/manifest/android.hardware.health-service.qti.xml
--vendor/etc/vintf/manifest/android.hardware.radio.config.xml
--vendor/etc/vintf/manifest/android.hardware.radio.data.xml
--vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml
--vendor/etc/vintf/manifest/android.hardware.radio.modem.xml
--vendor/etc/vintf/manifest/android.hardware.radio.network.xml
--vendor/etc/vintf/manifest/android.hardware.radio.sim.xml
--vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
--vendor/etc/vintf/manifest/bluetooth_audio.xml
--vendor/etc/vintf/manifest/deviceinfo-saidl.xml
--vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miface.xml
--vendor/etc/vintf/manifest/memtrack_qti.xml
--vendor/etc/vintf/manifest/mi-misight.xml
--vendor/etc/vintf/manifest/qcrilhook-saidl.xml
--vendor/etc/vintf/manifest/qms-saidl.xml
--vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
--vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
--vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
--vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
--vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml
--vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge@1.0.xml
--vendor/etc/vintf/manifest/vendor.xiaomi.hardware.miperf@1.0.xml
--vendor/etc/vintf/manifest/vendor.xiaomi.modem.qms.xml
+vendor/etc/vintf/manifest/android.hardware.health-service.qti.xml
+vendor/etc/vintf/manifest/android.hardware.radio.config.xml
+vendor/etc/vintf/manifest/android.hardware.radio.data.xml
+vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml
+vendor/etc/vintf/manifest/android.hardware.radio.modem.xml
+vendor/etc/vintf/manifest/android.hardware.radio.network.xml
+vendor/etc/vintf/manifest/android.hardware.radio.sim.xml
+vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
+vendor/etc/vintf/manifest/bluetooth_audio.xml
+vendor/etc/vintf/manifest/deviceinfo-saidl.xml
+vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
+vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miface.xml
+vendor/etc/vintf/manifest/memtrack_qti.xml
+vendor/etc/vintf/manifest/mi-misight.xml
+vendor/etc/vintf/manifest/qcrilhook-saidl.xml
+vendor/etc/vintf/manifest/qms-saidl.xml
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge@1.0.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.miperf@1.0.xml
+vendor/etc/vintf/manifest/vendor.xiaomi.modem.qms.xml
 vendor/app/EidService/EidService.apk
 vendor/app/TrustedUIService/TrustedUIService.apk
 vendor/bin/AnchorTest
