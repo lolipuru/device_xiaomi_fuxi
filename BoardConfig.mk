@@ -55,6 +55,9 @@ TARGET_SCREEN_DENSITY := 440
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config/config.fs
 
+# Fingerprint
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.xiaomi_sm8550
+
 # Kernel
 BOARD_KERNEL_PAGESIZE   := 4096
 BOARD_KERNEL_BASE       := 0x00000000

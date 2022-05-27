@@ -440,7 +440,7 @@ odm/firmware/evass.mdt
 
 # Fingerprint
 odm/app/goodix_sz/goodix_sz.apk
-odm/lib/hw/fingerprint.goodix_fod.so
+odm/lib/hw/fingerprint.goodix_fod.so:vendor/lib/hw/fingerprint.goodix_fod.default.so
 odm/lib64/hw/fingerprint.goodix_fod.so
 
 # firmware
@@ -813,7 +813,6 @@ vendor/bin/init.qcom.usb.sh
 vendor/etc/init/hw/init.qcom.usb.rc
 
 # vendor
--vendor/etc/vintf/manifest/AHBF@2.1-service.xml
 -vendor/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml
 -vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 -vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml
@@ -989,7 +988,6 @@ vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/dolbycodec2
 vendor/bin/hw/fbo-test
 vendor/bin/hw/hostapd
-vendor/bin/hw/mfp-daemon
 vendor/bin/hw/miperf_client
 vendor/bin/hw/qconfigservice
 vendor/bin/hw/qcrilNrd
