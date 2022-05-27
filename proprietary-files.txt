@@ -3872,7 +3872,4 @@ vendor/lib/vendor.xiaomi.sensor.citsensorservice@1.1.so
 vendor/lib/vendor.xiaomi.sensor.citsensorservice@2.0.so
 vendor/lib/vndk/libstagefright_foundation.so
 vendor/lib/vndk/libstagefright_omx.so
-vendor/overlay/SecureElementResTarget_Vendor.apk
-vendor/overlay/WifiResTarget.apk
-vendor/overlay/WifiResTarget_spf.apk
 vendor/rfs/rfs_symlinks
