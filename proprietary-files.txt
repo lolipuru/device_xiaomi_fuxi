@@ -441,7 +441,7 @@ odm/firmware/evass.mdt
 # Fingerprint
 odm/app/goodix_sz/goodix_sz.apk
 odm/lib/hw/fingerprint.goodix_fod.so:vendor/lib/hw/fingerprint.goodix_fod.default.so
-odm/lib64/hw/fingerprint.goodix_fod.so
+odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
 
 # firmware
 odm/firmware/0_click_P_RTP.bin
