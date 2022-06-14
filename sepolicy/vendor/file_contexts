@@ -1,0 +1,8 @@
+# Battery
+/vendor/bin/batterysecret                            u:object_r:batterysecret_exec:s0
+
+# Mi RIC
+/vendorbin/MI_RIC                                    u:object_r:mi_ric_exec:s0
+
+# Thermal
+/vendor/bin/mi_thermald                              u:object_r:mi_thermald_exec:s0
