@@ -100,6 +100,14 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# Properties
+include $(LOCAL_PATH)/properties/default.mk
+
+# QTI
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
+    $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext-privapp-permissions-qti.xml
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
@@ -107,24 +115,9 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     set_permissive.sh
 
-# Properties
-include $(LOCAL_PATH)/properties/default.mk
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
-
-# Telephony & IMS  
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Update engine
 PRODUCT_PACKAGES += \
