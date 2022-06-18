@@ -1,0 +1,11 @@
+prebuilt_etc {
+    name: "init.qti.media.rc",
+    src: "init.qti.media.rc",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.media.sh",
+    src: "init.qti.media.sh",
+    vendor: true,
+}
