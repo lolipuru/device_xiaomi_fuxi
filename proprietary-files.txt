@@ -39,8 +39,6 @@ odm/etc/audio/rcv_hp.wav
 odm/etc/audio/rcv_seal.wav
 odm/etc/audio/silent-3sec.wav
 odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-odm/etc/audio/sku_kalama/mixer_paths_overlay_dynamic.xml
-odm/etc/audio/sku_kalama/mixer_paths_overlay_static.xml
 odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 odm/etc/audio/spk.wav
 odm/etc/audio/test.wav
@@ -50,7 +48,6 @@ odm/etc/audio_policy_engine_configuration_mi.xml
 odm/etc/audio_policy_engine_default_stream_volumes.xml
 odm/etc/audio_policy_engine_product_strategies.xml
 odm/etc/audio_policy_engine_stream_volumes.xml
-odm/etc/backend_conf.xml
 odm/etc/dolby/dax-default.xml
 
 # Camera
@@ -1244,16 +1241,12 @@ vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd
 vendor/etc/apdr.conf
 vendor/etc/audio/sku_kalama/adsp_sleep_monitor.conf
 vendor/etc/audio/sku_kalama/audio_effects.conf
-vendor/etc/audio/sku_kalama/audio_effects.xml
-vendor/etc/audio/sku_kalama/audio_policy_configuration.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
 vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
 vendor/etc/audio_cloud_control_white_list.xml
@@ -1261,7 +1254,6 @@ vendor/etc/audio_diag.cfg
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/batching.conf
 vendor/etc/bluetooth_qti_audio_policy_configuration.xml
-vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
 vendor/etc/cacert_location.pem
 vendor/etc/camera/102_SummerDay.png
 vendor/etc/camera/103_Fantasy.png
@@ -1622,7 +1614,6 @@ vendor/etc/camera/resources/render/glsl/binShaders64/shader_YUV2YUVUtils.bin
 vendor/etc/camera/resources/render/glsl/binShaders64/shader_YUV2YUVUtils_SWAP_UV.bin
 vendor/etc/camera/resources/truesight_param.json
 vendor/etc/camera/resources/truesight_param_debug.json
-vendor/etc/card-defs.xml
 vendor/etc/charger_diag.cfg
 vendor/etc/charger_fw_fstab.qti
 vendor/etc/clstc_config_library.xml
@@ -1885,7 +1876,6 @@ vendor/etc/media_kalama/video_system_specs.json
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_kalama.xml
-vendor/etc/microphone_characteristics.xml
 vendor/etc/misound_asc_model.tflite
 vendor/etc/misound_res_spk.bin
 vendor/etc/models/acd/event.eai
@@ -2037,7 +2027,6 @@ vendor/etc/tzlog.dict
 vendor/etc/ueventd.rc
 vendor/etc/usb_audio_policy_configuration.xml
 vendor/etc/usb_compositions.conf
-vendor/etc/usecaseKvManager.xml
 vendor/etc/vmmgr.conf
 vendor/etc/wfdconfig.xml
 vendor/etc/wifi/icm.conf
