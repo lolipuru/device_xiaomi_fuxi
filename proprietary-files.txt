@@ -465,24 +465,7 @@ vendor/etc/apdr.conf
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/audio_diag.cfg
 vendor/etc/audio_policy_configuration.xml
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/audio/sku_kalama/adsp_sleep_monitor.conf
-vendor/etc/audio/sku_kalama/audio_effects.conf
-vendor/etc/audio/sku_kalama/audio_effects.xml
-vendor/etc/audio/sku_kalama/audio_policy_configuration.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
-vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
 vendor/etc/batching.conf
-vendor/etc/bluetooth_qti_audio_policy_configuration.xml
-vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
 vendor/etc/cacert_location.pem
 vendor/etc/camera/102_SummerDay.png
 vendor/etc/camera/103_Fantasy.png
@@ -843,7 +826,6 @@ vendor/etc/camera/resources/render/glsl/binShaders64/shader_YUV2YUVUtils.bin
 vendor/etc/camera/resources/render/glsl/binShaders64/shader_YUV2YUVUtils_SWAP_UV.bin
 vendor/etc/camera/resources/truesight_param_debug.json
 vendor/etc/camera/resources/truesight_param.json
-vendor/etc/card-defs.xml
 vendor/etc/charger_diag.cfg
 vendor/etc/clstc_config_library.xml
 vendor/etc/cne/mwqem.conf
@@ -881,7 +863,6 @@ vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
-vendor/etc/default_volume_tables.xml
 vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/backlight_calib_r66451_amoled_cmd_mode_dsi_visionox_panel_with_DSC.xml
 vendor/etc/display/backlight_calib_r66451_amoled_video_mode_dsi_visionox_panel_with_DSC.xml
@@ -1115,7 +1096,6 @@ vendor/etc/lm/QGPE.xml
 vendor/etc/lm/SilkyScrollsFeature.xml
 vendor/etc/lm/sPLHFeature.xml
 vendor/etc/lowi.conf
-vendor/etc/media_codecs_c2_audio.xml
 vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/media_codecs_google_audio.xml
 vendor/etc/media_codecs_google_c2_audio.xml
@@ -1129,13 +1109,11 @@ vendor/etc/media_codecs_kalama.xml
 vendor/etc/media_codecs_no_dolbyencoder_vendor.xml
 vendor/etc/media_codecs_performance_kalama_vendor.xml
 vendor/etc/media_codecs_performance_kalama.xml
-vendor/etc/media_codecs_vendor_audio.xml
 vendor/etc/media_codecs.xml
 vendor/etc/media_kalama/video_system_specs.json
 vendor/etc/media_profiles_kalama.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles.xml
-vendor/etc/microphone_characteristics.xml
 vendor/etc/misound_asc_model.tflite
 vendor/etc/misound_res_spk.bin
 vendor/etc/mkshrc
@@ -1163,8 +1141,6 @@ vendor/etc/perf/testcommonresourceconfigs.xml
 vendor/etc/perf/testtargetresourceconfigs.xml
 vendor/etc/perf/thermal-boost.conf
 vendor/etc/perf/thermalbreakboostconfig.xml
-vendor/etc/permissions/android.hardware.audio.low_latency.xml
-vendor/etc/permissions/android.hardware.audio.pro.xml
 vendor/etc/permissions/android.hardware.biometrics.face.xml
 vendor/etc/permissions/android.hardware.bluetooth_le.xml
 vendor/etc/permissions/android.hardware.bluetooth.xml
@@ -1203,7 +1179,6 @@ vendor/etc/permissions/android.hardware.wifi.passpoint.xml
 vendor/etc/permissions/android.hardware.wifi.xml
 vendor/etc/permissions/android.software.device_id_attestation.xml
 vendor/etc/permissions/android.software.ipsec_tunnels.xml
-vendor/etc/permissions/android.software.midi.xml
 vendor/etc/permissions/android.software.opengles.deqp.level.xml
 vendor/etc/permissions/android.software.sip.voip.xml
 vendor/etc/permissions/android.software.verified_boot.xml
@@ -1261,7 +1236,6 @@ vendor/etc/qvr/qvrservice_config.txt
 vendor/etc/qvr/qvr_usb_device_list.txt
 vendor/etc/res/images/default/charger/battery_fail.png
 vendor/etc/res/images/default/charger/battery_scale.png
-vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/sap.conf
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
@@ -1327,9 +1301,7 @@ vendor/etc/thermal-engine.conf
 vendor/etc/thermal-map.conf
 vendor/etc/tzlog.dict
 vendor/etc/UrlSign.xml
-vendor/etc/usb_audio_policy_configuration.xml
 vendor/etc/usb_compositions.conf
-vendor/etc/usecaseKvManager.xml
 vendor/etc/vmmgr.conf
 vendor/etc/wfdconfig.xml
 vendor/etc/wifi/icm.conf
