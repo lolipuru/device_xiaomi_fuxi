@@ -180,6 +180,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti
+
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \

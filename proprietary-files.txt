@@ -844,7 +844,6 @@ vendor/etc/init/hw/init.qcom.usb.rc
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miface.xml
 -vendor/etc/vintf/manifest/memtrack_qti.xml
 -vendor/etc/vintf/manifest/mi-misight.xml
--vendor/etc/vintf/manifest/power.xml
 -vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 -vendor/etc/vintf/manifest/qms-saidl.xml
 -vendor/etc/vintf/manifest/qtiradio-saidl.xml
@@ -976,7 +975,6 @@ vendor/bin/hw/android.hardware.identity-service-qti
 vendor/bin/hw/android.hardware.ir-service.example
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
-vendor/bin/hw/android.hardware.power-service
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/bin/hw/android.hardware.sensors-service.multihal
 vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
@@ -1708,7 +1706,6 @@ vendor/etc/init/android.hardware.health-service.qti.rc
 vendor/etc/init/android.hardware.identity-service-qti.rc
 vendor/etc/init/android.hardware.ir-service.example.rc
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
-vendor/etc/init/android.hardware.power-service.rc
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/init/android.hardware.sensors-service-multihal.rc
 vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
@@ -1926,7 +1923,6 @@ vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
 vendor/etc/permissions/qti_fingerprint_interface.xml
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/permissions/vendor.qti.hardware.factory.xml
-vendor/etc/powerhint.xml
 vendor/etc/public.libraries.txt
 vendor/etc/pwr/AODPowerOptFeature.xml
 vendor/etc/pwr/PSMPowerOptFeature.xml
@@ -2166,9 +2162,6 @@ vendor/lib/android.hardware.media.c2@1.0.so
 vendor/lib/android.hardware.nfc@1.0.so
 vendor/lib/android.hardware.nfc@1.1.so
 vendor/lib/android.hardware.nfc@1.2.so
-vendor/lib/android.hardware.power@1.0.so
-vendor/lib/android.hardware.power@1.1.so
-vendor/lib/android.hardware.power@1.2.so
 vendor/lib/android.hardware.radio.config@1.0.so
 vendor/lib/android.hardware.radio.config@1.1.so
 vendor/lib/android.hardware.radio.config@1.2.so
@@ -3256,9 +3249,6 @@ vendor/lib64/android.hardware.media.c2@1.2.so
 vendor/lib64/android.hardware.nfc@1.0.so
 vendor/lib64/android.hardware.nfc@1.1.so
 vendor/lib64/android.hardware.nfc@1.2.so
-vendor/lib64/android.hardware.power@1.0.so
-vendor/lib64/android.hardware.power@1.1.so
-vendor/lib64/android.hardware.power@1.2.so
 vendor/lib64/android.hardware.radio.config@1.0.so
 vendor/lib64/android.hardware.radio.config@1.1.so
 vendor/lib64/android.hardware.radio.config@1.2.so
