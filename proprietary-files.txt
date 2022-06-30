@@ -18,12 +18,9 @@ system_ext/lib64/libdpmtcm.so
 system_ext/priv-app/ims/ims.apk
 system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
-system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
-system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
-system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -82,7 +79,6 @@ system_ext/framework/qcrilhook.jar
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miface.xml
 -vendor/etc/vintf/manifest/memtrack_qti.xml
 -vendor/etc/vintf/manifest/mi-misight.xml
--vendor/etc/vintf/manifest/power.xml
 -vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 -vendor/etc/vintf/manifest/qms-saidl.xml
 -vendor/etc/vintf/manifest/qtiradio-saidl.xml
@@ -213,7 +209,6 @@ vendor/bin/hw/android.hardware.ir-service.example
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
-vendor/bin/hw/android.hardware.power-service
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
 vendor/bin/hw/android.hardware.usb@1.2-service-qti
@@ -931,7 +926,6 @@ vendor/etc/init/android.hardware.identity-service-qti.rc
 vendor/etc/init/android.hardware.ir-service.example.rc
 vendor/etc/init/android.hardware.media.omx@1.0-service.rc
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
-vendor/etc/init/android.hardware.power-service.rc
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
 vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
@@ -1443,9 +1437,6 @@ vendor/lib64/android.hardware.media.c2@1.2.so
 vendor/lib64/android.hardware.nfc@1.0.so
 vendor/lib64/android.hardware.nfc@1.1.so
 vendor/lib64/android.hardware.nfc@1.2.so
-vendor/lib64/android.hardware.power@1.0.so
-vendor/lib64/android.hardware.power@1.1.so
-vendor/lib64/android.hardware.power@1.2.so
 vendor/lib64/android.hardware.radio@1.0.so
 vendor/lib64/android.hardware.radio@1.1.so
 vendor/lib64/android.hardware.radio@1.2.so
@@ -2810,9 +2801,6 @@ vendor/lib/android.hardware.media.c2@1.0.so
 vendor/lib/android.hardware.nfc@1.0.so
 vendor/lib/android.hardware.nfc@1.1.so
 vendor/lib/android.hardware.nfc@1.2.so
-vendor/lib/android.hardware.power@1.0.so
-vendor/lib/android.hardware.power@1.1.so
-vendor/lib/android.hardware.power@1.2.so
 vendor/lib/android.hardware.radio@1.0.so
 vendor/lib/android.hardware.radio@1.1.so
 vendor/lib/android.hardware.radio@1.2.so
