@@ -624,6 +624,14 @@ odm/firmware/99_POCO_P_RTP.bin
 odm/firmware/9_ringTone4_P_RTP.bin
 
 # IMS 
+system_ext/app/ImsRcsService/ImsRcsService.apk
+system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
+system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
 
 # IR
 odm/lib/hw/consumerir.qcom.so
