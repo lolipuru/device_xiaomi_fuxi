@@ -150,15 +150,11 @@ vendor/bin/athdiag
 vendor/bin/audioadsprpcd
 vendor/bin/audiodsd2pcmtest
 vendor/bin/audioflacapp
-vendor/bin/awk
 vendor/bin/batterysecret
 vendor/bin/battery_stats
-vendor/bin/boringssl_self_test32
-vendor/bin/boringssl_self_test64
 vendor/bin/ccid_daemon_nr
 vendor/bin/cdsprpcd
 vendor/bin/charge_logger
-vendor/bin/checkpoint_gc
 vendor/bin/chiaoncameratest
 vendor/bin/chimcxtest
 vendor/bin/chiofflinepostproctest
@@ -183,7 +179,6 @@ vendor/bin/disp_factory_tool
 vendor/bin/displayfeature
 vendor/bin/dpmQmiMgr
 vendor/bin/dspservice
-vendor/bin/dumpsys
 vendor/bin/edgnss-daemon
 vendor/bin/e_loop
 vendor/bin/embmsslServer
@@ -206,8 +201,6 @@ vendor/bin/hostapd_cli
 vendor/bin/hw/android.hardware.atrace@1.0-service
 vendor/bin/hw/android.hardware.audio.service_64
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
-vendor/bin/hw/android.hardware.boot@1.2-service
-vendor/bin/hw/android.hardware.cas@1.2-service
 vendor/bin/hw/android.hardware.drm-service.clearkey
 vendor/bin/hw/android.hardware.drm-service.widevine
 vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
@@ -217,7 +210,6 @@ vendor/bin/hw/android.hardware.health-service.qti
 vendor/bin/hw/android.hardware.identity-service-qti
 vendor/bin/hw/android.hardware.ir-service.example
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
@@ -307,7 +299,6 @@ vendor/bin/KmInstallKeybox
 vendor/bin/ks
 vendor/bin/loadalgo
 vendor/bin/loc_launcher
-vendor/bin/logwrapper
 vendor/bin/lowi-server
 vendor/bin/lowi_test
 vendor/bin/mbnota
@@ -384,7 +375,6 @@ vendor/bin/qvrservicetest
 vendor/bin/qwesd
 vendor/bin/rmt_storage
 vendor/bin/sensors.qti
-vendor/bin/sh
 vendor/bin/show_reserved_mem
 vendor/bin/shsusrd
 vendor/bin/sigma_dut
@@ -407,8 +397,6 @@ vendor/bin/test_diag
 vendor/bin/tftp_server
 vendor/bin/thermal-engine-v2
 vendor/bin/time_daemon
-vendor/bin/toolbox
-vendor/bin/toybox_vendor
 vendor/bin/trusteduilistener
 vendor/bin/TrustedUISampleTAClient
 vendor/bin/TrustedUISampleTest
@@ -924,8 +912,6 @@ vendor/etc/hrtf5c.bin
 vendor/etc/init/android.hardware.atrace@1.0-service.rc
 vendor/etc/init/android.hardware.audio.service_64.rc
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
-vendor/etc/init/android.hardware.boot@1.2-service.rc
-vendor/etc/init/android.hardware.cas@1.2-service.rc
 vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
 vendor/etc/init/android.hardware.drm-service.clearkey.rc
 vendor/etc/init/android.hardware.drm-service.widevine.rc
@@ -934,7 +920,6 @@ vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/android.hardware.health-service.qti.rc
 vendor/etc/init/android.hardware.identity-service-qti.rc
 vendor/etc/init/android.hardware.ir-service.example.rc
-vendor/etc/init/android.hardware.media.omx@1.0-service.rc
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
@@ -942,7 +927,6 @@ vendor/etc/init/android.hardware.usb@1.2-service-qti.rc
 vendor/etc/init/android.hardware.usb.gadget@1.1-service-qti.rc
 vendor/etc/init/android.hardware.wifi@1.0-service.rc
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/cnd.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/etc/init/dataadpl.rc
