@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/fuxi
 
+# Inherit from the proprietary version
+-include vendor/xiaomi/fuxi/BoardConfigVendor.mk
+
 BUILD_BROKEN_DUP_RULES := true
 
 # A/B
@@ -112,7 +115,11 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := false
 
-# Kernel modules
+# Vendor boot
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/etc/recovery.fstab:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
+# Vednor kernel modules
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilts/modules/ramdisk/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilts/modules/ramdisk/modules.load))
 
