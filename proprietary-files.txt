@@ -994,7 +994,6 @@ vendor/bin/garden_app
 vendor/bin/hal_proxy_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
-vendor/bin/hw/android.hardware.audio.service_64
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/bin/hw/android.hardware.drm-service.widevine
 vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
@@ -1695,7 +1694,6 @@ vendor/etc/gps.conf
 vendor/etc/gps_diag.cfg
 vendor/etc/hrtf5c.bin
 vendor/etc/init.qti.fm.sh
-vendor/etc/init/android.hardware.audio.service_64.rc
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
 vendor/etc/init/android.hardware.drm-service.widevine.rc
 vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
