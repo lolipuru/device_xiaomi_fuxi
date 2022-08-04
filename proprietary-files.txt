@@ -1085,8 +1085,6 @@ vendor/bin/init.qti.kernel.early_debug.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/init.qti.qcv.sh
 vendor/bin/init.qti.write.sh
-vendor/bin/ipacm
-vendor/bin/ipacm-diag
 vendor/bin/iperf
 vendor/bin/iperf3
 vendor/bin/irsc_util
@@ -1113,7 +1111,6 @@ vendor/bin/modemManager
 vendor/bin/modem_api_test
 vendor/bin/msm_irqbalance
 vendor/bin/mtb
-vendor/bin/myftm
 vendor/bin/nativechitest
 vendor/bin/nativehaltest
 vendor/bin/netmgrd
@@ -1135,7 +1132,6 @@ vendor/bin/power_off_alarm
 vendor/bin/poweroffm64
 vendor/bin/poweropt-service
 vendor/bin/ppd
-vendor/bin/qca6234-service.sh
 vendor/bin/qcc-trd
 vendor/bin/qcc-vendor
 vendor/bin/qcom-system-daemon
@@ -1157,7 +1153,6 @@ vendor/bin/qsap_sensors
 vendor/bin/qsap_voiceui
 vendor/bin/qseecom_sample_client
 vendor/bin/qseecomd
-vendor/bin/qsh_wifi_test
 vendor/bin/qti
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
@@ -1211,15 +1206,12 @@ vendor/bin/wificfrtool
 vendor/bin/wifidisplayhalservice
 vendor/bin/wifilearner
 vendor/bin/wlanramdumpcollector
-vendor/bin/wpa_cli
 vendor/bin/xiaomi_cellinfo_test
 vendor/bin/xiaomi_extend_cmd
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
 vendor/etc/1-SN1X0_SPC.txt
-vendor/etc/IPACM_Filter_cfg.xml
-vendor/etc/IPACM_cfg.xml
 vendor/etc/UrlSign.xml
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -1710,9 +1702,6 @@ vendor/etc/ftm_test_config_kalama-qrd-snd-card
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/gps.conf
 vendor/etc/gps_diag.cfg
-vendor/etc/hostapd/hostapd.accept
-vendor/etc/hostapd/hostapd.deny
-vendor/etc/hostapd/hostapd_default.conf
 vendor/etc/hrtf5c.bin
 vendor/etc/init.qti.fm.sh
 vendor/etc/init/android.hardware.audio.service_64.rc
@@ -1763,8 +1752,6 @@ vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/ipa_fws.rc
-vendor/etc/init/ipacm-diag.rc
-vendor/etc/init/ipacm.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/init/memtrack_qti.rc
@@ -2346,7 +2333,6 @@ vendor/lib/libcdfw_remote_api.so
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libcheckpid.so
-vendor/lib/libcld80211.so
 vendor/lib/libclstc_algorithm_adapter.so
 vendor/lib/libclstc_gcp_adapter.so
 vendor/lib/libclstc_tm.so
@@ -2710,8 +2696,6 @@ vendor/lib/libvpplibrary.so
 vendor/lib/libvpptestutils.so
 vendor/lib/libvui_dmgr.so
 vendor/lib/libvui_dmgr_client.so
-vendor/lib/libwifi-hal-ctrl.so
-vendor/lib/libwifi-hal-qcom.so
 vendor/lib/libwms.so
 vendor/lib/libwqe.so
 vendor/lib/libxiaomi_qcril.so
@@ -3528,12 +3512,10 @@ vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libceres.so
-vendor/lib64/libcert_parse.wpa_s.so
 vendor/lib64/libcheckpid.so
 vendor/lib64/libchifeature2.so
 vendor/lib64/libchilog.so
 vendor/lib64/libchrome.so
-vendor/lib64/libcld80211.so
 vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libclstc_tm.so
@@ -3641,7 +3623,6 @@ vendor/lib64/libhme.so
 vendor/lib64/libhta_hexagon_runtime_snpe.so
 vendor/lib64/libidl.so
 vendor/lib64/libintervmipc.so
-vendor/lib64/libipanat.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libipebpsstriping480.so
@@ -3742,7 +3723,6 @@ vendor/lib64/libmorpho_video_stabilizer.so
 vendor/lib64/libnanopb.so
 vendor/lib64/libnative-api.so
 vendor/lib64/libnbaio_mono.so
-vendor/lib64/libnetfilter_conntrack.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnetmgr_datapath_proxy.so
@@ -3755,13 +3735,11 @@ vendor/lib64/libnetmgrext_interface_server.so
 vendor/lib64/libnetmgrmodemproxy.so
 vendor/lib64/libnetmgrportutils.so
 vendor/lib64/libnetmgrxfrmutils.so
-vendor/lib64/libnfnetlink.so
 vendor/lib64/libnlnetmgr.so
 vendor/lib64/liboem_specific.so
 vendor/lib64/liboemaids_vendor.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libofflinefeatureintf.so
-vendor/lib64/liboffloadhal.so
 vendor/lib64/libomp.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
@@ -3771,7 +3749,6 @@ vendor/lib64/libos.so
 vendor/lib64/libpal_net_if.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libpasrutils.so
-vendor/lib64/libpcap.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libperfconfig.so
@@ -4037,9 +4014,6 @@ vendor/lib64/libwfduibcsinkinterface_vendor.so
 vendor/lib64/libwfduibcsrc_vendor.so
 vendor/lib64/libwfduibcsrcinterface_vendor.so
 vendor/lib64/libwfdutils_proprietary.so
-vendor/lib64/libwifi-hal-ctrl.so
-vendor/lib64/libwifi-hal-qcom.so
-vendor/lib64/libwifi-hal.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/libwvaidl.so
