@@ -3970,7 +3970,6 @@ vendor/lib/libclstc_algorithm_adapter.so
 vendor/lib/libclstc_gcp_adapter.so
 vendor/lib/libclstc_tm.so
 vendor/lib/libdiagjni.so
-vendor/lib/libdisplayconfig.qti.so
 vendor/lib/libdlbpreg.so
 vendor/lib/libdrm.so
 vendor/lib/libesepmconfig.so
@@ -3980,8 +3979,6 @@ vendor/lib/libeye_tracking_dsp_sample_stub.so
 vendor/lib/libfilefinder.so
 vendor/lib/libgame_enhance.so
 vendor/lib/libgpt.so
-vendor/lib/libgralloc.qti.so
-vendor/lib/libgui_vendor.so
 vendor/lib/libhdcp1prov.so
 vendor/lib/libhdcp2p2prov.so
 vendor/lib/libhdcpsrm.so
@@ -4242,7 +4239,6 @@ vendor/lib64/libcodec2_vndk.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libdiagjni.so
-vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/libdlbpreg.so
 vendor/lib64/libdolbyottcameracontrol.so
@@ -4252,11 +4248,9 @@ vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
 vendor/lib64/libext2_uuid.so
 vendor/lib64/libfastmessage.so
-vendor/lib64/libfilefinder.so
+vendor/lib64/libfilefinder.so   
 vendor/lib64/libgame_enhance.so
 vendor/lib64/libgpt.so
-vendor/lib64/libgralloc.qti.so
-vendor/lib64/libgui_vendor.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
