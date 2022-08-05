@@ -521,6 +521,13 @@ on property:ro.boot.ramdump=enable
 on boot && property:ro.product.system.manufacturer=Android
     setprop debug.sf.set_idle_timer_ms 0
 
+on property:vendor.post_boot.parsed=1
+    # IRQ Tuning
+    # IRQ 253: msm_drm0
+    # IRQ 208: kgsl_3d0_irq
+    write /proc/irq/208/smp_affinity_list 1
+    write /proc/irq/253/smp_affinity_list 2
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
