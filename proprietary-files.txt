@@ -3942,7 +3942,6 @@ vendor/lib/libsamplefilterplugin.so
 vendor/lib/libsdmdal.so
 vendor/lib/libsecureui_svcsock.so
 vendor/lib/libsensor_calibration.so
-vendor/lib/libsfplugin_ccodec_utils.so
 vendor/lib/libsmemlog.so
 vendor/lib/libspatializerparamstorage.so
 vendor/lib/libstandbyfeature.so
@@ -4161,7 +4160,6 @@ vendor/lib64/librmsclib1.so
 vendor/lib64/libsamplefilterplugin.so
 vendor/lib64/libsdmdal.so
 vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libsfplugin_ccodec_utils.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libstreamparser.so
