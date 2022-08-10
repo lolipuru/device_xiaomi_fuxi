@@ -1491,7 +1491,6 @@ vendor/lib/vendor.qti.diaghal@1.0.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
-vendor/bin/hw/vendor.qti.hardware.display.demura-service
 vendor/bin/init.qti.display_boot.sh
 vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
@@ -4050,7 +4049,6 @@ vendor/lib/rfsa/adsp/tests/test_elf_size_64k.so
 vendor/lib/rfsa/adsp/tests/test_elf_size_768k.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib/vendor.qti.hardware.display.demura@2.0.so
 vendor/lib/vendor.qti.hardware.perf@2.0.so
 vendor/lib/vendor.qti.hardware.perf@2.1.so
 vendor/lib/vendor.qti.hardware.perf@2.2.so
@@ -4272,7 +4270,6 @@ vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib64/vendor.qti.hardware.display.demura@2.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 vendor/lib64/vendor.qti.hardware.limits@1.0.so
