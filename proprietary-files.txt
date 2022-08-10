@@ -2187,7 +2187,6 @@ vendor/lib/android.system.net.netd@1.1.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/camx.device-impl.so
 vendor/lib/camx.provider-impl.so
-vendor/lib/com.dsi.ant@1.0.so
 vendor/lib/com.qti.settings.sm8550.so
 vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
@@ -3373,7 +3372,6 @@ vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 vendor/lib64/camera/libPlatformValidatorShared.so
 vendor/lib64/camx.device-impl.so
 vendor/lib64/camx.provider-impl.so
-vendor/lib64/com.dsi.ant@1.0.so
 vendor/lib64/com.fingerprints.extension@3.0.so
 vendor/lib64/com.qti.camx.chiiqutils.so
 vendor/lib64/com.qti.chiusecaseselector.so
