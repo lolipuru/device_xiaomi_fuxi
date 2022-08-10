@@ -320,6 +320,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0
 
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.3.vendor
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
