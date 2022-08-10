@@ -4052,12 +4052,6 @@ vendor/lib/rfsa/adsp/tests/test_elf_size_64k.so
 vendor/lib/rfsa/adsp/tests/test_elf_size_768k.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib/vendor.qti.hardware.display.config-V1-ndk.so
-vendor/lib/vendor.qti.hardware.display.config-V2-ndk.so
-vendor/lib/vendor.qti.hardware.display.config-V3-ndk.so
-vendor/lib/vendor.qti.hardware.display.config-V4-ndk.so
-vendor/lib/vendor.qti.hardware.display.config-V5-ndk.so
-vendor/lib/vendor.qti.hardware.display.config-V6-ndk.so
 vendor/lib/vendor.qti.hardware.display.demura@2.0.so
 vendor/lib/vendor.qti.hardware.display.mapper@1.0.so
 vendor/lib/vendor.qti.hardware.display.mapper@1.1.so
@@ -4289,12 +4283,6 @@ vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib64/vendor.qti.hardware.display.config-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V2-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V3-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V4-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V5-ndk.so
-vendor/lib64/vendor.qti.hardware.display.config-V6-ndk.so
 vendor/lib64/vendor.qti.hardware.display.demura@2.0.so
 vendor/lib64/vendor.qti.hardware.display.mapper@1.0.so
 vendor/lib64/vendor.qti.hardware.display.mapper@1.1.so
