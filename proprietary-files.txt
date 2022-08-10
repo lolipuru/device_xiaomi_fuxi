@@ -4070,7 +4070,6 @@ vendor/lib/vendor.display.config@1.9.so
 vendor/lib/vendor.display.config@2.0.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so
 vendor/lib/vendor.qti.hardware.display.allocator@1.0.so
 vendor/lib/vendor.qti.hardware.display.allocator@3.0.so
 vendor/lib/vendor.qti.hardware.display.allocator@4.0.so
@@ -4327,7 +4326,6 @@ vendor/lib64/vendor.display.config@2.0.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
 vendor/lib64/vendor.qti.hardware.display.allocator@1.0.so
 vendor/lib64/vendor.qti.hardware.display.allocator@3.0.so
 vendor/lib64/vendor.qti.hardware.display.allocator@4.0.so
