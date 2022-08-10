@@ -3971,7 +3971,6 @@ vendor/lib/libclstc_gcp_adapter.so
 vendor/lib/libclstc_tm.so
 vendor/lib/libdiagjni.so
 vendor/lib/libdlbpreg.so
-vendor/lib/libdrm.so
 vendor/lib/libesepmconfig.so
 vendor/lib/libesesbprovision.so
 vendor/lib/libext2_uuid.so
@@ -4243,7 +4242,6 @@ vendor/lib64/libdlbdsservice.so
 vendor/lib64/libdlbpreg.so
 vendor/lib64/libdolbyottcameracontrol.so
 vendor/lib64/libdolbyvision.so
-vendor/lib64/libdrm.so
 vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
 vendor/lib64/libext2_uuid.so
