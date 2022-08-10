@@ -1491,15 +1491,10 @@ vendor/lib/vendor.qti.diaghal@1.0.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Display
-vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/bin/hw/vendor.qti.hardware.display.demura-service
 vendor/bin/init.qti.display_boot.sh
 vendor/etc/init/init.qti.display_boot.rc
-vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
-vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
 vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
 vendor/lib/libdisplaydebug.so
 vendor/lib/libgpu_tonemapper.so
 vendor/lib/libgralloccore.so
@@ -4057,12 +4052,6 @@ vendor/lib/rfsa/adsp/tests/test_elf_size_64k.so
 vendor/lib/rfsa/adsp/tests/test_elf_size_768k.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib/vendor.qti.hardware.display.allocator@1.0.so
-vendor/lib/vendor.qti.hardware.display.allocator@3.0.so
-vendor/lib/vendor.qti.hardware.display.allocator@4.0.so
-vendor/lib/vendor.qti.hardware.display.composer@1.0.so
-vendor/lib/vendor.qti.hardware.display.composer@2.0.so
-vendor/lib/vendor.qti.hardware.display.composer@3.0.so
 vendor/lib/vendor.qti.hardware.display.config-V1-ndk.so
 vendor/lib/vendor.qti.hardware.display.config-V2-ndk.so
 vendor/lib/vendor.qti.hardware.display.config-V3-ndk.so
@@ -4300,13 +4289,6 @@ vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib64/vendor.qti.hardware.display.allocator@1.0.so
-vendor/lib64/vendor.qti.hardware.display.allocator@3.0.so
-vendor/lib64/vendor.qti.hardware.display.allocator@4.0.so
-vendor/lib64/vendor.qti.hardware.display.composer@1.0.so
-vendor/lib64/vendor.qti.hardware.display.composer@2.0.so
-vendor/lib64/vendor.qti.hardware.display.composer@3.0.so
-vendor/lib64/vendor.qti.hardware.display.composer@3.1.so
 vendor/lib64/vendor.qti.hardware.display.config-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.display.config-V2-ndk.so
 vendor/lib64/vendor.qti.hardware.display.config-V3-ndk.so
