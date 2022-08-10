@@ -4026,7 +4026,6 @@ vendor/lib/libstandbyfeature.so
 vendor/lib/libstreamparser.so
 vendor/lib/libsxrservice.so
 vendor/lib/libsysmon_cdsp_skel.so
-vendor/lib/libtinycompress.so
 vendor/lib/libtracker_6dof_impl.so
 vendor/lib/libturboschedmanager.so
 vendor/lib/libvmfilexfer.so
@@ -4303,7 +4302,6 @@ vendor/lib64/libsparse.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libstreamparser.so
 vendor/lib64/libsysmon_cdsp_skel.so
-vendor/lib64/libtinycompress.so
 vendor/lib64/libturboschedmanager.so
 vendor/lib64/libvideoml.so
 vendor/lib64/libvmfilexfer.so
