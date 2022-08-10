@@ -4051,7 +4051,6 @@ vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
 vendor/lib/vendor.qti.hardware.qxr-V1-ndk.so
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so
-vendor/lib/vendor.qti.hardware.systemhelper@1.0.so
 vendor/lib/vendor.qti.ims.callcapability@1.0.so
 vendor/lib/vendor.qti.ims.callinfo@1.0.so
 vendor/lib/vendor.qti.ims.configservice@1.0.so
@@ -4273,7 +4272,6 @@ vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
-vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
