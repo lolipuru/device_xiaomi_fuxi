@@ -4007,8 +4007,6 @@ vendor/lib/libqesdk2_0.so
 vendor/lib/libqms_client.so
 vendor/lib/libqnnengine.so
 vendor/lib/libqti-qesdk-secure.so
-vendor/lib/libqti_vndfwk_detect.so
-vendor/lib/libqti_vndfwk_detect_vendor.so
 vendor/lib/libqvr_cam_cdsp_driver_stub.so
 vendor/lib/libqvr_cdsp_driver_stub.so
 vendor/lib/libqvr_eyetracking_plugin.so
@@ -4033,8 +4031,6 @@ vendor/lib/libtinycompress.so
 vendor/lib/libtracker_6dof_impl.so
 vendor/lib/libturboschedmanager.so
 vendor/lib/libvmfilexfer.so
-vendor/lib/libvndfwk_detect_jni.qti.so
-vendor/lib/libvndfwk_detect_jni.qti_vendor.so
 vendor/lib/libvui_dmgr.so
 vendor/lib/libvui_dmgr_client.so
 vendor/lib/nfc_nci.st21nfc.st.so
@@ -4294,8 +4290,6 @@ vendor/lib64/libqnnengine.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqsh_ble_pb.so
 vendor/lib64/libqti-qesdk-secure.so
-vendor/lib64/libqti_vndfwk_detect.so
-vendor/lib64/libqti_vndfwk_detect_vendor.so
 vendor/lib64/librecovery_updater.so
 vendor/lib64/librecovery_updater_msm.so
 vendor/lib64/libreffeature.so
@@ -4315,8 +4309,6 @@ vendor/lib64/libtinycompress.so
 vendor/lib64/libturboschedmanager.so
 vendor/lib64/libvideoml.so
 vendor/lib64/libvmfilexfer.so
-vendor/lib64/libvndfwk_detect_jni.qti.so
-vendor/lib64/libvndfwk_detect_jni.qti_vendor.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libwfdaac_vendor.so
