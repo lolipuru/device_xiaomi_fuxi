@@ -2119,7 +2119,6 @@ vendor/lib/qti.video.utils.videobufferlayout.so
 vendor/lib64/libEvrcSwCodec.so
 vendor/lib64/libOmxCore.so
 vendor/lib64/libQcelp13SwCodec.so
-vendor/lib64/libavservices_minijail.so
 vendor/lib64/libmm-omxcore.so
 vendor/lib64/libplatformconfig.so
 vendor/lib64/libqc2audio_base.so
@@ -4210,7 +4209,6 @@ vendor/lib64/libvideoml.so
 vendor/lib64/libvmfilexfer.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
-vendor/lib64/libwfdaac_vendor.so
 vendor/lib64/libwvaidl.so
 vendor/lib64/libxmi_slow_motion_triger.so
 vendor/lib64/nfc_nci.st21nfc.st.so
