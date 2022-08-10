@@ -4022,7 +4022,6 @@ vendor/lib/libsfplugin_ccodec_utils.so
 vendor/lib/libsmemlog.so
 vendor/lib/libsparse.so
 vendor/lib/libspatializerparamstorage.so
-vendor/lib/libstagefright_bufferpool@2.0.1.so
 vendor/lib/libstandbyfeature.so
 vendor/lib/libstreamparser.so
 vendor/lib/libsxrservice.so
@@ -4302,7 +4301,6 @@ vendor/lib64/libsfplugin_ccodec_utils.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsparse.so
 vendor/lib64/libspatializerparamstorage.so
-vendor/lib64/libstagefright_bufferpool@2.0.1.so
 vendor/lib64/libstreamparser.so
 vendor/lib64/libsysmon_cdsp_skel.so
 vendor/lib64/libtinycompress.so
