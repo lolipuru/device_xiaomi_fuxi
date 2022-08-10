@@ -4000,7 +4000,6 @@ vendor/lib/libmisoundsa.so
 vendor/lib/libmispowerop.so
 vendor/lib/libnanopb.so
 vendor/lib/libnative-api.so
-vendor/lib/libnbaio_mono.so
 vendor/lib/liboemaids_vendor.so
 vendor/lib/libpichdralgo.so
 vendor/lib/libqape_oem_ext.so
@@ -4281,7 +4280,6 @@ vendor/lib64/libmisight.so
 vendor/lib64/libmisoundsa.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libnative-api.so
-vendor/lib64/libnbaio_mono.so
 vendor/lib64/liboem_specific.so
 vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libofflinefeatureintf.so
