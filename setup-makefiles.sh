@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -31,6 +31,11 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
+
+VIBRATOR_XML="etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml"
+printf '\n%s\n' "PRODUCT_COPY_FILES += \\" >> "$PRODUCTMK"
+printf '    %s/proprietary/%s:$(TARGET_COPY_OUT_PRODUCT)/%s\n' \
+                "$OUTDIR" "product/$VIBRATOR_XML" "$VIBRATOR_XML" >> "$PRODUCTMK"
 
 # Finish
 write_footers

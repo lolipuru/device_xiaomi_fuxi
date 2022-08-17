@@ -1,6 +1,10 @@
 on early-init
     start set_permissive
 
+on post-fs
+    mount none /product/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service /odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service bind
+    mount none /product/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml /product/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml bind
+
 on fs
     # qcom-haptics
     chmod 0666 /sys/class/qcom-haptics/lra_calibration
