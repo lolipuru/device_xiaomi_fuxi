@@ -1,4 +1,4 @@
-package co.potatoproject.dt2w.Fuxi;
+package org.lineageos.dt2w.Fuxi;
 
 import android.app.Service;
 import android.content.ContentResolver;
