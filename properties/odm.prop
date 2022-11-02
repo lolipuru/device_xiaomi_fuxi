@@ -1,2 +1,12 @@
+# Audio
+persist.audio.button_jack.profile=volume
+persist.audio.button_jack.switch=0
+persist.audio.fluence.speaker=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicecomm=true
+persist.audio.fluence.voicerec=false
+ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.ssr=false
+
 # Qti
 ro.vendor.qti.va_odm.support=1
