@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "WifiResOverlayFuxi",
+    product_specific: true
+}
