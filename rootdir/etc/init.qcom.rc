@@ -8,7 +8,6 @@ on fs
 
     # cal-file directory
     mkdir /mnt/vendor/persist/haptics 0755 system system
-    start vibratorfeature-fuxi
     start lights-fuxi
 
 on property:dev.bootcomplete=1
@@ -42,16 +41,3 @@ service vendor.qti.light /vendor/bin/hw/vendor.qti.hardware.lights.service
     shutdown critical
     disabled
     override
-
-service vibratorfeature-hal-service /odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
-    class hal
-    user system
-    group system input audio
-    disabled
-    override
-
-service vibratorfeature-fuxi /product/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
-    class hal
-    user system
-    group system input audio
-    onrestart restart vibratorfeature
