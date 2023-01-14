@@ -41,3 +41,4 @@ service vendor.qti.light /vendor/bin/hw/vendor.qti.hardware.lights.service
     shutdown critical
     disabled
     override
+
