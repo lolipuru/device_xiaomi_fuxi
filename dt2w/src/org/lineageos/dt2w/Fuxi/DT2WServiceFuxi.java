@@ -53,7 +53,7 @@ public class DT2WServiceFuxi extends Service {
         void update() {
             int dt2wValue = Secure.getInt(mContext.getContentResolver(), Secure.DOUBLE_TAP_TO_WAKE, 0);
             boolean dt2wEnabled = dt2wValue == 1;
-            SystemProperties.set("persist.sys.Fuxi.dt2w", dt2wEnabled ? "1" : "0");
+            SystemProperties.set("persist.sys.fuxi.dt2w", dt2wEnabled ? "1" : "0");
         }
 
         @Override

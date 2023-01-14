@@ -1,18 +1,19 @@
 on early-init
     start set_permissive
 
-on late-fs
-    # Qcom haptics
-    chown system system /sys/class/qcom-haptics/lra_calibration
-    chown system system /sys/class/qcom-haptics/lra_frequency_hz
-    chown system system /sys/class/qcom-haptics/lra_impedance
+on fs
+    # qcom-haptics
+    chmod 0666 /sys/class/qcom-haptics/lra_calibration
+    chmod 0666 /sys/class/qcom-haptics/lra_impedance
 
-    # Touch feature
-    chown system system /dev/xiaomi-touch
-    chmod 0660 /dev/xiaomi-touch
+    # cal-file directory
+    mkdir /mnt/vendor/persist/haptics 0755 system system
 
-on property:persist.sys.fuxi.dt2w=*
-    exec /system/bin/xiaomi-touch 14 ${persist.sys.Fuxi.dt2w}
+on property:dev.bootcomplete=1
+    chmod 0666 /dev/xiaomi-touch
+
+on property:dev.bootcomplete=1 && property:persist.sys.fuxi.dt2w=*
+    exec /system/bin/xiaomi-touch 14 ${persist.sys.fuxi.dt2w}
 
 service set_permissive /system/bin/set_permissive.sh
     class main
