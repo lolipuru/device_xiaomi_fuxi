@@ -11,10 +11,6 @@ on late-fs
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
 
-    # Display feature
-    chown system system /sys/class/mi_display/disp-DSI-0/disp_param
-    chmod 0664 /sys/class/mi_display/disp-DSI-0/disp_param
-
 on property:persist.sys.fuxi.dt2w=*
     exec /system/bin/xiaomi-touch 14 ${persist.sys.Fuxi.dt2w}
 

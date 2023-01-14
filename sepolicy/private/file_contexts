@@ -1,0 +1,3 @@
+# Xiaomi touch
+/system/bin/xiaomi-touch   u:object_r:xiaomi_touch_exec:s0
+/dev/xiaomi-touch          u:object_r:vendor_touchfeature_device:s0

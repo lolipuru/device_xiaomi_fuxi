@@ -77,7 +77,7 @@ include $(LOCAL_PATH)/properties/default.mk
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
-    init.fuxi.rc \
+    init.qcom.rc \
     set_permissive.sh
 
 # Soong namespaces
