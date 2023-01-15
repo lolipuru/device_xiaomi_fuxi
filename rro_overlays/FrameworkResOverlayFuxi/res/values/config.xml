@@ -316,6 +316,11 @@
         <item>0</item>
     </integer-array>
 
+    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDoze">17</integer>
+
     <!-- An array of device capabilities defined by GSMA SGP.22 v2.0.
          The first item is the capability name that the device supports. The second item is the
          major version. The minor and revision versions are default to 0s.
@@ -393,7 +398,7 @@
          to maximize power savings but not all devices support it.
          Refer to power.h for details.
     -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -489,9 +494,6 @@
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
-    <!-- If true, the display will be shifted around in ambient mode. -->
-    <bool name="config_enableBurnInProtection">true</bool>
-
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
@@ -573,4 +575,229 @@
 
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- Vibrator pattern for feedback about a long screen/key press. -->
+    <integer-array name="config_longPressVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for feedback about touching a virtual key. -->
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </integer-array>
+
+    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap. -->
+    <integer-array name="config_keyboardTapVibePattern">
+        <item>40</item>
+    </integer-array>
+
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+         manually by the user. Off by default, since the expected haptic feedback may not be
+         available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Specifies the maximum burn-in offset displacement from the center. If -1, no maximum value
+         will be used. -->
+    <integer name="config_burnInProtectionMaxRadius">70</integer>
+
+    <!-- Specifies the minimum burn-in offset horizontally. -->
+    <integer name="config_burnInProtectionMinHorizontalOffset">-15</integer>
+
+    <!-- Specifies the maximum burn-in offset horizontally. -->
+    <integer name="config_burnInProtectionMaxHorizontalOffset">15</integer>
+
+    <!-- Specifies the minimum burn-in offset vertically. -->
+    <integer name="config_burnInProtectionMinVerticalOffset">-40</integer>
+
+    <!-- Specifies the maximum burn-in offset vertically. -->
+    <integer name="config_burnInProtectionMaxVerticalOffset">40</integer>
+
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
+
+    <!-- MMS user agent prolfile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+
+    <!-- Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
+
+    <!-- Whether UI for multi user should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
+
+    <!-- Safe headphone volume index. When music stream volume is below this index
+         the SPL on headphone output is compliant to EN 60950 requirements for portable music
+         players. -->
+    <integer name="config_safe_media_volume_index">100</integer>
+
+    <!-- Flag indicating which package name can access the persistent data partition -->
+    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
+
+    <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay,
+         an empty string is passed in -->
+    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
+
+    <!-- IWLAN network service package name to bind to by default. If none is specified in an
+         overlay, an empty string is passed in -->
+    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
+
+    <!-- Telephony qualified networks service package name to bind to by default. -->
+    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
+
+    <!-- The default "usage setting" indicating that the device is either a voice-centric
+         device (1) or a data-centric device (2). A voice-centric device will require that any cellular
+         service that it uses provides access to voice capability, and a data-centric device will
+         likewise require that the network provides access to data services. These settings are
+         sent to the cellular modem and control the behavior in accordance with 3gpp TS 24.301 sec 4.3
+         (and equivalent functionality in other generations of cellular).-->
+    <integer name="config_default_cellular_usage_setting">-1</integer>
+
+    <!-- Whether the device enable the standalone (SA) mode of 5G NR.-->
+    <bool name="config_telephony5gStandalone">true</bool>
+
+    <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
+    <bool name="config_telephony5gNonStandalone">true</bool>
+
+    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
+    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
+    <bool name="config_camera_sound_forced">true</bool>
+    <bool name="config_cellBroadcastAppLinks">true</bool>
+    <bool name="config_enable_iwlan_handover_policy">false</bool>
+    <bool name="config_enhanced_iwlan_handover_check">false</bool>
+    <bool name="config_hotswapCapable">true</bool>
+    <bool name="config_speed_up_audio_on_mt_calls">true</bool>
+    <bool name="config_stkNoAlphaUsrCnf">false</bool>
+    <bool name="config_supportAudioSourceUnprocessed">true</bool>
+    <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
+    <bool name="config_unplugTurnsOnScreen">true</bool>
+    <bool name="config_voice_data_sms_auto_fallback">true</bool>
+    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
+    <bool name="config_wifi_background_scan_support">true</bool>
+    <bool name="config_wifi_batched_scan_supported">true</bool>
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+    <bool name="config_wifi_dual_band_support">true</bool>
+    <bool name="config_wifi_dual_sap_mode_enabled">true</bool>
+    <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
+    <bool name="config_wifi_softap_ieee80211ac_supported">true</bool>
+    <bool name="skip_restoring_network_selection">true</bool>
+    
+    <integer-array name="config_availableColorModes">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>256</item>
+        <item>257</item>
+        <item>258</item>
+        <item>259</item>
+        <item>260</item>
+        <item>261</item>
+        <item>262</item>
+        <item>263</item>
+        <item>264</item>
+        <item>265</item>
+        <item>266</item>
+        <item>267</item>
+        <item>268</item>
+        <item>269</item>
+        <item>270</item>
+        <item>271</item>
+        <item>272</item>
+        <item>273</item>
+        <item>274</item>
+        <item>275</item>
+        <item>276</item>
+        <item>277</item>
+        <item>278</item>
+        <item>279</item>
+        <item>280</item>
+        <item>281</item>
+        <item>282</item>
+        <item>283</item>
+        <item>284</item>
+        <item>285</item>
+        <item>286</item>
+        <item>287</item>
+        <item>288</item>
+    </integer-array>
+
+    <string-array name="config_mobile_tcp_buffers">
+        <item>5gnr:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>lte:2097152,4194304,8388608,262144,524288,1048576</item>
+        <item>lte_ca:4096,6291456,12582912,4096,1048576,2097152</item>
+        <item>umts:4094,87380,1220608,4096,16384,1220608</item>
+        <item>hspa:4094,87380,1220608,4096,16384,1220608</item>
+        <item>hsupa:4094,87380,1220608,4096,16384,1220608</item>
+        <item>hsdpa:4094,87380,1220608,4096,16384,1220608</item>
+        <item>hspap:4094,87380,1220608,4096,16384,1220608</item>
+        <item>edge:4093,26280,35040,4096,16384,35040</item>
+        <item>gprs:4092,8760,11680,4096,8760,11680</item>
+        <item>evdo:4094,87380,524288,4096,16384,262144</item>
+    </string-array>
+
+    <string-array name="config_network_type_tcp_buffers">
+        <item>NR_SA_MMWAVE:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_SA:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_NSA_MMWAVE:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>NR_NSA:2097152,6291456,16777216,512000,2097152,8388608</item>
+        <item>LTE:2097152,4194304,8388608,262144,524288,1048576</item>
+        <item>LTE_CA:4096,6291456,12582912,4096,1048576,2097152</item>
+        <item>UMTS:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSUPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSDPA:4094,87380,1220608,4096,16384,1220608</item>
+        <item>HSPA+:4094,87380,1220608,4096,16384,1220608</item>
+        <item>EDGE:4093,26280,35040,4096,16384,35040</item>
+        <item>GPRS:4092,8760,11680,4096,8760,11680</item>
+        <item>EvDo_0:4094,87380,524288,4096,16384,262144</item>
+        <item>EvDo_A:4094,87380,524288,4096,16384,262144</item>
+        <item>EvDo_B:4094,87380,524288,4096,16384,262144</item>
+    </string-array>
+
+    <string-array name="config_tether_bluetooth_regexs">
+        <item>bnep\\d</item>
+        <item>bt-pan</item>
+    </string-array>
+
+    <string-array name="config_tether_dhcp_range">
+        <item>192.168.42.2</item>
+        <item>192.168.42.254</item>
+        <item>192.168.43.2</item>
+        <item>192.168.43.254</item>
+        <item>192.168.44.2</item>
+        <item>192.168.44.254</item>
+        <item>192.168.45.2</item>
+        <item>192.168.45.254</item>
+        <item>192.168.46.2</item>
+        <item>192.168.46.254</item>
+        <item>192.168.47.2</item>
+        <item>192.168.47.254</item>
+        <item>192.168.48.2</item>
+        <item>192.168.48.254</item>
+        <item>192.168.49.2</item>
+        <item>192.168.49.254</item>
+        <item>192.168.50.2</item>
+        <item>192.168.50.254</item>
+        <item>192.168.51.2</item>
+        <item>192.168.51.254</item>
+    </string-array>
+
+    <string name="config_emergency_apn" />
+    
+    <string name="config_optionalPackageVerifierName">seemp.service</string>
+
+    <string-array name="config_defaultPinnerServiceFiles">
+        <item>/system/framework/arm64/boot-QPerformance.oat</item>
+        <item>/system/framework/arm64/boot-UxPerformance.oat</item>
+        <item>/apex/com.android.media/javalib/updatable-media.jar</item>
+        <item>/system/lib64/libsurfaceflinger.so</item>
+        <item>/vendor/lib64/libllvm-qgl.so</item>
+    </string-array>
 </resources>

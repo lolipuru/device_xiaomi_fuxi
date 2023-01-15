@@ -27,18 +27,3 @@ service set_permissive /system/bin/set_permissive.sh
     user root
     seclabel u:r:su:s0
     disabled
-
-service lights-fuxi /system/bin/hw/android.hardware.lights-service.fuxi
-    class hal
-    user system
-    group system
-    shutdown critical
-
-service vendor.qti.light /vendor/bin/hw/vendor.qti.hardware.lights.service
-    class hal
-    user system
-    group system
-    shutdown critical
-    disabled
-    override
-

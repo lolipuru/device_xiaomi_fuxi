@@ -6,11 +6,19 @@
 
 DEVICE_PATH := device/xiaomi/fuxi
 
+# Inherit from the proprietary version
+$(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
+
 # SHIPPING API
 PRODUCT_SHIPPING_API_LEVEL := 33
 
 # VNDK API
 PRODUCT_TARGET_VNDK_VERSION := 33
+
+# AAPT
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -25,6 +33,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=erofs \
     POSTINSTALL_OPTIONAL_vendor=true
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
@@ -33,6 +45,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
+
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # Dtb
 PRODUCT_COPY_FILES += \
@@ -60,9 +76,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
-# Lights
+# NFC
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.fuxi
+    NfcNci \
+    Tag \
+    SecureElement \
+    com.android.nfc_extras
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -75,14 +94,11 @@ PRODUCT_PACKAGES += \
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := true
+PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# Properties
-include $(LOCAL_PATH)/properties/default.mk
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -91,9 +107,24 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     set_permissive.sh
 
+# Properties
+include $(LOCAL_PATH)/properties/default.mk
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
+
+# Telephony & IMS  
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Update engine
 PRODUCT_PACKAGES += \
