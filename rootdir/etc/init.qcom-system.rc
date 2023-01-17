@@ -1,0 +1,29 @@
+on early-init
+    start set_permissive
+
+on fs
+    # qcom-haptics
+    chmod 0666 /sys/class/qcom-haptics/lra_calibration
+    chmod 0666 /sys/class/qcom-haptics/lra_impedance
+
+    # cal-file directory
+    mkdir /mnt/vendor/persist/haptics 0755 system system
+    start lights-fuxi
+
+on property:dev.bootcomplete=1
+    chmod 0666 /dev/xiaomi-touch
+
+on property:dev.bootcomplete=1 && property:persist.sys.fuxi.dt2w=*
+    exec /system/bin/xiaomi-touch 14 ${persist.sys.fuxi.dt2w}
+
+on boot
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+    chown system system /sys/class/backlight/panel0-backlight/max_brightness
+    chmod 0644 /sys/class/backlight/panel0-backlight/brightness
+    chmod 0644 /sys/class/backlight/panel0-backlight/max_brightness
+
+service set_permissive /system/bin/set_permissive.sh
+    class main
+    user root
+    seclabel u:r:su:s0
+    disabled
