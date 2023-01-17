@@ -48,6 +48,9 @@ TARGET_USES_UEFI := true
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)//configs/config/config.fs
+
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
