@@ -50,7 +50,6 @@ system_ext/etc/permissions/qti_permissions.xml
 
 # vendor
 #-vendor/etc/vintf/manifest/AHBF@2.1-service.xml
--vendor/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml
 -vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 -vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml
 -vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
@@ -198,7 +197,6 @@ vendor/bin/hal_proxy_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/bin/hostapd_cli
-vendor/bin/hw/android.hardware.atrace@1.0-service
 vendor/bin/hw/android.hardware.audio.service_64
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/bin/hw/android.hardware.drm-service.clearkey
@@ -909,7 +907,6 @@ vendor/etc/hostapd/hostapd.accept
 vendor/etc/hostapd/hostapd_default.conf
 vendor/etc/hostapd/hostapd.deny
 vendor/etc/hrtf5c.bin
-vendor/etc/init/android.hardware.atrace@1.0-service.rc
 vendor/etc/init/android.hardware.audio.service_64.rc
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
 vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
@@ -1311,7 +1308,6 @@ vendor/lib64/android.frameworks.cameraservice.service@2.0.so
 vendor/lib64/android.frameworks.cameraservice.service@2.1.so
 vendor/lib64/android.frameworks.cameraservice.service@2.2.so
 vendor/lib64/android.frameworks.sensorservice@1.0.so
-vendor/lib64/android.hardware.atrace@1.0.so
 vendor/lib64/android.hardware.audio@2.0.so
 vendor/lib64/android.hardware.audio@2.0-util.so
 vendor/lib64/android.hardware.audio@4.0.so
