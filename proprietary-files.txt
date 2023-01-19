@@ -49,7 +49,7 @@ system/etc/sysconfig/qti_whitelist.xml
 system_ext/etc/permissions/qti_permissions.xml
 
 # vendor
-#-vendor/etc/vintf/manifest/AHBF@2.1-service.xml
+-vendor/etc/vintf/manifest/AHBF@2.1-service.xml
 -vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 -vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml
 -vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
@@ -151,6 +151,7 @@ vendor/bin/audiodsd2pcmtest
 vendor/bin/audioflacapp
 vendor/bin/batterysecret
 vendor/bin/battery_stats
+#vendor/bin/btconfig
 vendor/bin/ccid_daemon_nr
 vendor/bin/cdsprpcd
 vendor/bin/charge_logger
@@ -277,15 +278,25 @@ vendor/bin/hw/vendor.xiaomi.modem.qms@1.0-service
 vendor/bin/hw/wpa_supplicant
 vendor/bin/imsdaemon
 vendor/bin/ims_rtp_daemon
+vendor/bin/init.crda.sh
 vendor/bin/init.kernel.post_boot-kalama.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.mdm.sh
+vendor/bin/init.qcom.coex.sh
+vendor/bin/init.qcom.efs.sync.sh
+vendor/bin/init.qcom.sdio.sh
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/init.qcom.usb.sh
+vendor/bin/init.qti.kernel.debug.sh
+vendor/bin/init.qti.kernel.debug-kalama.sh
 vendor/bin/init.qti.display_boot.sh
+vendor/bin/init.qti.kernel.early_debug.sh
+vendor/bin/init.qti.kernel.early_debug-kalama.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/init.qti.qcv.sh
 vendor/bin/init.qti.write.sh
+#vendor/bin/ipacm
+#vendor/bin/ipacm-diag
 vendor/bin/iperf
 vendor/bin/iperf3
 vendor/bin/irsc_util
@@ -461,6 +472,16 @@ vendor/etc/apdr.conf
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/audio_diag.cfg
 vendor/etc/audio_policy_configuration.xml
+vendor/etc/audio/sku_kalama/adsp_sleep_monitor.conf
+vendor/etc/audio/sku_kalama/audio_effects.conf
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
+vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
 vendor/etc/batching.conf
 vendor/etc/cacert_location.pem
 vendor/etc/camera/102_SummerDay.png
@@ -938,9 +959,11 @@ vendor/etc/init/ffu.rc
 vendor/etc/init/hostapd.android.rc
 vendor/etc/init/hw/init.batterysecret.rc
 vendor/etc/init/hw/init.mi_thermald.rc
+vendor/etc/init/hw/init.qcom.factory.rc
 vendor/etc/init/hw/init.qcom.usb.rc
 vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/hw/init.qti.kernel.test.rc
+vendor/etc/init/hw/init.qti.ufs.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/ims_rtp_daemon.rc
 vendor/etc/init/init.charge_logger.rc
@@ -959,8 +982,8 @@ vendor/etc/init/init.vendor.ins.rc
 vendor/etc/init/init.vendor.qti.spu@1.1-service.rc
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/init.vendor.wlan.rc
-vendor/etc/init/ipacm-diag.rc
-vendor/etc/init/ipacm.rc
+#vendor/etc/init/ipacm-diag.rc
+#vendor/etc/init/ipacm.rc
 vendor/etc/init/ipa_fws.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/loc-launcher.rc
@@ -1059,6 +1082,9 @@ vendor/etc/init/vndservicemanager.rc
 vendor/etc/init/vppservice.rc
 vendor/etc/init/wfdvndservice.rc
 vendor/etc/init/wlanramdumpcollector.rc
+vendor/etc/permissions/android.hardware.se.omapi.ese.xml
+vendor/etc/permissions/android.hardware.se.omapi.uicc.xml
+vendor/etc/permissions/android.software.opengles.deqp.level.xml
 vendor/etc/IPACM_cfg.xml
 vendor/etc/IPACM_Filter_cfg.xml
 vendor/etc/kvh2xml.xml
@@ -2160,9 +2186,7 @@ vendor/lib64/libril-legacy.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/librilqmimiscservices.so
-vendor/lib64/libril.so
-vendor/lib64/librilutils.so
-vendor/lib64/librmnetctl.so
+#vendor/lib64/librmnetctl.so
 vendor/lib64/librmsclib1.so
 vendor/lib64/librpmb.so
 vendor/lib64/lib-rtpcommon.so
@@ -3200,9 +3224,7 @@ vendor/lib/libril-legacy.so
 vendor/lib/libril-qc-ltedirectdisc.so
 vendor/lib/libril-qc-radioconfig.so
 vendor/lib/librilqmimiscservices.so
-vendor/lib/libril.so
-vendor/lib/librilutils.so
-vendor/lib/librmnetctl.so
+#vendor/lib/librmnetctl.so
 vendor/lib/librpmb.so
 vendor/lib/lib-rtpcommon.so
 vendor/lib/lib-rtpcore.so

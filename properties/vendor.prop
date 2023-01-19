@@ -256,11 +256,6 @@ sys.vendor.shutdown.waittime=500
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.3
-ro.vendor.perf.scroll_opt.heavy_app=2
-ro.vendor.perf.scroll_opt=1
-vendor.pasr.activemode.enabled=false
-vendor.power.pasr.enabled=false
-ro.vendor.perf-hal.ver=2.3
 ro.vendor.perf.scroll_opt=1
 vendor.perf.framepacing.enable=1
 vendor.power.pasr.enabled=true
@@ -286,7 +281,7 @@ persist.vendor.radio.procedure_bytes=SKIP
 # RCS
 persist.vendor.rcs.singlereg.feature=1
 
-	# USB
+# USB
 sys.usb.mtp.batchcancel=1
 vendor.usb.rndis.func.name=gsi
 vendor.usb.rmnet.func.name=gsi
