@@ -5,4 +5,3 @@ type vendor_touchfeature_device, dev_type;
 init_daemon_domain(xiaomi_touch)
 
 allow xiaomi_touch vendor_touchfeature_device:chr_file rw_file_perms;
-

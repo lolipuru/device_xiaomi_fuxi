@@ -32,6 +32,7 @@
 /******************************************************************************
  * INCLUDE SECTION
  ******************************************************************************/
+#include <stdio.h>
 #include <fcntl.h>
 #include <string.h>
 #include <errno.h>
@@ -42,6 +43,7 @@
 #include <limits.h>
 #include <dirent.h>
 #include <linux/kernel.h>
+#include <asm/byteorder.h>
 #include <map>
 #include <vector>
 #include <string>
@@ -157,11 +159,18 @@ static int blk_rw(int fd, int rw, int64_t offset, uint8_t *buf, unsigned len)
     else
         r = read(fd, buf, len);
 
-    if (r < 0)
+    if (r < 0) {
         fprintf(stderr, "block dev %s failed: %s\n", rw ? "write" : "read",
                 strerror(errno));
-    else
-        r = 0;
+    } else {
+        if (rw) {
+            r = fsync(fd);
+            if (r < 0)
+                fprintf(stderr, "fsync failed: %s\n", strerror(errno));
+        } else {
+            r = 0;
+        }
+    }
 
     return r;
 }
@@ -241,9 +250,9 @@ static int gpt_boot_chain_swap(const uint8_t *pentries_start,
         uint8_t ptn_swap[PTN_ENTRY_SIZE];
         //Skip the xbl, multiimgoem, multiimgqti partitions on UFS devices. That is handled
         //seperately.
-        if (gpt_utils_is_ufs_device() && !strncmp(ptn_swap_list[i],PTN_XBL,strlen(PTN_XBL))
+        if (gpt_utils_is_ufs_device() && (!strncmp(ptn_swap_list[i],PTN_XBL,strlen(PTN_XBL))
             || !strncmp(ptn_swap_list[i],PTN_MULTIIMGOEM,strlen(PTN_MULTIIMGOEM))
-            || !strncmp(ptn_swap_list[i],PTN_MULTIIMGQTI,strlen(PTN_MULTIIMGQTI)))
+            || !strncmp(ptn_swap_list[i],PTN_MULTIIMGQTI,strlen(PTN_MULTIIMGQTI))))
             continue;
 
         ptn_entry = gpt_pentry_seek(ptn_swap_list[i], pentries_start,
@@ -717,7 +726,6 @@ int prepare_partitions(enum boot_update_stage stage, const char *dev_path)
     enum gpt_state gpt_prim, gpt_second;
     enum boot_update_stage internal_stage;
     struct stat xbl_partition_stat;
-    struct stat ufs_dir_stat;
 
     if (!dev_path) {
         fprintf(stderr, "%s: Invalid dev_path\n",
@@ -940,7 +948,6 @@ int add_lun_to_update_list(char *lun_path, struct update_data *dat)
 
 int prepare_boot_update(enum boot_update_stage stage)
 {
-        int r, fd;
         int is_ufs = gpt_utils_is_ufs_device();
         struct stat ufs_dir_stat;
         struct update_data data;

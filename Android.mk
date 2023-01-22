@@ -32,10 +32,10 @@ $(VM_SYSTEM_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $(TARGET_OUT_VENDOR)/vm-system
 
 ALL_DEFAULT_INSTALLED_MODULES += \
-    $(FIRMWARE_MOUNT_POINT) \
-    $(BT_FIRMWARE_MOUNT_POINT) \
-    $(DSP_MOUNT_POINT) \
-    $(VM_SYSTEM_MOUNT_POINT)
+	$(FIRMWARE_MOUNT_POINT) \
+	$(BT_FIRMWARE_MOUNT_POINT) \
+	$(DSP_MOUNT_POINT) \
+	$(VM_SYSTEM_MOUNT_POINT)
 
 RFS_MDM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/mdm/adsp/
 $(RFS_MDM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
@@ -110,12 +110,12 @@ $(RFS_MDM_WPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
 ALL_DEFAULT_INSTALLED_MODULES += \
-    $(RFS_MDM_ADSP_SYMLINKS) \
-    $(RFS_MDM_CDSP_SYMLINKS) \
-    $(RFS_MDM_MPSS_SYMLINKS) \
-    $(RFS_MDM_SLPI_SYMLINKS) \
-    $(RFS_MDM_TN_SYMLINKS) \
-    $(RFS_MDM_WPSS_SYMLINKS)
+	$(RFS_MDM_ADSP_SYMLINKS) \
+	$(RFS_MDM_CDSP_SYMLINKS) \
+	$(RFS_MDM_MPSS_SYMLINKS) \
+	$(RFS_MDM_SLPI_SYMLINKS) \
+	$(RFS_MDM_TN_SYMLINKS) \
+	$(RFS_MDM_WPSS_SYMLINKS)
 
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
@@ -151,6 +151,7 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
+	$(hide) ln -sf /data/vendor/mbnconfig $@/readonly/mbnconfig
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
 RFS_MSM_SLPI_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/slpi/
@@ -178,12 +179,12 @@ $(RFS_MSM_WPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
 ALL_DEFAULT_INSTALLED_MODULES += \
-    $(RFS_MSM_ADSP_SYMLINKS) \
-    $(RFS_MSM_CDSP_SYMLINKS) \
-    $(RFS_MSM_MPSS_SYMLINKS) \
-    $(RFS_MSM_SLPI_SYMLINKS) \
-    $(RFS_MSM_WPSS_SYMLINKS)
-    
+	$(RFS_MSM_ADSP_SYMLINKS) \
+	$(RFS_MSM_CDSP_SYMLINKS) \
+	$(RFS_MSM_MPSS_SYMLINKS) \
+	$(RFS_MSM_SLPI_SYMLINKS) \
+	$(RFS_MSM_WPSS_SYMLINKS)
+	
 RFS_APQ_GNSS_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/apq/gnss/
 $(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS APQ GNSS folder structure: $@"
@@ -197,7 +198,7 @@ $(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
 ALL_DEFAULT_INSTALLED_MODULES += \
-    $(RFS_APQ_GNSS_SYMLINKS) \
+	$(RFS_APQ_GNSS_SYMLINKS)
 
 FIRMWARE_WLAN_QCA_CLD_KIWI_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/kiwi/
 $(FIRMWARE_WLAN_QCA_CLD_KIWI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
@@ -221,8 +222,17 @@ $(FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /mnt/vendor/persist/qca6490/wlan_mac.bin $@/wlan_mac.bin
 
 ALL_DEFAULT_INSTALLED_MODULES += \
-    $(FIRMWARE_WLAN_QCA_CLD_KIWI_SYMLINKS) \
-    $(FIRMWARE_WLAN_QCA_CLD_KIWI_V2_SYMLINKS) \
-    $(FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS)
+	$(FIRMWARE_WLAN_QCA_CLD_KIWI_SYMLINKS) \
+	$(FIRMWARE_WLAN_QCA_CLD_KIWI_V2_SYMLINKS) \
+	$(FIRMWARE_WLAN_QCA_CLD_QCA6490_SYMLINKS)
+
+FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/
+$(FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating wlanmdsp.otaupdate firmware symlinks: $@"
+	mkdir -p $@
+	$(hide) ln -sf /data/vendor/firmware/wlanmdsp.mbn $@/wlanmdsp.otaupdate
+
+ALL_DEFAULT_INSTALLED_MODULES += \
+	$(FIRMWARE_SYMLINKS)
 
 endif
