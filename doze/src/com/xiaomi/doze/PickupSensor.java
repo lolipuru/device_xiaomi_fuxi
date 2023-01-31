@@ -39,12 +39,12 @@ public class PickupSensor implements SensorEventListener {
     private static final String TAG = "PickupSensor";
 
     private static final int MIN_PULSE_INTERVAL_MS = 2500;
-    private static final int MIN_WAKEUP_INTERVAL_MS = 1000;
     private static final int WAKELOCK_TIMEOUT_MS = 300;
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
     private String mSensorName;
+    private int mSensorLowerValue;
     private Context mContext;
     private ExecutorService mExecutorService;
     private PowerManager mPowerManager;
@@ -56,6 +56,7 @@ public class PickupSensor implements SensorEventListener {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
         mSensorName = SystemProperties.get("ro.sensor.pickup");
+        mSensorLowerValue = SystemProperties.getInt("ro.sensor.pickup.lower.value", -1);
         mSensor = DozeUtils.getSensor(mSensorManager, mSensorName);
         mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
         mWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
@@ -68,25 +69,24 @@ public class PickupSensor implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        boolean isRaiseToWake = DozeUtils.isRaiseToWakeEnabled(mContext);
-
-        if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[0]);
-
-        long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
-        if (delta < MIN_PULSE_INTERVAL_MS) {
-            return;
-        }
-
-        mEntryTimestamp = SystemClock.elapsedRealtime();
-
-        if (event.values[0] == 1) {
-            if (isRaiseToWake) {
+        float ev = event.values[0];
+        if (DEBUG) Log.d(TAG, "Got sensor event: " + ev);
+        if (ev == 1) {
+            long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
+            if (delta < MIN_PULSE_INTERVAL_MS) {
+                if (DEBUG) Log.d(TAG, "Too soon, skipping");
+                return;
+            }
+            mEntryTimestamp = SystemClock.elapsedRealtime();
+            if (DozeUtils.isRaiseToWakeEnabled(mContext)) {
                 mWakeLock.acquire(WAKELOCK_TIMEOUT_MS);
                 mPowerManager.wakeUp(SystemClock.uptimeMillis(),
                     PowerManager.WAKE_REASON_GESTURE, TAG);
             } else {
                 DozeUtils.launchDozePulse(mContext);
             }
+        } else if (ev == mSensorLowerValue) {
+            mPowerManager.goToSleep(SystemClock.uptimeMillis());
         }
     }
 

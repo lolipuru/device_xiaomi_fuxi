@@ -42,6 +42,7 @@ public class DozeService extends Service {
         IntentFilter screenStateFilter = new IntentFilter();
         screenStateFilter.addAction(Intent.ACTION_SCREEN_ON);
         screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
+        screenStateFilter.addAction(Intent.ACTION_USER_PRESENT);
         registerReceiver(mScreenStateReceiver, screenStateFilter);
     }
 
@@ -67,9 +68,6 @@ public class DozeService extends Service {
 
     private void onDisplayOn() {
         if (DEBUG) Log.d(TAG, "Display on");
-        if (DozeUtils.isPickUpEnabled(this)) {
-            mPickupSensor.disable();
-        }
         if (DozeUtils.isHandwaveGestureEnabled(this) ||
                 DozeUtils.isPocketGestureEnabled(this)) {
             mProximitySensor.disable();
@@ -87,13 +85,26 @@ public class DozeService extends Service {
         }
     }
 
+    private void onUserPresent() {
+        if (DEBUG) Log.d(TAG, "User present");
+        if (DozeUtils.isPickUpEnabled(this)) {
+            mPickupSensor.disable();
+        }
+    }
+
     private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
-                onDisplayOn();
-            } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
-                onDisplayOff();
+            switch (intent.getAction()) {
+                case Intent.ACTION_SCREEN_ON:
+                    onDisplayOn();
+                    break;
+                case Intent.ACTION_SCREEN_OFF:
+                    onDisplayOff();
+                    break;
+                case Intent.ACTION_USER_PRESENT:
+                    onUserPresent();
+                    break;
             }
         }
     };
