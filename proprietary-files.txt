@@ -3795,7 +3795,6 @@ vendor/etc/init/wlanramdumpcollector.rc
 vendor/etc/kvh2xml.xml
 vendor/etc/misound_asc_model.tflite
 vendor/etc/misound_res_spk.bin
-vendor/etc/permissions/android.software.device_id_attestation.xml
 vendor/etc/permissions/camera_extensions.xml
 vendor/etc/qvirtmgr-vndr.json
 vendor/etc/res/images/default/charger/battery_fail.png
