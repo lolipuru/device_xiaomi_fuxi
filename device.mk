@@ -175,8 +175,10 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# Properties
-include $(LOCAL_PATH)/properties/default.mk
+# Eng build debugging
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0
 
 # Rootdir
 PRODUCT_PACKAGES += \
