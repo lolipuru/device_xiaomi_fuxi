@@ -183,7 +183,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.rc \
+    init.xiaomi.fuxi.rc \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
     set_permissive.sh
