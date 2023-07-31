@@ -4,16 +4,31 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/fuxi
+# Configure emulated_storage.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Configure updatable_apex.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+# Configure developer_gsi_keys.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
+# Enable Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
+# Enforce generic ramdisk allow list
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Enable virtual AB with vendor ramdisk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
 # SHIPPING API
-PRODUCT_SHIPPING_API_LEVEL := 33
-
-# VNDK API
-PRODUCT_TARGET_VNDK_VERSION := 33
+BOARD_API_LEVEL := 33
+BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
+PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -69,7 +84,7 @@ PRODUCT_COPY_FILES += \
 
 # Dtb
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/prebuilts/dtb:dtb.img
+    $(LOCAL_PATH)/prebuilts/dtb:dtb.img
 
 # DT2W
 PRODUCT_PACKAGES += \
@@ -183,7 +198,7 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
+    $(LOCAL_PATH)
 
 # Telephony
 PRODUCT_COPY_FILES += \
