@@ -60,7 +60,7 @@ ro.vendor.audio.gain.support=true
 ro.vendor.audio.feature.fade=true
 ro.vendor.audio.dualadc.support=true
 ro.vendor.audio.extendtonecallendedlength=true
-vendor.audio.adm.buffering.ms=6
+vendor.audio.adm.buffering.ms=2
 vendor.audio.enable.mirrorlink=false
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
@@ -126,6 +126,20 @@ vendor.qc2audio.per_frame.flac.dec.enabled=true
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
+bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.avrcp.target.enabled=true
+bluetooth.profile.avrcp.controller.enabled=false
+bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.asha.central.enabled=true
+bluetooth.profile.gatt.enabled=true
+bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.map.server.enabled=true
+bluetooth.profile.opp.enabled=true
+bluetooth.profile.pan.nap.enabled=true
+bluetooth.profile.pan.panu.enabled=true
+bluetooth.profile.pbap.server.enabled=true
+bluetooth.profile.sap.server.enabled=false
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-lhdc
 persist.bluetooth.a2dp_offload.disabled=false
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
@@ -217,7 +231,7 @@ debug.sf.earlyGl.sf.duration=10500000
 debug.sf.late.sf.duration=10500000
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.taro.api31
+ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kalama.api33
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -235,15 +249,65 @@ ro.surface_flinger.supports_background_blur=1
 vendor.gralloc.disable_ubwc=0
 
 # Haptics
-ro.vendor.mm.vibrator.sys_path=/sys/class/qcom-haptics
+sys.haptic.motor=linear
+sys.haptic.infinitelevel=true
+sys.haptic.dynamiceffect=true
+sys.haptic.dynamiceffect.richtap=true
+sys.haptic.down.weak=0
+sys.haptic.down.normal=2
+sys.haptic.down.strong=5
+sys.haptic.down=5,2
+sys.haptic.tap.normal=3,2
+sys.haptic.tap.light=5,2
+sys.haptic.flick=5,2
+sys.haptic.flick.light=7,2
+sys.haptic.switch=9,2
+sys.haptic.mesh.heavy=8,2
+sys.haptic.mesh.normal=5,2
+sys.haptic.mesh.light=5,1
+sys.haptic.long.press=0,1
+sys.haptic.popup.normal=6,2
+sys.haptic.popup.light=6,1
+sys.haptic.pickup=2,2
+sys.haptic.scroll.edge=7,0
+sys.haptic.trigger.drawer=2,0
+sys.haptic.hold=4,0
+sys.haptic.runin=13
+sys.haptic.intensityforkeyboard=true
+sys.haptic.device_type=agm
 
 # Incremental
 ro.incremental.enable=yes
 
+# LMK
+persist.sys.miui.camera.boost.killAdj_threshold=251:200:100:50
+persist.sys.lmkd.extend_reclaim.enable=false
+persist.sys.lmkd.double_watermark.enable=true
+persist.sys.lmkd.camera_adaptive_lmk.enable=true
+
 # Media
+debug.c2.use_dmabufheaps=1
+debug.config.media.video.aie.support=true
+debug.config.media.video.ais.support=true
+debug.config.media.video.frc.support=true
+debug.mdpcomp.logs=0
+debug.media.video.chipset=6
+debug.media.video.frc=false
+debug.media.video.vpp=false
 debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
-debug.c2.use_dmabufheaps=1
+debug.stagefright.omx_default_rank=0
+ro.vendor.media.video.frc.support=true
+ro.vendor.media.video.vpp.support=true
+vendor.media.vpp.aie.cade=100
+vendor.media.vpp.aie.ltm=1
+vendor.media.vpp.aie.ltmacebrih=0
+vendor.media.vpp.aie.ltmacebril=20
+vendor.media.vpp.aie.ltmacestr=37
+vendor.media.vpp.aie.ltmsatgain=55
+vendor.media.vpp.aie.ltmsatoff=55
+vendor.media.vpp.debug.value.use=false
+vendor.mm.enable.qcom_parser=16777215
 
 # Misc
 sys.vendor.shutdown.waittime=500
