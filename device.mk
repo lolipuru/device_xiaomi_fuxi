@@ -187,9 +187,16 @@ PRODUCT_COPY_FILES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.xiaomi.fuxi.rc \
+    init.class_main.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
+    init.target.rc \
+    init.xiaomi.fuxi.rc \
     set_permissive.sh
 
 # Sensors
