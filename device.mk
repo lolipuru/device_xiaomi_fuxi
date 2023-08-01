@@ -195,9 +195,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
-    init.target.rc \
-    init.xiaomi.fuxi.rc \
-    set_permissive.sh
+    init.target.rc
 
 # Sensors
 PRODUCT_COPY_FILES += \
