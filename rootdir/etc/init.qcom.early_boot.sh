@@ -69,9 +69,23 @@ else
 fi
 
 function set_density_by_fb() {
+    project=`getprop ro.build.product`
     #put default density based on width
     if [ -z $fb_width ]; then
-        setprop vendor.display.lcd_density 320
+        case "$project" in
+            "fuxi")
+            setprop vendor.display.lcd_density 440
+            ;;
+            "nuwa")
+            setprop vendor.display.lcd_density 560
+            ;;
+            "socrates")
+            setprop vendor.display.lcd_density 560
+            ;;
+            *)
+            setprop vendor.display.lcd_density 440
+            ;;
+        esac
     else
         if [ $fb_width -ge 1600 ]; then
            setprop vendor.display.lcd_density 640
@@ -86,6 +100,11 @@ function set_density_by_fb() {
         else
             setprop vendor.display.lcd_density 160
         fi
+        case "$project" in
+            "fuxi")
+            setprop vendor.display.lcd_density 440
+            ;;
+        esac
     fi
 }
 
