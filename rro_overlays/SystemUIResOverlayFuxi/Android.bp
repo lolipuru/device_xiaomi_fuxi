@@ -1,4 +1,0 @@
-runtime_resource_overlay {
-    name: "SystemUIResOverlayFuxi",
-    product_specific: true
-}
