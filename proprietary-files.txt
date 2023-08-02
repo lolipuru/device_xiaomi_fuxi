@@ -659,7 +659,6 @@ odm/etc/fs_config_dirs
 odm/etc/fs_config_files
 odm/etc/group
 odm/etc/init.panel_info.sh
-odm/etc/init/android.hardware.biometrics.face-aidl-service.rc
 odm/etc/init/init.boled.lightsensor.rc
 odm/etc/init/init.cirrus.rc
 odm/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
@@ -1907,7 +1906,6 @@ vendor/etc/perf/testcommonresourceconfigs.xml
 vendor/etc/perf/testtargetresourceconfigs.xml
 vendor/etc/perf/thermal-boost.conf
 vendor/etc/perf/thermalbreakboostconfig.xml
-vendor/etc/permissions/android.hardware.biometrics.face.xml
 vendor/etc/permissions/android.hardware.hardware_keystore.xml
 vendor/etc/permissions/android.hardware.keystore.app_attest_key.xml
 vendor/etc/permissions/android.hardware.light.xml
@@ -3207,7 +3205,6 @@ vendor/lib64/android.hardware.authsecret@1.0.so
 vendor/lib64/android.hardware.automotive.vehicle@2.0-manager-lib.so
 vendor/lib64/android.hardware.automotive.vehicle@2.0.so
 vendor/lib64/android.hardware.biometrics.common-V2-ndk.so
-vendor/lib64/android.hardware.biometrics.face-V2-ndk.so
 vendor/lib64/android.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/android.hardware.bluetooth.audio@2.0.so
 vendor/lib64/android.hardware.bluetooth.audio@2.1.so
@@ -4570,7 +4567,6 @@ odm/lib64/libwvkeybox.so
 odm/lib64/nfc_nci.nqx.default.hw.so
 
 # Xiaomi Related blobs
-odm/bin/hw/android.hardware.biometrics.face-aidl-service
 odm/bin/hw/vendor.nxp.hardware.nfc@2.0-service
 odm/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service
 odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
