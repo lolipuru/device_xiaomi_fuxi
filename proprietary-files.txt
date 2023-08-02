@@ -631,17 +631,17 @@ odm/lib64/hw/consumerir.qcom.so
 
 # Misc.
 odm/etc/ueventd.rc
-odm/etc/vintf/manifest/face-default.xml
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mfidoca.xml
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mtdservice.xml
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.otrpagent@2.0.xml
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.tidaservice.xml
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
-odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
-odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
-odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
-odm/etc/vintf/manifest/vendor.xiaomi.sensor.communicate@1.0_manifest.xml
+-odm/etc/vintf/manifest/face-default.xml
+-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mfidoca.xml
+-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
+-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mtdservice.xml
+-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.otrpagent@2.0.xml
+-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.tidaservice.xml
+-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
+-odm/etc/vintf/manifest/vendor.xiaomi.hardware.vibratorfeature.service.xml
+-odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
+-odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
+-odm/etc/vintf/manifest/vendor.xiaomi.sensor.communicate@1.0_manifest.xml
 
 # Misc (to be nuke)
 odm/etc/default.lm
