@@ -109,6 +109,12 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_fuxi
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/qcom-battery/input_suspend
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED := 1
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
@@ -234,7 +240,8 @@ DEVICE_MANIFEST_KALAMA_FILES := \
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
-    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xiaomi.xml
+    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xiaomi.xml \
+    vendor/lineage/config/device_framework_matrix.xml
 
 # Vibrator
 $(call soong_config_set, XIAOMI_VIBRATOR, USE_EFFECT_STREAM, true)

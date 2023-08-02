@@ -575,6 +575,7 @@ subsystem mem_buf_vm
 
 # Battery
 /sys/class/qcom-battery                                 reverse_chg_mode                0644    system  system
+/sys/class/qcom-battery                                 input_suspend                   0660    system  system
 
 # hdmi cec hal
 /dev/cec*                                            0660    system  system
