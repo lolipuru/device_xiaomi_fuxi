@@ -3645,7 +3645,6 @@ odm/lib64/libmi_hdr_raw.so
 odm/lib64/libmi_llhdr_raw.so
 
 # vendor
-vendor/etc/vintf/manifest/android.hardware.health-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/android.hardware.radio.data.xml
 vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml
@@ -3704,7 +3703,6 @@ vendor/bin/hal_proxy_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
-vendor/bin/hw/android.hardware.health-service.qti
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
 vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/fbo-test
@@ -3764,7 +3762,6 @@ vendor/etc/charger_diag.cfg
 vendor/etc/charger_fw_fstab.qti
 vendor/etc/clstc_config_library.xml
 vendor/etc/hrtf5c.bin
-vendor/etc/init/android.hardware.health-service.qti.rc
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 vendor/etc/init/dcfd.rc
 vendor/etc/init/ddr_training.rc
