@@ -64,3 +64,10 @@ external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmwa
 external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.b03 system "/vendor/bin/vmmgr -r"
 external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.b04 system "/vendor/bin/vmmgr -r"
 external_firmware_handler /devices/platform/soc/soc:gh-secure-vm-loader@1/firmware/oemvm.b05 system "/vendor/bin/vmmgr -r"
+# xiaomi display feature
+subsystem mi_display
+    devname uevent_devpath
+    dirname /dev/mi_display
+
+# xiaomi display feature
+/dev/mi_display/*         0666   root       graphics

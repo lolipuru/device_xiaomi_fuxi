@@ -562,3 +562,19 @@ subsystem mem_buf_vm
 
 # devcoredump data attributes
 /sys/class/devcoredump/devcd*                           data                            0600    system  system
+
+# qdss sysfs node attributes
+/sys/bus/coresight/devices/coresight-tmc-etf/curr_sink          0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etf/enable_sink        0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etr/curr_sink          0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etr/enable_sink        0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etr/out_mode           0664   system   system
+/sys/bus/coresight/devices/coresight-tpiu/curr_sink             0664   system   system
+/sys/bus/coresight/devices/coresight-tpiu/out_mode              0664   system   system
+/sys/bus/coresight/devices/coresight-stm/enable                 0664   system   system
+/sys/bus/coresight/devices/coresight-stm/enable_source          0664   system   system
+/sys/bus/coresight/devices/coresight-hwevent/enable             0664   system   system
+/sys/bus/coresight/devices/coresight-stm/hwevent_enable         0664   system   system
+/sys/bus/coresight/devices/coresight-hwevent/setreg             0664   system   system
+/sys/bus/coresight/devices/coresight-swao-csr/timestamp         0664   system   system
+/sys/bus/coresight/devices/coresight-modem-diag/enable_source   0664   system   system
