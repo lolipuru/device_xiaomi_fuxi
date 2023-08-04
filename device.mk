@@ -274,7 +274,9 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
-    init.target.rc
+    init.target.rc \
+    ueventd-odm.rc \
+    ueventd.qcom.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
