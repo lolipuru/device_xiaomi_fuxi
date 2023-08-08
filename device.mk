@@ -181,6 +181,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libgralloc.qti \
+    libgui_vendor \
     libqdMetaData
 
 PRODUCT_COPY_FILES += \
