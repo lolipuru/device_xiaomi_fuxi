@@ -24,7 +24,7 @@
 /lib/modules/mi_cnss_statistic.ko:
 /lib/modules/qcom_tsens.ko: /lib/modules/qcom_ipc_logging.ko /lib/modules/minidump.ko /lib/modules/smem.ko /lib/modules/gh_rm_drv.ko /lib/modules/gh_dbl.ko /lib/modules/gh_msgq.ko /lib/modules/gh_arm_drv.ko
 /lib/modules/qcom-pdc.ko: /lib/modules/qcom-scm.ko /lib/modules/qcom_ipc_logging.ko /lib/modules/minidump.ko /lib/modules/smem.ko /lib/modules/gh_rm_drv.ko /lib/modules/gh_dbl.ko /lib/modules/gh_msgq.ko /lib/modules/gh_arm_drv.ko
-/lib/modules/pm8941-pwrkey.ko: /lib/modules/mtdoops.ko /lib/modules/mtd.ko
+/lib/modules/pm8941-pwrkey.ko:
 /lib/modules/memlat_vendor.ko:
 /lib/modules/qrtr-mhi.ko: /lib/modules/qrtr.ko /lib/modules/ns.ko /lib/modules/mhi.ko /lib/modules/pci-msm-drv.ko /lib/modules/rproc_qcom_common.ko /lib/modules/qcom_smd.ko /lib/modules/qcom_glink_smem.ko /lib/modules/qcom_glink.ko /lib/modules/qcom_ipc_logging.ko /lib/modules/minidump.ko /lib/modules/smem.ko /lib/modules/gh_rm_drv.ko /lib/modules/gh_dbl.ko /lib/modules/gh_msgq.ko /lib/modules/gh_arm_drv.ko /lib/modules/clk-qcom.ko /lib/modules/gdsc-regulator.ko /lib/modules/debug-regulator.ko /lib/modules/proxy-consumer.ko
 /lib/modules/qcom_cpuss_sleep_stats.ko: /lib/modules/qcom-scm.ko
@@ -87,7 +87,7 @@
 /lib/modules/rpmh-regulator.ko: /lib/modules/qcom_rpmh.ko /lib/modules/cmd-db.ko /lib/modules/qcom_ipc_logging.ko /lib/modules/minidump.ko /lib/modules/smem.ko /lib/modules/gh_rm_drv.ko /lib/modules/gh_dbl.ko /lib/modules/gh_msgq.ko /lib/modules/gh_arm_drv.ko /lib/modules/debug-regulator.ko /lib/modules/proxy-consumer.ko
 /lib/modules/qcom_glink.ko: /lib/modules/qcom_ipc_logging.ko /lib/modules/minidump.ko /lib/modules/smem.ko /lib/modules/gh_rm_drv.ko /lib/modules/gh_dbl.ko /lib/modules/gh_msgq.ko /lib/modules/gh_arm_drv.ko
 /lib/modules/mhi.ko: /lib/modules/pci-msm-drv.ko /lib/modules/rproc_qcom_common.ko /lib/modules/qcom_smd.ko /lib/modules/qcom_glink_smem.ko /lib/modules/qcom_glink.ko /lib/modules/qcom_ipc_logging.ko /lib/modules/minidump.ko /lib/modules/smem.ko /lib/modules/gh_rm_drv.ko /lib/modules/gh_dbl.ko /lib/modules/gh_msgq.ko /lib/modules/gh_arm_drv.ko /lib/modules/clk-qcom.ko /lib/modules/gdsc-regulator.ko /lib/modules/debug-regulator.ko /lib/modules/proxy-consumer.ko
-/lib/modules/mtdoops.ko: /lib/modules/mtd.ko
+/lib/modules/mtdoops.ko: /lib/modules/pm8941-pwrkey.ko /lib/modules/mtd.ko
 /lib/modules/qcom-scm.ko:
 /lib/modules/qcom_smd.ko: /lib/modules/smem.ko
 /lib/modules/icc-test.ko:
