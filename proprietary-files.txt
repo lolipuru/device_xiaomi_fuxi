@@ -1802,6 +1802,9 @@ odm/lib/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so
 odm/lib64/libgf_hal.so
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
+vendor/etc/init/init.mfp-daemon.rc
+vendor/lib64/com.fingerprints.extension@3.0.so
+vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
 # FM
 vendor/etc/init.qti.fm.sh
@@ -2576,8 +2579,15 @@ system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/framework/qcrilhook.jar
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
+system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
@@ -2585,6 +2595,7 @@ system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/ims.apk
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/app/IWlanService/IWlanService.apk
@@ -3145,6 +3156,15 @@ vendor/lib64/libtime_genoff.so
 odm/firmware/st_fts_m3.ftb
 odm/firmware/stm_fts_production_limits.csv
 
+# Touch Feature
+odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
+odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
+odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
+odm/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
+vendor/lib/vendor.xiaomi.hw.touchfeature@1.0.so
+odm/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
+vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
+
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/lib/libGPQTEEC_vendor.so
@@ -3526,66 +3546,22 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 # Xiaomi MAC address
 vendor/bin/nv_mac
 
-# Audio
-odm/bin/audio-factory-test
-odm/etc/audio-test-config
-odm/etc/audio/RES1K.wav
-odm/etc/audio/bottom_spk.wav
-odm/etc/audio/bottom_spk_hp.wav
-odm/etc/audio/hrtf5c.bin
-odm/etc/audio/rcv.wav
-odm/etc/audio/rcv_hp.wav
-odm/etc/audio/rcv_seal.wav
-odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
-odm/etc/audio/spk.wav
-odm/etc/audio/test.wav
-odm/etc/audio/top_spk.wav
-odm/etc/audio/top_spk_hp.wav
-odm/etc/audio_policy_engine_configuration_mi.xml
-odm/etc/audio_policy_engine_default_stream_volumes.xml
-odm/etc/audio_policy_engine_product_strategies.xml
-odm/etc/audio_policy_engine_stream_volumes.xml
-odm/etc/dolby/dax-default.xml
-
 # Display
 odm/etc/dolby_vision.cfg
-odm/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
 odm/lib64/libMiDispDevManager.so
 odm/lib64/libmi_hdr_raw.so
 odm/lib64/libmi_llhdr_raw.so
 
 # Misc.
-odm/etc/ueventd.rc
 -odm/etc/vintf/manifest/face-default.xml
--odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.otrpagent@2.0.xml
--odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.vsimapp.xml
--odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
 
 # Misc (to be nuke)
-odm/etc/default.lm
-odm/etc/device_info_qr_config.yml
-odm/etc/device_sar_config.xml
-odm/etc/fs_config_dirs
-odm/etc/fs_config_files
-odm/etc/group
 odm/etc/init.panel_info.sh
 odm/etc/init/init.boled.lightsensor.rc
 odm/etc/init/init.cirrus.rc
-odm/etc/merged_language_model.lat
-odm/etc/miperf_actvity_cfg.xml
-odm/etc/miperf_app_cfg.xml
-odm/etc/miperf_contable.xml
-odm/etc/miperflock_activity_cfg.xml
-odm/etc/passwd
 odm/lib64/libmiphone_preview_mdbokeh.so
-odm/overlay/FrameworksResTarget_Vendor.apk
-
-# Touch Feature
-odm/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
 
 # vendor
--vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 -vendor/etc/vintf/manifest/android.hardware.health-service.qti.xml
 -vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 -vendor/etc/vintf/manifest/android.hardware.radio.data.xml
@@ -3597,7 +3573,6 @@ odm/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
 -vendor/etc/vintf/manifest/bluetooth_audio.xml
 -vendor/etc/vintf/manifest/deviceinfo-saidl.xml
 -vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
--vendor/etc/vintf/manifest/fod.xml
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miface.xml
 -vendor/etc/vintf/manifest/memtrack_qti.xml
 -vendor/etc/vintf/manifest/mi-misight.xml
@@ -3617,7 +3592,6 @@ odm/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
 -vendor/etc/vintf/manifest/vendor.xiaomi.hardware.miperf@1.0.xml
 -vendor/etc/vintf/manifest/vendor.xiaomi.modem.qms.xml
 vendor/app/EidService/EidService.apk
-vendor/app/QFingerprintService/QFingerprintService.apk
 vendor/app/TrustedUIService/TrustedUIService.apk
 vendor/bin/AnchorTest
 vendor/bin/COSNet_spatial_8bit_quantized.serialized.bin
@@ -3752,20 +3726,6 @@ vendor/bin/wlanramdumpcollector
 vendor/bin/xiaomi_cellinfo_test
 vendor/bin/xiaomi_extend_cmd
 vendor/etc/1-SN1X0_SPC.txt
-vendor/etc/a2dp_audio_policy_configuration.xml
-vendor/etc/audio/sku_kalama/adsp_sleep_monitor.conf
-vendor/etc/audio/sku_kalama/audio_effects.conf
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
-vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
-vendor/etc/audio_diag.cfg
-vendor/etc/audio_policy_configuration.xml
-vendor/etc/bluetooth_qti_audio_policy_configuration.xml
 vendor/etc/charger_diag.cfg
 vendor/etc/charger_fw_fstab.qti
 vendor/etc/clstc_config_library.xml
@@ -3788,7 +3748,6 @@ vendor/etc/init/hw/init.qti.kernel.test.rc
 vendor/etc/init/hw/init.qti.ufs.rc
 vendor/etc/init/init.charge_logger.rc
 vendor/etc/init/init.hwinfo.rc
-vendor/etc/init/init.mfp-daemon.rc
 vendor/etc/init/init.qccvendor.rc
 vendor/etc/init/init.spuservice.rc
 vendor/etc/init/init.vendor.qti.spu@1.1-service.rc
@@ -3846,7 +3805,6 @@ vendor/etc/permissions/android.software.device_id_attestation.xml
 vendor/etc/permissions/android.software.opengles.deqp.level.xml
 vendor/etc/permissions/android.software.vulkan.deqp.level.xml
 vendor/etc/permissions/camera_extensions.xml
-vendor/etc/permissions/qti_fingerprint_interface.xml
 vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/etc/qvirtmgr-vndr.json
 vendor/etc/res/images/default/charger/battery_fail.png
@@ -3865,9 +3823,6 @@ vendor/etc/thermal-engine.conf
 vendor/etc/thermal-map.conf
 vendor/etc/thermald-devices.conf
 vendor/etc/tzlog.dict
-vendor/etc/ueventd.rc
-vendor/etc/usb_audio_policy_configuration.xml
-vendor/etc/usb_compositions.conf
 vendor/etc/wifi/icm.conf
 vendor/etc/wifi/kiwi/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
@@ -3882,17 +3837,7 @@ vendor/etc/xiaomi_ecc_list_preference.xml
 vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/CAMERA_ICP_170.elf
 vendor/framework/androidx.camera.extensions.impl.jar
-vendor/lib/android.frameworks.cameraservice.common@2.0.so
-vendor/lib/android.frameworks.cameraservice.device@2.0.so
-vendor/lib/android.frameworks.cameraservice.device@2.1.so
-vendor/lib/android.frameworks.cameraservice.service@2.0.so
-vendor/lib/android.frameworks.cameraservice.service@2.1.so
-vendor/lib/android.frameworks.cameraservice.service@2.2.so
 vendor/lib/android.hardware.authsecret@1.0.so
-vendor/lib/android.hardware.graphics.composer@2.1.so
-vendor/lib/android.hardware.graphics.composer@2.2.so
-vendor/lib/android.hardware.graphics.composer@2.3.so
-vendor/lib/android.hardware.graphics.composer@2.4.so
 vendor/lib/com.xiaomi.camhal.overlap.so
 vendor/lib/com.xiaomi.camhal.submodel.camxfrag.so
 vendor/lib/com.xiaomi.camhal.submodel.chifrag.so
@@ -3956,7 +3901,6 @@ vendor/lib/libmediautils_vendor.so
 vendor/lib/libmiClstc.so
 vendor/lib/libmidebuggerdimpl_vendor.so
 vendor/lib/libmisight.so
-vendor/lib/libmisoundsa.so
 vendor/lib/libmispowerop.so
 vendor/lib/libnanopb.so
 vendor/lib/libnative-api.so
@@ -3993,30 +3937,7 @@ vendor/lib/libvui_dmgr.so
 vendor/lib/libvui_dmgr_client.so
 vendor/lib/nfc_nci.st21nfc.st.so
 vendor/lib/qsysd-diag-plugin/libffbmdiagplugin.so
-vendor/lib/rfsa/adsp/tests/libbenchmark_skel.so
-vendor/lib/rfsa/adsp/tests/libfastrpc_tests1_skel.so
-vendor/lib/rfsa/adsp/tests/libfastrpc_tests_skel.so
-vendor/lib/rfsa/adsp/tests/libhap_power_test_skel.so
-vendor/lib/rfsa/adsp/tests/librpcperf1_skel.so
-vendor/lib/rfsa/adsp/tests/librpcperf_skel.so
-vendor/lib/rfsa/adsp/tests/libtest_dl1_skel.so
-vendor/lib/rfsa/adsp/tests/libtest_dl_perf1_skel.so
-vendor/lib/rfsa/adsp/tests/libtest_dl_perf_skel.so
-vendor/lib/rfsa/adsp/tests/libtest_dl_skel.so
-vendor/lib/rfsa/adsp/tests/libunsigned_pd_test_skel.so
-vendor/lib/rfsa/adsp/tests/test_elf_dep1.so
-vendor/lib/rfsa/adsp/tests/test_elf_dep2.so
-vendor/lib/rfsa/adsp/tests/test_elf_nop.so
-vendor/lib/rfsa/adsp/tests/test_elf_size_128k.so
-vendor/lib/rfsa/adsp/tests/test_elf_size_16k.so
-vendor/lib/rfsa/adsp/tests/test_elf_size_1MB.so
-vendor/lib/rfsa/adsp/tests/test_elf_size_256k.so
-vendor/lib/rfsa/adsp/tests/test_elf_size_32k.so
-vendor/lib/rfsa/adsp/tests/test_elf_size_512k.so
-vendor/lib/rfsa/adsp/tests/test_elf_size_64k.so
-vendor/lib/rfsa/adsp/tests/test_elf_size_768k.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
-vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
 vendor/lib/vendor.qti.hardware.qxr-V1-ndk.so
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib/vendor.qti.ims.callcapability@1.0.so
@@ -4054,20 +3975,9 @@ vendor/lib/vendor.xiaomi.hidl.minet@1.0-impl.so
 vendor/lib/vendor.xiaomi.hidl.minet@1.0.so
 vendor/lib/vendor.xiaomi.hidl.miwill@1.0-impl.so
 vendor/lib/vendor.xiaomi.hidl.miwill@1.0.so
-vendor/lib/vendor.xiaomi.hw.touchfeature@1.0.so
 vendor/lib/vndk/libstagefright_foundation.so
 vendor/lib/vndk/libstagefright_omx.so
-vendor/lib64/android.frameworks.cameraservice.common@2.0.so
-vendor/lib64/android.frameworks.cameraservice.device@2.0.so
-vendor/lib64/android.frameworks.cameraservice.device@2.1.so
-vendor/lib64/android.frameworks.cameraservice.service@2.0.so
-vendor/lib64/android.frameworks.cameraservice.service@2.1.so
-vendor/lib64/android.frameworks.cameraservice.service@2.2.so
 vendor/lib64/android.hardware.authsecret@1.0.so
-vendor/lib64/android.hardware.graphics.composer@2.1.so
-vendor/lib64/android.hardware.graphics.composer@2.2.so
-vendor/lib64/android.hardware.graphics.composer@2.3.so
-vendor/lib64/android.hardware.graphics.composer@2.4.so
 vendor/lib64/android.hardware.security.keymint-V1-ndk.so
 vendor/lib64/android.system.keystore2-V1-ndk.so
 vendor/lib64/android.system.net.netd@1.0.so
@@ -4080,7 +3990,6 @@ vendor/lib64/c2.dolby.hevc.dec.so
 vendor/lib64/c2.dolby.hevc.enc.so
 vendor/lib64/c2.dolby.hevc.sec.dec.so
 vendor/lib64/c2.dolby.store.so
-vendor/lib64/com.fingerprints.extension@3.0.so
 vendor/lib64/com.xiaomi.camhal.overlap.so
 vendor/lib64/com.xiaomi.camhal.submodel.camxfrag.so
 vendor/lib64/com.xiaomi.camhal.submodel.chifrag.so
@@ -4111,7 +4020,6 @@ vendor/lib64/libSnpeHtpV68Stub.so
 vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/libTxPwrJni.so
 vendor/lib64/libXMFaceFocus.so
-vendor/lib64/lib_misound_asc.so
 vendor/lib64/libaodoptfeature.so
 vendor/lib64/libarcsoft_hdr_detection.so
 vendor/lib64/libarcsoft_super_night_detection.so
@@ -4171,7 +4079,6 @@ vendor/lib64/libmis_plugin_qisv2.so
 vendor/lib64/libmis_plugin_qisv3.so
 vendor/lib64/libmis_plugin_vidhance.so
 vendor/lib64/libmisight.so
-vendor/lib64/libmisoundsa.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libnative-api.so
 vendor/lib64/liboem_specific.so
@@ -4212,7 +4119,6 @@ vendor/lib64/libxmi_slow_motion_triger.so
 vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 vendor/lib64/vendor.qti.hardware.limits@1.0.so
@@ -4227,7 +4133,6 @@ vendor/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.miface@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.miperf@1.0.so
@@ -4236,10 +4141,7 @@ vendor/lib64/vendor.xiaomi.hidl.minet@1.0-impl.so
 vendor/lib64/vendor.xiaomi.hidl.minet@1.0.so
 vendor/lib64/vendor.xiaomi.hidl.miwill@1.0-impl.so
 vendor/lib64/vendor.xiaomi.hidl.miwill@1.0.so
-vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
 vendor/lib64/vendor.xiaomi.modem.qms@1.0.so
-vendor/lib64/vndk/libnl.so
-vendor/rfs/rfs_symlinks
 
 # Will sort later
 odm/lib/libaudioroute_ext.so
@@ -4247,7 +4149,6 @@ odm/lib/libclient2slpi.notifier.so
 odm/lib/libcrussp.so
 odm/lib/libssccalapi@2.0.so
 odm/lib/libteeclientjni.so
-odm/lib/libvsim.so
 odm/lib64/libaachaptics.so
 odm/lib64/libaudioroute_ext.so
 odm/lib64/libceresNM.so
@@ -4269,17 +4170,5 @@ odm/lib64/libwrapper_dlengine.so
 odm/lib64/libwvkeybox.so
 
 # Xiaomi Related blobs
-odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
 odm/bin/mifaced@1.0
-odm/bin/vendor.xiaomi.hardware.otrpagent@2.0-service
-odm/etc/XiaoAiNiZaiNa.uim
-odm/etc/XiaoAiNiZaiNaMi.udm
-odm/etc/XiaoAiTongXue.uim
-odm/etc/XiaoAiTongXueMi.udm
 odm/etc/init/vendor.xiaomi.hardware.miface@1.0-service.rc
-odm/etc/init/vendor.xiaomi.hardware.otrpagent@2.0-service.rc
-odm/etc/init/vendor.xiaomi.hardware.vsimapp@1.0-service.rc
-odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
-odm/lib/vendor.xiaomi.hardware.vsimapp@1.0.so
-odm/lib64/vendor.xiaomi.hardware.otrpagent@2.0-impl.so
-odm/lib64/vendor.xiaomi.hardware.otrpagent@2.0.so
