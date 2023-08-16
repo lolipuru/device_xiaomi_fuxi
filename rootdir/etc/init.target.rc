@@ -268,12 +268,27 @@ on post-fs-data
     #QCC mode configuration
     setprop vendor.qti.qcc.oper.mode 3
 
+    mkdir /data/vendor/misc 01771 system system
+    mkdir /data/vendor/misc/mi_fp 0770 system system
+    mkdir /persist/mi_fp 0770 system system
+    mkdir /mnt/vendor/persist/mi_fp 0770 system system
+    mkdir /data/vendor/fpdump 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /data/vendor/fingerprint 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
+
 on early-boot
     start vendor.sensors
     #Enable WLAN SSR recovery
     write /sys/kernel/cnss/recovery 3
 
+    chown system graphics /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
+    chmod 0664 /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
+
 on boot
+    chmod 0666 /dev/input/event2
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
     chown system system /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/balance_mode
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/torch_real_level
