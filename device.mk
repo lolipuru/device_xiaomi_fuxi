@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 # Dtb
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/dtb:dtb.img
