@@ -57,3 +57,6 @@ ro.hardware.wlan.chip=kiwi_v2
 ro.hardware.wlan.dbs=2
 ro.hardware.wlan.mimo=1
 ro.hardware.wlan.vendor=qcom
+
+# LMK properties
+ro.lmk.kill_heaviest_task=true
