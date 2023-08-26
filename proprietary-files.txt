@@ -3835,8 +3835,6 @@ vendor/etc/modem/Diag_global.cfg
 vendor/etc/modem/Diag_ims.cfg
 vendor/etc/permissions/android.hardware.light.xml
 vendor/etc/permissions/android.software.device_id_attestation.xml
-vendor/etc/permissions/android.software.opengles.deqp.level.xml
-vendor/etc/permissions/android.software.vulkan.deqp.level.xml
 vendor/etc/permissions/camera_extensions.xml
 vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/etc/qvirtmgr-vndr.json
