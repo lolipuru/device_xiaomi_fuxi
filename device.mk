@@ -244,10 +244,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
-# JSON
-PRODUCT_PACKAGES += \
-    libjson
-
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
@@ -255,6 +251,9 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail_vendor \
+    libavservices_minijail.vendor \
     libcodec2_hidl@1.2.vendor \
     libsfplugin_ccodec_utils.vendor
 
@@ -274,10 +273,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
-
-# Minijail
-PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor
 
 # Network
 PRODUCT_PACKAGES += \
@@ -343,6 +338,8 @@ PRODUCT_COPY_FILES += \
 
 # QTI
 PRODUCT_PACKAGES += \
+    libjson \
+    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti_vendor \
     vendor.qti.hardware.systemhelper@1.0.vendor
 
