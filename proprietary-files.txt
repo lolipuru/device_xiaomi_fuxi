@@ -3833,7 +3833,6 @@ vendor/etc/modem/Diag_data.cfg
 vendor/etc/modem/Diag_default.cfg
 vendor/etc/modem/Diag_global.cfg
 vendor/etc/modem/Diag_ims.cfg
-vendor/etc/permissions/android.hardware.keystore.app_attest_key.xml
 vendor/etc/permissions/android.hardware.light.xml
 vendor/etc/permissions/android.software.device_id_attestation.xml
 vendor/etc/permissions/android.software.opengles.deqp.level.xml
@@ -4006,8 +4005,6 @@ vendor/lib/vendor.xiaomi.hardware.miperf@1.0.so
 vendor/lib/vndk/libstagefright_foundation.so
 vendor/lib/vndk/libstagefright_omx.so
 vendor/lib64/android.hardware.authsecret@1.0.so
-vendor/lib64/android.hardware.security.keymint-V1-ndk.so
-vendor/lib64/android.system.keystore2-V1-ndk.so
 vendor/lib64/android.system.net.netd@1.0.so
 vendor/lib64/android.system.net.netd@1.1.so
 vendor/lib64/com.xiaomi.camhal.overlap.so
