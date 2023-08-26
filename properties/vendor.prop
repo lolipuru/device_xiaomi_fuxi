@@ -259,6 +259,7 @@ persist.vendor.dpm.vndr.feature=11
 drm.service.enabled=true
 
 # Fingerprint
+persist.vendor.sys.fp.dump_data=0
 persist.vendor.sys.fp.expolevel=0x88
 persist.vendor.sys.fp.fod.location.X_Y=442,2052
 persist.vendor.sys.fp.fod.size.width_height=196,196

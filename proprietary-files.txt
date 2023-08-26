@@ -809,7 +809,6 @@ odm/lib/camera/com.qti.tuned.fuxi_sunny_imx800_wide.bin
 odm/lib/camera/com.qti.tuned.fuxi_sunny_ov32c_front.bin
 odm/lib/camera/com.qti.tuned.fuxi_sunny_ov32c_front_global.bin
 odm/lib/camera/com.qti.tuned.tpg.bin
-odm/lib/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so
 odm/lib/libmiface.so
 odm/lib/libmituning_datacenter.so
 odm/lib/libmituning_datacenter_base.so
@@ -1268,6 +1267,7 @@ vendor/lib64/libsdsprpc.so
 odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service
 odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@2.0-service.xml
+odm/lib/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so
 odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so
 vendor/lib/vendor.xiaomi.sensor.citsensorservice@1.1.so
 vendor/lib/vendor.xiaomi.sensor.citsensorservice@2.0.so
@@ -1806,14 +1806,12 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 product/priv-app/EuiccGoogle/EuiccGoogle.apk|2d238bfe14473b8f578bf0d4ea61246f61d0f618;PRESIGNED
 
 # Fingerprint
-odm/app/goodix_sz/goodix_sz.apk
-odm/lib/hw/fingerprint.goodix_fod.so:odm/lib/hw/fingerprint.goodix_fod.default.so
+odm/lib/hw/fingerprint.goodix_fod.so:vendor/lib/hw/fingerprint.goodix_fod.default.so
 odm/lib/libgf_hal.so
 odm/lib/vendor.xiaomi.hardware.fx.tunnel@1.0.so
-odm/lib64/hw/fingerprint.goodix_fod.so:odm/lib64/hw/fingerprint.goodix_fod.default.so
+odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
 odm/lib64/libgf_hal.so
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
-vendor/etc/init/init.mfp-daemon.rc
 vendor/etc/vintf/manifest/fod.xml
 vendor/lib64/com.fingerprints.extension@3.0.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
@@ -3210,8 +3208,9 @@ vendor/lib64/libtime_genoff.so
 odm/firmware/st_fts_m3.ftb
 odm/firmware/stm_fts_production_limits.csv
 
-# Touch Feature
+# TouchFeature
 odm/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
+odm/etc/init.panel_info.sh
 odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
 odm/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
 odm/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
@@ -3609,7 +3608,6 @@ odm/lib64/libmi_llhdr_raw.so
 odm/etc/vintf/manifest/face-default.xml
 
 # Misc (to be nuke)
-odm/etc/init.panel_info.sh
 odm/etc/init/init.boled.lightsensor.rc
 odm/etc/init/init.cirrus.rc
 odm/lib64/libmiphone_preview_mdbokeh.so
@@ -3626,9 +3624,7 @@ vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
 vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/deviceinfo-saidl.xml
 vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
-vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.miface.xml
 vendor/etc/vintf/manifest/memtrack_qti.xml
-vendor/etc/vintf/manifest/mi-misight.xml
 vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
@@ -3641,7 +3637,6 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml
-vendor/etc/vintf/manifest/vendor.xiaomi.hardware.miperf@1.0.xml
 vendor/app/EidService/EidService.apk
 vendor/app/TrustedUIService/TrustedUIService.apk
 vendor/bin/AnchorTest
@@ -3695,7 +3690,6 @@ vendor/bin/hw/android.hardware.health-service.qti
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
 vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/fbo-test
-vendor/bin/hw/miperf_client
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/bin/hw/vendor.qti.camera.provider-service_64
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
@@ -3703,8 +3697,6 @@ vendor/bin/hw/vendor.qti.hardware.lights.service
 vendor/bin/hw/vendor.qti.hardware.limits@1.2-service
 vendor/bin/hw/vendor.qti.hardware.memtrack-service
 vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
-vendor/bin/hw/vendor.xiaomi.hardware.miperf@1.0-service
-vendor/bin/hw/vendor.xiaomi.hardware.misight.service
 vendor/bin/hwinfo
 vendor/bin/init.crda.sh
 vendor/bin/init.mdm.sh
@@ -3724,9 +3716,7 @@ vendor/bin/iwpriv
 vendor/bin/mbnota
 vendor/bin/mcs_test
 vendor/bin/mec
-vendor/bin/minetd
 vendor/bin/minidump64
-vendor/bin/miwild
 vendor/bin/mm-audio-ftm
 vendor/bin/mmid
 vendor/bin/modem_api_test
@@ -3796,10 +3786,7 @@ vendor/etc/init/init.spuservice.rc
 vendor/etc/init/init.vendor.qti.spu@1.1-service.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/memtrack_qti.rc
-vendor/etc/init/mi-misight.rc
-vendor/etc/init/minetd.rc
 vendor/etc/init/minidump.rc
-vendor/etc/init/miwild.rc
 vendor/etc/init/qms.rc
 vendor/etc/init/qwesd.rc
 vendor/etc/init/shsusrd.rc
@@ -3818,7 +3805,6 @@ vendor/etc/init/vendor.qti.hardware.limits-service.rc
 vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wificfr@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.miperf@1.0-service.rc
 vendor/etc/init/wlanramdumpcollector.rc
 vendor/etc/kvh2xml.xml
 vendor/etc/media_codecs.xml
@@ -3875,7 +3861,6 @@ vendor/lib/com.xiaomi.camhal.submodel.chifrag.so
 vendor/lib/ftm_fm_lib.so
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib/hw/sensors.dynamic_sensor_hal.so
-vendor/lib/hw/vendor.xiaomi.hardware.miperf@1.0-impl.so
 vendor/lib/libDspIOProxy_stub.so
 vendor/lib/libGPMTEEC_vendor.so
 vendor/lib/libMapService.so
@@ -3930,7 +3915,6 @@ vendor/lib/libmdmdetect.so
 vendor/lib/libmediautils_vendor.so
 vendor/lib/libmiClstc.so
 vendor/lib/libmidebuggerdimpl_vendor.so
-vendor/lib/libmisight.so
 vendor/lib/libmispowerop.so
 vendor/lib/libnanopb.so
 vendor/lib/libnative-api.so
@@ -3998,8 +3982,6 @@ vendor/lib/vendor.qti.qesdhal@1.1.so
 vendor/lib/vendor.qti.qesdhal@1.2.so
 vendor/lib/vendor.qti.qesdhal@1.3.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
-vendor/lib/vendor.xiaomi.hardware.miface@1.0.so
-vendor/lib/vendor.xiaomi.hardware.miperf@1.0.so
 vendor/lib/vndk/libstagefright_foundation.so
 vendor/lib/vndk/libstagefright_omx.so
 vendor/lib64/android.hardware.authsecret@1.0.so
@@ -4010,7 +3992,6 @@ vendor/lib64/com.xiaomi.camhal.submodel.camxfrag.so
 vendor/lib64/com.xiaomi.camhal.submodel.chifrag.so
 vendor/lib64/ftm_fm_lib.so
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
-vendor/lib64/hw/vendor.xiaomi.hardware.miperf@1.0-impl.so
 vendor/lib64/libCOSNet_spatial_qnn_quantized.so
 vendor/lib64/libDcfHalBleProto.so
 vendor/lib64/libDcfHalFramework.so
@@ -4086,7 +4067,6 @@ vendor/lib64/libmis_plugin_morpho.so
 vendor/lib64/libmis_plugin_qisv2.so
 vendor/lib64/libmis_plugin_qisv3.so
 vendor/lib64/libmis_plugin_vidhance.so
-vendor/lib64/libmisight.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libnative-api.so
 vendor/lib64/liboem_specific.so
@@ -4141,9 +4121,6 @@ vendor/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.miface@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.miperf@1.0.so
-vendor/lib64/vendor.xiaomi.hardware.misight-V1-ndk_platform.so
 
 # Will sort later
 odm/lib/libaudioroute_ext.so
@@ -4170,7 +4147,3 @@ odm/lib64/libsupermoon.so
 odm/lib64/libteeclientjni.so
 odm/lib64/libwrapper_dlengine.so
 odm/lib64/libwvkeybox.so
-
-# Xiaomi Related blobs
-odm/bin/mifaced@1.0
-odm/etc/init/vendor.xiaomi.hardware.miface@1.0-service.rc
