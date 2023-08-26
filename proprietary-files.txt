@@ -3610,7 +3610,6 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge@1.0.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.miperf@1.0.xml
-vendor/etc/vintf/manifest/vendor.xiaomi.modem.qms.xml
 vendor/app/EidService/EidService.apk
 vendor/app/TrustedUIService/TrustedUIService.apk
 vendor/bin/AnchorTest
@@ -3677,9 +3676,6 @@ vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
 vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.miperf@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.misight.service
-vendor/bin/hw/vendor.xiaomi.hidl.minet@1.0-service
-vendor/bin/hw/vendor.xiaomi.hidl.miwill@1.0-service
-vendor/bin/hw/vendor.xiaomi.modem.qms@1.0-service
 vendor/bin/hwinfo
 vendor/bin/init.crda.sh
 vendor/bin/init.mdm.sh
@@ -3798,9 +3794,6 @@ vendor/etc/init/vendor.qti.hardware.wifi.wificfr@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.micharge@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.miperf@1.0-service.rc
-vendor/etc/init/vendor.xiaomi.hidl.minet@1.0-service.rc
-vendor/etc/init/vendor.xiaomi.hidl.miwill@1.0-service.rc
-vendor/etc/init/vendor.xiaomi.modem.qms@1.0-service.rc
 vendor/etc/init/wlanramdumpcollector.rc
 vendor/etc/kvh2xml.xml
 vendor/etc/media_codecs.xml
@@ -3989,10 +3982,6 @@ vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib/vendor.xiaomi.hardware.micharge@1.0.so
 vendor/lib/vendor.xiaomi.hardware.miface@1.0.so
 vendor/lib/vendor.xiaomi.hardware.miperf@1.0.so
-vendor/lib/vendor.xiaomi.hidl.minet@1.0-impl.so
-vendor/lib/vendor.xiaomi.hidl.minet@1.0.so
-vendor/lib/vendor.xiaomi.hidl.miwill@1.0-impl.so
-vendor/lib/vendor.xiaomi.hidl.miwill@1.0.so
 vendor/lib/vndk/libstagefright_foundation.so
 vendor/lib/vndk/libstagefright_omx.so
 vendor/lib64/android.hardware.authsecret@1.0.so
@@ -4155,11 +4144,6 @@ vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.miface@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.miperf@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.misight-V1-ndk_platform.so
-vendor/lib64/vendor.xiaomi.hidl.minet@1.0-impl.so
-vendor/lib64/vendor.xiaomi.hidl.minet@1.0.so
-vendor/lib64/vendor.xiaomi.hidl.miwill@1.0-impl.so
-vendor/lib64/vendor.xiaomi.hidl.miwill@1.0.so
-vendor/lib64/vendor.xiaomi.modem.qms@1.0.so
 
 # Will sort later
 odm/lib/libaudioroute_ext.so

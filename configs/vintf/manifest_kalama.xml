@@ -542,24 +542,4 @@
         </interface>
         <fqname>@1.0::IBGService/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hidl.minet</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMiNetService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IMiNetService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hidl.miwill</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMiwillService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IMiwillService/default</fqname>
-    </hal>
 </manifest>
