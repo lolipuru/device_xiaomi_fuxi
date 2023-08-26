@@ -101,3 +101,6 @@
 
 # Vibrator
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi_sm8450 u:object_r:hal_vibrator_default_exec:s0
+
+# Dolby
+/vendor/bin/hw/dolbycodec2			     u:object_r:mediacodec_exec:s0

@@ -2163,6 +2163,31 @@ vendor/lib64/libstagefrighthw.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
+# Media (Dolby Vision)
+odm/etc/dolby/dax-default.xml
+odm/etc/dolby_vision.cfg
+vendor/bin/hw/dolbycodec2
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/init/dolbycodec2.rc
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_no_dolbyencoder_vendor.xml
+vendor/lib64/c2.dolby.avc.dec.so
+vendor/lib64/c2.dolby.avc.sec.dec.so
+vendor/lib64/c2.dolby.client.so
+vendor/lib64/c2.dolby.egl.so
+vendor/lib64/c2.dolby.hevc.dec.so
+vendor/lib64/c2.dolby.hevc.enc.so
+vendor/lib64/c2.dolby.hevc.sec.dec.so
+vendor/lib64/c2.dolby.store.so
+vendor/lib64/libcodec2_soft_ac4dec.so
+vendor/lib64/libcodec2_soft_ddpdec.so
+vendor/lib64/libcodec2_store_dolby.so
+vendor/lib64/libdeccfg.so
+vendor/lib64/libdolbyottcameracontrol.so
+vendor/lib64/libdolbyvision.so
+
 # Mlipay
 odm/bin/mlipayd@1.1
 odm/bin/mtd@1.3
@@ -3567,7 +3592,6 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 vendor/bin/nv_mac
 
 # Display
-odm/etc/dolby_vision.cfg
 odm/lib64/libMiDispDevManager.so
 odm/lib64/libmi_hdr_raw.so
 odm/lib64/libmi_llhdr_raw.so
@@ -3662,11 +3686,9 @@ vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
 vendor/bin/hw/android.hardware.health-service.qti
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
 vendor/bin/hw/capabilityconfigstoretest
-vendor/bin/hw/dolbycodec2
 vendor/bin/hw/fbo-test
 vendor/bin/hw/miperf_client
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/bin/hw/vendor.dolby.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.camera.provider-service_64
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
 vendor/bin/hw/vendor.qti.hardware.lights.service
@@ -3745,7 +3767,6 @@ vendor/etc/1-SN1X0_SPC.txt
 vendor/etc/charger_diag.cfg
 vendor/etc/charger_fw_fstab.qti
 vendor/etc/clstc_config_library.xml
-vendor/etc/dolby/dax-default.xml
 vendor/etc/ftm_test_config
 vendor/etc/ftm_test_config_kalama-grd-snd-card
 vendor/etc/ftm_test_config_kalama-qrd-snd-card
@@ -3756,7 +3777,6 @@ vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 vendor/etc/init/dcfd.rc
 vendor/etc/init/ddr_training.rc
 vendor/etc/init/diagcommd.rc
-vendor/etc/init/dolbycodec2.rc
 vendor/etc/init/dumpstate-xiaomi.rc
 vendor/etc/init/ffu.rc
 vendor/etc/init/hw/init.qcom.factory.rc
@@ -3778,7 +3798,6 @@ vendor/etc/init/qwesd.rc
 vendor/etc/init/shsusrd.rc
 vendor/etc/init/slad.rc
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/init/vendor.mbnota.rc
 vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/init/vendor.qsap.qapeservice.rc
@@ -3797,9 +3816,7 @@ vendor/etc/init/vendor.xiaomi.hardware.miperf@1.0-service.rc
 vendor/etc/init/wlanramdumpcollector.rc
 vendor/etc/kvh2xml.xml
 vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/media_codecs_kalama_vendor.xml
-vendor/etc/media_codecs_no_dolbyencoder_vendor.xml
 vendor/etc/media_codecs_performance_kalama_vendor.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
@@ -3989,14 +4006,6 @@ vendor/lib64/android.hardware.security.keymint-V1-ndk.so
 vendor/lib64/android.system.keystore2-V1-ndk.so
 vendor/lib64/android.system.net.netd@1.0.so
 vendor/lib64/android.system.net.netd@1.1.so
-vendor/lib64/c2.dolby.avc.dec.so
-vendor/lib64/c2.dolby.avc.sec.dec.so
-vendor/lib64/c2.dolby.client.so
-vendor/lib64/c2.dolby.egl.so
-vendor/lib64/c2.dolby.hevc.dec.so
-vendor/lib64/c2.dolby.hevc.enc.so
-vendor/lib64/c2.dolby.hevc.sec.dec.so
-vendor/lib64/c2.dolby.store.so
 vendor/lib64/com.xiaomi.camhal.overlap.so
 vendor/lib64/com.xiaomi.camhal.submodel.camxfrag.so
 vendor/lib64/com.xiaomi.camhal.submodel.chifrag.so
@@ -4039,18 +4048,12 @@ vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libclstc_tm.so
 vendor/lib64/libcodec2_hidl_plugin.so
-vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_common.so
-vendor/lib64/libcodec2_soft_ddpdec.so
-vendor/lib64/libcodec2_store_dolby.so
 vendor/lib64/libcodec2_vndk.so
 vendor/lib64/libcommonchiutils.so
-vendor/lib64/libdeccfg.so
 vendor/lib64/libdiagjni.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/libdlbpreg.so
-vendor/lib64/libdolbyottcameracontrol.so
-vendor/lib64/libdolbyvision.so
 vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
 vendor/lib64/libfastmessage.so
