@@ -3165,31 +3165,31 @@ vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
 -vendor/lib64/libthermalclient.so
 
 # Thermal config (fuxi)
-odm/etc/thermal-4k.conf
-odm/etc/thermal-abnormal.conf
-odm/etc/thermal-arvr.conf
-odm/etc/thermal-camera.conf
-odm/etc/thermal-cclassvideo.conf
-odm/etc/thermal-cgame.conf
-odm/etc/thermal-chg-only.conf
-odm/etc/thermal-class0.conf
-odm/etc/thermal-dolbyvision.conf
-odm/etc/thermal-hp-mgame.conf
-odm/etc/thermal-hp-normal.conf
-odm/etc/thermal-huanji.conf
-odm/etc/thermal-mgame.conf
-odm/etc/thermal-navigation.conf
-odm/etc/thermal-nolimits.conf
-odm/etc/thermal-normal.conf
-odm/etc/thermal-per-cclassvideo.conf
-odm/etc/thermal-per-cgame.conf
-odm/etc/thermal-per-class0.conf
-odm/etc/thermal-per-normal.conf
-odm/etc/thermal-per-video.conf
-odm/etc/thermal-phone.conf
-odm/etc/thermal-tgame.conf
-odm/etc/thermal-video.conf
-odm/etc/thermal-videochat.conf
+odm/etc/thermal-4k.conf:vendor/etc/thermal-4k.conf
+odm/etc/thermal-abnormal.conf:vendor/etc/thermal-abnormal.conf
+odm/etc/thermal-arvr.conf:vendor/etc/thermal-arvr.conf
+odm/etc/thermal-camera.conf:vendor/etcc/thermal-camera.conf
+odm/etc/thermal-cclassvideo.conf:vendor/etc/thermal-cclassvideo.conf
+odm/etc/thermal-cgame.conf:vendor/etc/thermal-cgame.conf
+odm/etc/thermal-chg-only.conf:vendor/etc/thermal-chg-only.conf
+odm/etc/thermal-class0.conf:vendor/etc/thermal-class0.conf
+odm/etc/thermal-dolbyvision.conf:vendor/etc/thermal-dolbyvision.conf
+odm/etc/thermal-hp-mgame.conf:vendor/etc/thermal-hp-mgame.conf
+odm/etc/thermal-hp-normal.conf:vendor/etc/thermal-hp-normal.conf
+odm/etc/thermal-huanji.conf:vendor/etc/thermal-huanji.conf
+odm/etc/thermal-mgame.conf:vendor/etc/thermal-mgame.conf
+odm/etc/thermal-navigation.conf:vendor/etc/thermal-navigation.conf
+odm/etc/thermal-nolimits.conf:vendor/etc/thermal-nolimits.conf
+odm/etc/thermal-normal.conf:vendor/etc/thermal-normal.conf
+odm/etc/thermal-per-cclassvideo.conf:vendor/etc/thermal-per-cclassvideo.conf
+odm/etc/thermal-per-cgame.conf:vendor/etc/thermal-per-cgame.conf
+odm/etc/thermal-per-class0.conf:vendor/etc/thermal-per-class0.conf
+odm/etc/thermal-per-normal.conf:vendor/etc/thermal-per-normal.conf
+odm/etc/thermal-per-video.conf:vendor/etc/thermal-per-video.conf
+odm/etc/thermal-phone.conf:vendor/etc/thermal-phone.conf
+odm/etc/thermal-tgame.conf:vendor/etc/thermal-tgame.conf
+odm/etc/thermal-video.conf:vendor/etc/thermal-video.conf
+odm/etc/thermal-videochat.conf:vendor/etc/thermal-videochat.conf
 
 # Thermal engine
 vendor/bin/mi_thermald
