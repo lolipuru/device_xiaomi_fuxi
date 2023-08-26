@@ -166,6 +166,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiDolby
 
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # Dtb
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/dtb:dtb.img
