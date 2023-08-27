@@ -2025,11 +2025,7 @@ vendor/lib64/libqtiidentitycredential.so
 vendor/etc/init/ipa_fws.rc
 
 # IR
-odm/lib/hw/consumerir.qcom.so
-odm/lib64/hw/consumerir.qcom.so
-vendor/etc/init/android.hardware.ir-service.example.rc
-vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml
-vendor/bin/hw/android.hardware.ir-service.example
+odm/lib64/hw/consumerir.qcom.so:vendor/lib64/hw/consumerir.qcom.so
 
 # IRQ balance
 vendor/bin/msm_irqbalance
