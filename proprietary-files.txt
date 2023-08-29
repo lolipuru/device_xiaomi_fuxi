@@ -207,7 +207,6 @@ vendor/lib/libcapiv2svacnnvendor.so
 vendor/lib/libcapiv2svarnnvendor.so
 vendor/lib/libcapiv2udk7vendor.so
 vendor/lib/libcapiv2uvvendor.so
-vendor/lib/libdapparamstorage.so
 vendor/lib/libfmpal.so
 vendor/lib/libkaraokepal.so
 vendor/lib/liblx-ar_util.so
@@ -236,7 +235,6 @@ vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libfmpal.so
 vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
@@ -250,6 +248,17 @@ vendor/lib64/libsndcardparser.so
 vendor/lib64/libxlog.so
 -vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.pal@1.0.so
+
+# Audio (Dolby)
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
+vendor/lib/libdapparamstorage.so
+vendor/lib/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 
 # Audio firmware (Fuxi)
 odm/firmware/B-cs35l41-dsp1-spk-cali.bin
@@ -301,6 +310,7 @@ vendor/etc/init/hw/init.batterysecret.rc
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
+vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -3589,6 +3599,7 @@ vendor/etc/init/wfdvndservice.rc
 vendor/etc/seccomp_policy/wfdhdcphalservice.policy
 vendor/etc/seccomp_policy/wfdvndservice.policy
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy
+vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml
 vendor/etc/wfdconfig.xml
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so
@@ -3627,14 +3638,6 @@ odm/lib64/libMiDispDevManager.so
 odm/lib64/libmi_hdr_raw.so
 odm/lib64/libmi_llhdr_raw.so
 
-# Misc.
-odm/etc/vintf/manifest/face-default.xml
-
-# Misc (to be nuke)
-odm/etc/init/init.boled.lightsensor.rc
-odm/etc/init/init.cirrus.rc
-odm/lib64/libmiphone_preview_mdbokeh.so
-
 # vendor
 vendor/etc/vintf/manifest/android.hardware.health-service.qti.xml
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
@@ -3644,21 +3647,17 @@ vendor/etc/vintf/manifest/android.hardware.radio.modem.xml
 vendor/etc/vintf/manifest/android.hardware.radio.network.xml
 vendor/etc/vintf/manifest/android.hardware.radio.sim.xml
 vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
-vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/deviceinfo-saidl.xml
 vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
 vendor/etc/vintf/manifest/memtrack_qti.xml
 vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
-vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.wifidisplaysession-service.xml
 vendor/app/EidService/EidService.apk
 vendor/app/TrustedUIService/TrustedUIService.apk
 vendor/bin/AnchorTest
@@ -3681,7 +3680,6 @@ vendor/bin/charge_logger
 vendor/bin/chiaoncameratest
 vendor/bin/chimcxtest
 vendor/bin/chiofflinepostproctest
-vendor/bin/cnss_diag
 vendor/bin/compatibilitytest
 vendor/bin/ctrlapp_dut
 vendor/bin/disp_factory_tool
@@ -3704,20 +3702,10 @@ vendor/bin/hw/android.hardware.health-service.qti
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
 vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/fbo-test
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/bin/hw/vendor.qti.hardware.lights.service
 vendor/bin/hw/vendor.qti.hardware.memtrack-service
 vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
 vendor/bin/hwinfo
-vendor/bin/init.crda.sh
-vendor/bin/init.mdm.sh
-vendor/bin/init.qcom.coex.sh
-vendor/bin/init.qcom.efs.sync.sh
-vendor/bin/init.qcom.sdio.sh
-vendor/bin/init.qti.kernel.debug-kalama.sh
-vendor/bin/init.qti.kernel.debug.sh
-vendor/bin/init.qti.kernel.early_debug-kalama.sh
-vendor/bin/init.qti.kernel.early_debug.sh
 vendor/bin/iperf
 vendor/bin/iperf3
 vendor/bin/iw
@@ -3756,7 +3744,6 @@ vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/tcpdump
 vendor/bin/ubwcconvert
 vendor/bin/uet
-vendor/bin/vendor.qti.diag.sh
 vendor/bin/vendor_cmd_tool
 vendor/bin/vppcommonlibraryunittest
 vendor/bin/vppipcunittest
@@ -3766,16 +3753,10 @@ vendor/bin/vppserviceunittest
 vendor/bin/wificfrtool
 vendor/bin/wifilearner
 vendor/bin/wlanramdumpcollector
-vendor/bin/xiaomi_cellinfo_test
-vendor/bin/xiaomi_extend_cmd
 vendor/etc/1-SN1X0_SPC.txt
 vendor/etc/charger_diag.cfg
 vendor/etc/charger_fw_fstab.qti
 vendor/etc/clstc_config_library.xml
-vendor/etc/ftm_test_config
-vendor/etc/ftm_test_config_kalama-grd-snd-card
-vendor/etc/ftm_test_config_kalama-qrd-snd-card
-vendor/etc/gps_diag.cfg
 vendor/etc/hrtf5c.bin
 vendor/etc/init/android.hardware.health-service.qti.rc
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
@@ -3798,7 +3779,6 @@ vendor/etc/init/qms.rc
 vendor/etc/init/qwesd.rc
 vendor/etc/init/shsusrd.rc
 vendor/etc/init/slad.rc
-vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
 vendor/etc/init/vendor.mbnota.rc
 vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/init/vendor.qsap.qapeservice.rc
@@ -3808,8 +3788,6 @@ vendor/etc/init/vendor.qti.camera.provider-service_64.rc
 vendor/etc/init/vendor.qti.diag_userdebug.rc
 vendor/etc/init/vendor.qti.hardware.lights.service.rc
 vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
-vendor/etc/init/vendor.qti.hardware.wifi.wificfr@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/etc/init/wlanramdumpcollector.rc
 vendor/etc/kvh2xml.xml
 vendor/etc/media_codecs.xml
@@ -3935,8 +3913,6 @@ vendor/lib/libvui_dmgr.so
 vendor/lib/libvui_dmgr_client.so
 vendor/lib/nfc_nci.st21nfc.st.so
 vendor/lib/qsysd-diag-plugin/libffbmdiagplugin.so
-vendor/lib/vendor.dolby.hardware.dms@2.0.so
-vendor/lib/vendor.qti.hardware.qxr-V1-ndk.so
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib/vendor.qti.ims.callcapability@1.0.so
 vendor/lib/vendor.qti.ims.callinfo@1.0.so
@@ -4015,7 +3991,6 @@ vendor/lib64/libcodec2_soft_common.so
 vendor/lib64/libcodec2_vndk.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libdiagjni.so
-vendor/lib64/libdlbdsservice.so
 vendor/lib64/libdlbpreg.so
 vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
@@ -4082,16 +4057,11 @@ vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libwvaidl.so
 vendor/lib64/libxmi_slow_motion_triger.so
 vendor/lib64/nfc_nci.st21nfc.st.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
-vendor/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
-vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Will sort later
