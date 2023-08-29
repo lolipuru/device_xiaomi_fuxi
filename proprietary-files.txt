@@ -1792,11 +1792,6 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# Dtool
-vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
-vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
-vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
-
 # eid
 vendor/bin/hw/vendor.rongcard.hardware.eid@1.0-service
 vendor/etc/init/vendor.rongcard.hardware.eid@1.0-service.rc
@@ -1826,14 +1821,14 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 product/priv-app/EuiccGoogle/EuiccGoogle.apk|2d238bfe14473b8f578bf0d4ea61246f61d0f618;PRESIGNED
 
 # Fingerprint
-odm/lib/hw/fingerprint.goodix_fod.so:vendor/lib/hw/fingerprint.goodix_fod.default.so
-odm/lib/libgf_hal.so
-odm/lib/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
 odm/lib64/libgf_hal.so
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
+vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
+vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
 vendor/etc/vintf/manifest/fod.xml
 vendor/lib64/com.fingerprints.extension@3.0.so
+vendor/lib64/vendor.xiaomi.hardware.dtool@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
 # FM
