@@ -5,12 +5,9 @@
 -->
 <resources>
 
-    <!-- Adjust the icon padding in status bar for rounded corners. -->
-    <dimen name="rounded_corner_content_padding">49.0px</dimen>
-
-    <!-- Location on the screen of the center of the physical power button. -->
-    <dimen name="physical_power_button_center_screen_location_y">1040px</dimen>
+    <!-- for 18dp of padding at 2.75px/dp at default density -->
+    <dimen name="rounded_corner_content_padding">49px</dimen>
 
     <!-- Bottom margin size when fingerprint in display is active -->
-    <dimen name="keyguard_indication_margin_bottom">4dp</dimen>
+    <dimen name="keyguard_indication_margin_bottom">8dp</dimen>
 </resources>

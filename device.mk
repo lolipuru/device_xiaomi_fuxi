@@ -325,8 +325,8 @@ PRODUCT_PACKAGES += \
     FrameworksResTargetFuxi \
     FrameworksResTargetXiaomi \
     SettingsResCommonXiaomi \
+    SystemUIResCommon \
     SystemUIResCommonFuxi \
-    SystemUIResCommonXiaomi \
     WifiResTarget
 
 # Partitions

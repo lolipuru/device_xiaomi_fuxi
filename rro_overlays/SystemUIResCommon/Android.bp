@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SystemUIResCommonXiaomi",
+    name: "SystemUIResCommon",
     vendor: true,
 }
