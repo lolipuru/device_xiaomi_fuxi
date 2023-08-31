@@ -79,6 +79,9 @@
 /data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
 /vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
 
+# Micharge
+/(vendor|system/vendor)/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service  u:object_r:vendor_hal_micharge_xiaomi_default_exec:s0
+
 # Mlipay
 /(vendor|system/vendor)/bin/fidoca                   u:object_r:hal_mfidoca_default_exec:s0
 /(vendor|system/vendor)/bin/mlipayd u:object_r:hal_mlipay_default_exec:s0
