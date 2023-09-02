@@ -47,9 +47,12 @@ allow hal_mtdservice_default hal_tidaservice_default:binder transfer;
 allow hal_mtdservice_default hal_secure_element_default:binder transfer;
 type_transition hal_mtdservice mnt_vendor_file:dir vendor_persist_drm_file "fdsd";
 init_daemon_domain(hal_mtdservice_default)
+get_prop(hal_mtdservice_default, vendor_deviceid_prop)
 get_prop(hal_mtdservice_default, vendor_system_prop)
 get_prop(hal_mtdservice_default, vendor_cpuid_prop)
+get_prop(hal_mtdservice_default, vendor_tee_listener_prop)
 set_prop(hal_mtdservice_default, vendor_payment_security_prop)
+set_prop(hal_mtdservice_default, vendor_system_prop)
 hwbinder_use(hal_mtdservice_default)
 hal_server_domain(hal_mtdservice_default, hal_mtdservice)
 add_hwservice(hal_mtdservice_server, hal_mtdservice_hwservice)

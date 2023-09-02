@@ -27,6 +27,15 @@ allow hal_camera_default camera_persist_file:dir search;
 allow hal_camera_default vendor_persist_sensors_file:dir search;
 allow hal_camera_default stmvl53l5_device:chr_file { ioctl open read write };
 allow hal_camera_default hal_quickcamera_hwservice:hwservice_manager { add find };
+allow hal_camera_default system_server:binder call;
+allow hal_camera_default self:capability sys_resource;
+allow hal_camera_default vendor_sysfs_battery_supply:dir search;
+allow hal_camera_default vendor_sysfs_battery_supply:file { open read };
+allow hal_camera_default proc_pressure_cpu:file read;
+allow hal_camera_default proc_pressure_mem:file read;
+allow hal_camera_default proc_pressure_io:file read;
+allow hal_camera_default cgroup:file read;
+allow hal_camera_default sys_thermal_flash_state:file write;
 dontaudit hal_camera graphics_device:dir search;
 dontaudit hal_camera_default default_prop:file read;
 r_dir_file(hal_camera_default, mnt_vendor_file)

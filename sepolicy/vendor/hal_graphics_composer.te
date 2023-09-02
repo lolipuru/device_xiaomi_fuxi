@@ -12,4 +12,6 @@ set_prop(hal_graphics_composer_default, vendor_ctl_vendor_display_prop)
 set_prop(hal_graphics_composer_default, vendor_display_prop)
 hal_client_domain(hal_graphics_composer_default, vendor_hal_displayfeature_xiaomi)
 allow hal_graphics_composer_default vendor_mistcdisplay_service:service_manager find;
+allow hal_graphics_composer_default vendor_miclstc_service:service_manager find;
 add_service(hal_graphics_composer_default, vendor_mistcdisplay_service)
+add_service(hal_graphics_composer_default, vendor_miclstc_service)

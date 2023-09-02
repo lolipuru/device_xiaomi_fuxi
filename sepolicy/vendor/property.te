@@ -32,6 +32,9 @@ vendor_public_prop(vendor_nfc_mi_prop)
 
 # Panel
 vendor_public_prop(vendor_panel_info_prop)
+vendor_public_prop(vendor_parsedalgo_prop)
+vendor_public_prop(vendor_touchfeature_prop)
+vendor_public_prop(vendor_touch_hostprocess_prop)
 
 # SLA
 type vendor_slad_prop, property_type, vendor_property_type;

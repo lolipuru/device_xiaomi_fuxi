@@ -2,3 +2,7 @@ allow surfaceflinger vendor_sysfs_displayfeature:dir r_dir_perms;
 allow surfaceflinger vendor_sysfs_displayfeature:file rw_file_perms;
 allow surfaceflinger vendor_displayfeature_device:chr_file { ioctl open read write };
 allow surfaceflinger vendor_sysfs_graphics:dir { open read search };
+allow surfaceflinger hal_touchfeature_xiaomi_default:binder { call transfer };
+allow surfaceflinger hal_touchfeature_xiaomi_default:fd use;
+allow surfaceflinger hal_touchfeature_xiaomi_hwservice:hwservice_manager find;
+get_prop(surfaceflinger, vendor_displayfeature_prop)

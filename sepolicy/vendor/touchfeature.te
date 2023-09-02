@@ -1,0 +1,36 @@
+type hal_touchfeature_xiaomi_default, domain;
+type hal_touchfeature_xiaomi_default_exec, exec_type, file_type, vendor_file_type;
+type hal_touchfeature_xiaomi_hwservice, hwservice_manager_type;
+attribute hal_touchfeature_xiaomi;
+attribute hal_touchfeature_xiaomi_client;
+attribute hal_touchfeature_xiaomi_server;
+
+init_daemon_domain(hal_touchfeature_xiaomi_default)
+r_dir_file(hal_touchfeature_xiaomi_default, mnt_vendor_file)
+vndbinder_use(hal_touchfeature_xiaomi)
+hal_server_domain(hal_touchfeature_xiaomi_default, hal_touchfeature_xiaomi)
+hal_client_domain(hal_touchfeature_xiaomi_default, hal_graphics_allocator)
+add_hwservice(hal_touchfeature_xiaomi_server, hal_touchfeature_xiaomi_hwservice)
+
+allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_hwservice:hwservice_manager find;
+allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_server:binder { call transfer };
+allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_server:fd use;
+
+allow hal_touchfeature_xiaomi_server hal_touchfeature_xiaomi_client:binder transfer;
+allow hal_touchfeature_xiaomi_server hal_touchfeature_xiaomi_hwservice:hwservice_manager { add find };
+allow hal_touchfeature_xiaomi_server hidl_base_hwservice:hwservice_manager add;
+
+allow hal_touchfeature_xiaomi_default sysfs:file { getattr open read write };
+allow hal_touchfeature_xiaomi_default surfaceflinger:binder transfer;
+allow hal_touchfeature_xiaomi_default system_server:binder call;
+allow hal_touchfeature_xiaomi_default property_socket:sock_file write;
+
+allow platform_app hal_touchfeature_xiaomi_hwservice:hwservice_manager find;
+get_prop(hal_touchfeature_xiaomi_default, vendor_touchfeature_prop)
+get_prop(hal_touchfeature_xiaomi_default, vendor_touch_hostprocess_prop)
+set_prop(hal_touchfeature_xiaomi_default, vendor_touchfeature_prop)
+set_prop(hal_touchfeature_xiaomi_default, vendor_touch_hostprocess_prop)
+
+unix_socket_connect(hal_touchfeature_xiaomi_default, property, init)
+unix_socket_connect(hal_touchfeature_xiaomi_default, property, touchreport)
+unix_socket_connect(hal_touchfeature_xiaomi_default, property, tpevent)

@@ -2,6 +2,7 @@ type vendor_hal_displayfeature_xiaomi_default, domain;
 type vendor_hal_displayfeature_xiaomi_default_exec, exec_type, file_type, vendor_file_type;
 type vendor_hal_displayfeature_xiaomi_hwservice, hwservice_manager_type;
 type vendor_mistcdisplay_service, vndservice_manager_type;
+type vendor_miclstc_service, vndservice_manager_type;
 
 type vendor_displayfeature, domain;
 type vendor_displayfeature_exec, exec_type, file_type, vendor_file_type;
@@ -26,6 +27,7 @@ allow vendor_hal_displayfeature_xiaomi_default vendor_displayfeature_device:chr_
 allow vendor_hal_displayfeature_xiaomi_default vendor_sysfs_displayfeature:dir r_dir_perms;
 allow vendor_hal_displayfeature_xiaomi_default vendor_sysfs_displayfeature:file rw_file_perms;
 allow vendor_hal_displayfeature_xiaomi_default vendor_mistcdisplay_service:service_manager find;
+allow vendor_hal_displayfeature_xiaomi_default vendor_miclstc_service:service_manager find;
 allow vendor_hal_displayfeature_xiaomi_default system_app:binder { call transfer };
 allow vendor_hal_displayfeature_xiaomi_default system_app:fd *;
 allow vendor_hal_displayfeature_xiaomi_default surfaceflinger:binder call;

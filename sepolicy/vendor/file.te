@@ -36,6 +36,7 @@ type sla_data_file, data_file_type, file_type;
 type slad_socket, file_type;
 
 # Thermal
+type sys_thermal_torch_real_level, fs_type, sysfs_type;
 type sys_thermal_wifi_limit, fs_type, sysfs_type;
 type sys_thermal_flash_state, fs_type, sysfs_type;
 type thermal_data_file, data_file_type, file_type;

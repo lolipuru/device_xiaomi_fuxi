@@ -1,0 +1,17 @@
+type vendor_dtool, domain;
+type vendor_dtool_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(vendor_dtool)
+
+allow vendor_dtool system_server:binder { call transfer };
+allow vendor_dtool system_server:fd use;
+allow vendor_dtool vendor_hal_fingerprint_hwservice_xiaomi:hwservice_manager { add find };
+allow vendor_dtool hidl_base_hwservice:hwservice_manager add;
+allow vendor_dtool hwservicemanager_prop:file { read getattr map open };
+allow vendor_dtool vendor_fingerprint_data_file_fpdump:dir r_dir_perms;
+allow vendor_dtool vendor_fingerprint_data_file_fpdump:file { read getattr unlink open };
+allow vendor_dtool hwservicemanager:binder { call transfer };
+allow vendor_dtool property_socket:sock_file write;
+unix_socket_connect(vendor_dtool, property, init);
+get_prop(vendor_dtool, vendor_fp_prop);
+set_prop(vendor_dtool, vendor_fp_prop);
