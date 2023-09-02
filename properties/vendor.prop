@@ -365,6 +365,7 @@ debug.media.video.vpp=false
 debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
+media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.media.video.frc.support=true
 ro.vendor.media.video.vpp.support=true
 vendor.media.vpp.aie.cade=100
@@ -376,6 +377,7 @@ vendor.media.vpp.aie.ltmsatgain=55
 vendor.media.vpp.aie.ltmsatoff=55
 vendor.media.vpp.debug.value.use=false
 vendor.mm.enable.qcom_parser=16777215
+ro.mediaserver.64b.enable=true
 
 # Misc
 sys.vendor.shutdown.waittime=500

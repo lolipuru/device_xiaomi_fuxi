@@ -269,10 +269,17 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.1.vendor \
+    android.hardware.media.c2@1.2.vendor \
     libavservices_minijail \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor \
+    libcodec2_soft_common.vendor \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_hidl@1.1.vendor \
     libcodec2_hidl@1.2.vendor \
+    libcodec2_vndk.vendor \
     libsfplugin_ccodec_utils.vendor
 
 PRODUCT_PACKAGES += \
