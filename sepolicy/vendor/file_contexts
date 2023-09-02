@@ -8,6 +8,9 @@
 # Mi RIC
 /vendor/bin/MI_RIC                                    u:object_r:mi_ric_exec:s0
 
+# NXP
+/(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@2\.0-service    u:object_r:hal_nfc_default_exec:s0
+
 # Battery
 /(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
 
