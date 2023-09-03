@@ -104,6 +104,13 @@ on init
 
 on post-fs
 
+on post-fs && property:ro.boot.hwc=CN
+    # Remove euicc on CN Variant
+    mount none /dev/null /product/etc/permissions/privapp-permissions-euiccgoogle.xml bind
+    mount none /dev/null /product/etc/permissions/android.hardware.telephony.euicc.xml bind
+    mount none /dev/null /product/priv-app/EuiccGoogle/EuiccGoogle.apk bind
+    mount none /dev/null /product/app/XiaomiEuicc/XiaomiEuicc.apk bind
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
