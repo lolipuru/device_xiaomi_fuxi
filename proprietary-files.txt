@@ -3323,7 +3323,7 @@ vendor/bin/init.qcom.usb.sh
 vendor/etc/init/hw/init.qcom.usb.rc
 
 # Vibrator
-odm/firmware/0_click_P_RTP.bin
+odm/firmware/0_click_P_RTP.bin:vendor/firmware/0_click_P_RTP.bin
 odm/firmware/101_offlineCountdown_P_RTP.bin
 odm/firmware/102_sceneBombInjury_P_RTP.bin
 odm/firmware/103_sceneBomb_P_RTP.bin
@@ -3420,7 +3420,7 @@ odm/firmware/190_signalTransitionLight_P_RTP.bin
 odm/firmware/191_signalTransition_P_RTP.bin
 odm/firmware/192_hapticsVideo_RTP.bin
 odm/firmware/19_ringTone4_RTP.bin
-odm/firmware/1_doubelClick_P_RTP.bin
+odm/firmware/1_doubelClick_P_RTP.bin:vendor/firmware/1_doubelClick_P_RTP.bin
 odm/firmware/20_ringTone4_RTP.bin
 odm/firmware/23_Candy_P_RTP.bin
 odm/firmware/24_Carousel_P_RTP.bin
@@ -3428,7 +3428,7 @@ odm/firmware/25_Celesta_P_RTP.bin
 odm/firmware/26_Childhood_P_RTP.bin
 odm/firmware/27_Country_P_RTP.bin
 odm/firmware/28_Cowboy_P_RTP.bin
-odm/firmware/2_tick_P_RTP.bin
+odm/firmware/2_tick_P_RTP.bin:vendor/firmware/2_tick_P_RTP.bin
 odm/firmware/30_Fairyland_P_RTP.bin
 odm/firmware/31_Fantasy_P_RTP.bin
 odm/firmware/32_FieldTrip_P_RTP.bin
@@ -3437,7 +3437,7 @@ odm/firmware/35_IceLatte_P_RTP.bin
 odm/firmware/36_KungFu_P_RTP.bin
 odm/firmware/38_Lollipop_P_RTP.bin
 odm/firmware/39_MiMix2_P_RTP.bin
-odm/firmware/3_thud_P_RTP.bin
+odm/firmware/3_thud_P_RTP.bin:vendor/firmware/3_thud_P_RTP.bin
 odm/firmware/40_Mi_P_RTP.bin
 odm/firmware/41_MiHouse_P_RTP.bin
 odm/firmware/42_MiJazz_P_RTP.bin
@@ -3448,7 +3448,7 @@ odm/firmware/46_WindChime_P_RTP.bin
 odm/firmware/47_SpaceAge_P_RTP.bin
 odm/firmware/48_ToyRobot_P_RTP.bin
 odm/firmware/49_Vigor_P_RTP.bin
-odm/firmware/4_pop_P_RTP.bin
+odm/firmware/4_pop_P_RTP.bin:vendor/firmware/4_pop_P_RTP.bin
 odm/firmware/50_Bottle_P_RTP.bin
 odm/firmware/51_Bubble_P_RTP.bin
 odm/firmware/521_AcousticGuitar_P_RTP.bin
@@ -3460,7 +3460,7 @@ odm/firmware/56_Crystal_P_RTP.bin
 odm/firmware/57_FadeIn_P_RTP.bin
 odm/firmware/58_FadeOut_P_RTP.bin
 odm/firmware/59_Flute_P_RTP.bin
-odm/firmware/5_heavyClick_P_RTP.bin
+odm/firmware/5_heavyClick_P_RTP.bin:vendor/firmware/5_heavyClick_P_RTP.bin
 odm/firmware/60_Fresh_P_RTP.bin
 odm/firmware/61_Frog_P_RTP.bin
 odm/firmware/62_Guitar_P_RTP.bin
