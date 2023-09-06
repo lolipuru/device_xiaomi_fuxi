@@ -63,9 +63,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.3-impl \
-    agmcap \
-    agmcompressplay \
-    agmplay \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin
