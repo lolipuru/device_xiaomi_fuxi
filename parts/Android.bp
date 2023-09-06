@@ -15,6 +15,7 @@ android_app {
         "androidx.core_core",
         "SettingsLib",
         "vendor.lineage.xiaomitouch-V1-java",
+        "vendor.xiaomi.hardware.displayfeature-V1.0-java",
     ],
     required: [
         "privapp_whitelist_com.xiaomi.settings.xml",

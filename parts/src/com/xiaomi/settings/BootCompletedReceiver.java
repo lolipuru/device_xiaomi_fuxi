@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.UserHandle;
 import android.util.Log;
 
+import com.xiaomi.settings.display.ColorModeService;
 import com.xiaomi.settings.touch.AlwaysOnFingerprintService;
 import com.xiaomi.settings.touch.TouchPollingRateService;
 
@@ -27,9 +28,13 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
 
-        context.startServiceAsUser(new Intent(context, AlwaysOnFingerprintService.class),
+        // Display
+        context.startServiceAsUser(new Intent(context, ColorModeService.class),
                 UserHandle.CURRENT);
 
+        // Touchscreen
+        context.startServiceAsUser(new Intent(context, AlwaysOnFingerprintService.class),
+                UserHandle.CURRENT);
         context.startServiceAsUser(new Intent(context, TouchPollingRateService.class),
                 UserHandle.CURRENT);
     }

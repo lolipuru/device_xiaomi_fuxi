@@ -36,6 +36,11 @@
         </receiver>
 
         <service
+            android:name=".display.ColorModeService"
+            android:permission="ColorModeService">
+        </service>
+
+        <service
             android:name=".touch.AlwaysOnFingerprintService"
             android:exported="true">
         </service>

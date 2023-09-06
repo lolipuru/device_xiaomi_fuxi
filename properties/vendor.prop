@@ -202,6 +202,7 @@ vendor.display.use_smooth_motion=0
 vendor.display.vds_allow_hwc=1
 
 # displayfeature
+persist.sys.sf.native_mode=258
 persist.vendor.dc_backlight.enable=false
 persist.vendor.dc_backlight.threshold=0
 ro.vendor.bcbc.enable=true
