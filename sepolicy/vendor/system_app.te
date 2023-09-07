@@ -3,3 +3,6 @@ allow system_app vendor_sysfs_displayfeature:file rw_file_perms;
 allow system_app vendor_hal_citsensorservice_xiaomi_hwservice:hwservice_manager find;
 allow system_app vendor_hal_sensorcommunicate_hwservice:hwservice_manager find;
 allow system_app vendor_hal_sensorcommunicate_default:binder call;
+allow system_app sysfs_zram:dir { search };
+get_prop(system_app, qemu_hw_prop)
+allow system_app sysfs_zram:file { read };

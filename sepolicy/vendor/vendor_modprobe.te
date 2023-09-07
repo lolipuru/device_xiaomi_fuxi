@@ -1,0 +1,2 @@
+allow vendor_modprobe system_dlkm_file:dir r_dir_perms;
+allow vendor_modprobe vendor_modprobe:key write;

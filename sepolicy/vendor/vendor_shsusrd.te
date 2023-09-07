@@ -1,0 +1,1 @@
+allow vendor_shsusrd sysfs:file { read open };

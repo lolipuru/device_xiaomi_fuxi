@@ -3,4 +3,6 @@ allow system_server vendor_hal_citsensorservice_xiaomi_default:binder { call tra
 allow system_server vendor_hal_micharge_xiaomi_default:binder { call transfer };
 allow system_server vendor_hal_sensorcommunicate_default:binder { call transfer };
 allow system_server hal_touchfeature_xiaomi_default:process signal;
+allow system_server tmpfs:file { write };
+allow system_server zygote_tmpfs:file { write };
 get_prop(system_server, vendor_displayfeature_prop)

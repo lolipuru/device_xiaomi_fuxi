@@ -1,0 +1,3 @@
+allow vendor_ssgtzd vndbinder_device:chr_file { ioctl };
+binder_call(vendor_ssgtzd, vndservicemanager)
+allow vendor_ssgtzd vendor_dmabuf_qseecom_ta_heap_device:chr_file { read open ioctl };

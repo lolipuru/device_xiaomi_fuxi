@@ -1,0 +1,8 @@
+allow vendor_cnd vndbinder_device:chr_file { read };
+allow vendor_cnd vndbinder_device:chr_file { write };
+allow vendor_cnd vndbinder_device:chr_file { open };
+allow vendor_cnd vndbinder_device:chr_file { ioctl };
+allow vendor_cnd vndbinder_device:chr_file { map };
+binder_call(vendor_cnd, vndservicemanager)
+allow vendor_cnd vendor_ssgtzd_socket:sock_file { write };
+unix_socket_connect(vendor_ssgtzd, property, vendor_cnd)

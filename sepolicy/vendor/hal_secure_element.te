@@ -1,3 +1,5 @@
 allow hal_secure_element_default hal_mtdservice_hwservice:hwservice_manager find;
 allow hal_secure_element_default hal_mtdservice_default:binder { call transfer };
 allow hal_secure_element_default hal_mtdservice_default:fd *;
+allow hal_secure_element_default tee_device:chr_file { read write open ioctl };
+allow hal_secure_element_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { read open ioctl };

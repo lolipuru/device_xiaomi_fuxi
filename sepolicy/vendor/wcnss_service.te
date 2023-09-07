@@ -2,6 +2,7 @@
 allow vendor_wcnss_service self:capability { net_raw setgid setuid };
 #allow vendor_wcnss_service self:packet_socket { bind create getopt ioctl map read setopt };
 allow vendor_wcnss_service self:packet_socket write;
+allow vendor_wcnss_service sysfs:file { open read };
 allow vendor_wcnss_service sysfs_net:file read;
 allow vendor_wcnss_service vendor_mac_vendor_data_file:dir { add_name open read search setattr write };
 allow vendor_wcnss_service vendor_mac_vendor_data_file:dir rw_dir_perms;

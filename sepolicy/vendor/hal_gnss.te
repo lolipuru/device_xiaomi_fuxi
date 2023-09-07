@@ -2,6 +2,9 @@ allow vendor_hal_gnss_qti vendor_ins_vendor_data_file:dir rw_dir_perms;
 allow vendor_hal_gnss_qti vendor_ins_vendor_data_file:file create_file_perms;
 allow vendor_hal_gnss_qti vendor_persist_sensors_file:dir rw_dir_perms;
 allow vendor_hal_gnss_qti vendor_persist_sensors_file:file create_file_perms;
+allow vendor_hal_gnss_qti socket_device:dir { write add_name };
+allow vendor_hal_gnss_qti socket_device:sock_file { create };
+allow vendor_hal_gnss_qti sysfs:file { read open };
 allow vendor_hal_gnss_qti mnt_vendor_file:dir search;
 allow vendor_hal_gnss_qti mnt_vendor_file:dir rw_dir_perms;
 get_prop(vendor_hal_gnss_qti, vendor_sensors_prop)

@@ -34,6 +34,9 @@
 /(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor.xiaomi.sensor.citsensorservice@1.1-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 /(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 
+# Data files
+/data/vendor/multimedia(/.*)?                                                                 u:object_r:vendor_data_file:s0
+
 # Diag
 /data/vendor/modem(/.*)? u:object_r:vendor_modem_data_file:s0
 
@@ -45,8 +48,9 @@
 
 # Dolby
 /data/vendor/dolby(/.*)? u:object_r:vendor_data_file:s0
-/vendor/bin/hw/dolbycodec2 u:object_r:vendorcodec_exec:s0
+/vendor/bin/hw/dolbycodec2 u:object_r:mediacodec_exec:s0
 /vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service                        u:object_r:mediacodec_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                      u:object_r:hal_dms_default_exec:s0
 
 # Fingerprint
 /data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0

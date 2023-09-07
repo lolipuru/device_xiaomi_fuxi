@@ -1,0 +1,1 @@
+allow vendor_qms vendor_qms_vndr_data_file:dir { search };

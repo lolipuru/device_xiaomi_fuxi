@@ -4,8 +4,11 @@ allow init sla_data_file:file rw_file_perms;
 allow init hal_touchfeature_xiaomi_default_exec:file { read getattr map execute open };
 allow init vendor_touch_init_shell_exec:file { read getattr map execute open };
 allow init tpevent_exec:file { read getattr map execute open };
+allow init hal_dms_default_exec:file { read getattr map execute open };
 allow vendor_init vendor_ddr_prop:property_service set;
 set_prop(vendor_init, vendor_fp_prop)
 set_prop(vendor_init, vendor_fp_info_prop)
 set_prop(vendor_init, vendor_qcc_prop)
+set_prop(vendor_init, vendor_displayfeature_prop)
 allow vendor_init cgroup:file getattr;
+userdebug_or_eng(`allow init debugfs_tracing_debug:dir mounton;');

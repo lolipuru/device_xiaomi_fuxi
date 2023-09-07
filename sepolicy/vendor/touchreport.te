@@ -24,3 +24,5 @@ allow touchreport vendor_firmware_file:dir r_dir_perms;
 allow touchreport vendor_firmware_file:dir search;
 allow touchreport vendor_firmware_file:file r_file_perms;
 allow touchreport vendor_sysfs_graphics:file { open read };
+
+get_prop(touchreport, vendor_touch_hostprocess_prop);

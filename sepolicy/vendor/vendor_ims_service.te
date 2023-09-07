@@ -1,0 +1,1 @@
+allow vendor_ims_service sysfs:file { open read };

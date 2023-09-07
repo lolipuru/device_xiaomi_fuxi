@@ -1,0 +1,2 @@
+allow vendor_dpmd_vndr vndbinder_device:chr_file rw_file_perms;
+binder_call(vendor_dpmd_vndr, vndservicemanager)
