@@ -187,6 +187,10 @@ vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio
 odm/etc/audio/silent-3sec.wav
+odm/lib/libaudioroute_ext.so
+odm/lib/libcrussp.so
+odm/lib64/libaudioroute_ext.so
+odm/lib64/libcrussp.so
 vendor/etc/audio_cloud_control_white_list.xml
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
@@ -212,6 +216,8 @@ vendor/lib/libkaraokepal.so
 vendor/lib/liblx-ar_util.so
 -vendor/lib/liblx-osal.so
 vendor/lib/libmcs.so
+vendor/lib/libmisoundsa.so
+vendor/lib/libmispowerop.so
 vendor/lib/libpal_net_if.so
 vendor/lib/libpalclient.so
 vendor/lib/libqtigefar.so
@@ -240,6 +246,8 @@ vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
 -vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
+vendor/lib64/libmisoundsa.so
+vendor/lib64/libmispowerop.so
 vendor/lib64/libpal_net_if.so
 vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
@@ -423,6 +431,9 @@ odm/lib64/libarcsoft_super_night_raw.so
 odm/lib64/libbeauty_face_interface.so
 odm/lib64/libdualcam_optical_zoom_control.so
 odm/lib64/libdualcam_video_optical_zoom.so
+odm/lib64/libellv.so
+odm/lib64/libmi_hdr_raw.so
+odm/lib64/libmi_llhdr_raw.so
 odm/lib64/libmiStereoFactoryRemapBasicLib.so
 odm/lib64/libmiStereoFactoryRemapLib.so
 odm/lib64/libmiai_deblur.so
@@ -1504,6 +1515,7 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 system_ext/lib/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag_userdebug.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib/vendor.qti.diaghal@1.0.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
@@ -1576,6 +1588,7 @@ odm/lib/libsre.so
 odm/lib/libtruetone.so
 odm/lib/libvideomode.so
 odm/lib64/hw/displayfeature.default.so
+odm/lib64/libMiDispDevManager.so
 odm/lib64/libcolortempmode.so
 odm/lib64/libdisplaycount.so
 odm/lib64/libdither.so
@@ -2660,7 +2673,7 @@ product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QtiTelephony/QtiTelephony.apk|17292c6ee01535a5ecd7bc7d5fa198e67fea50a0
+system_ext/app/QtiTelephony/QtiTelephony.apk|568cffe4c34d675d8ba4057b0d507514a09e2cbf
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -2743,6 +2756,15 @@ vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/imsrtp.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/ssg/tz_whitelist.json
+vendor/etc/vintf/manifest/android.hardware.radio.config.xml
+vendor/etc/vintf/manifest/android.hardware.radio.data.xml
+vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml
+vendor/etc/vintf/manifest/android.hardware.radio.modem.xml
+vendor/etc/vintf/manifest/android.hardware.radio.network.xml
+vendor/etc/vintf/manifest/android.hardware.radio.sim.xml
+vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
+vendor/etc/vintf/manifest/deviceinfo-saidl.xml
+vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/telephony_packages.xml
 vendor/etc/vintf/manifest/dataconnection-saidl.xml
 vendor/etc/vintf/manifest/qtiradio-saidl.xml
@@ -3196,9 +3218,6 @@ vendor/etc/seccomp_policy/sxr@2.0.policy
 vendor/lib64/libsxrservice.so
 
 # Thermal
-vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2
-vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc
-vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
 -vendor/lib/libthermalclient.so
 -vendor/lib64/liblmthermallistner.so
 -vendor/lib64/libthermalclient.so
@@ -3207,7 +3226,7 @@ vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
 odm/etc/thermal-4k.conf:vendor/etc/thermal-4k.conf
 odm/etc/thermal-abnormal.conf:vendor/etc/thermal-abnormal.conf
 odm/etc/thermal-arvr.conf:vendor/etc/thermal-arvr.conf
-odm/etc/thermal-camera.conf:vendor/etcc/thermal-camera.conf
+odm/etc/thermal-camera.conf:vendor/etc/thermal-camera.conf
 odm/etc/thermal-cclassvideo.conf:vendor/etc/thermal-cclassvideo.conf
 odm/etc/thermal-cgame.conf:vendor/etc/thermal-cgame.conf
 odm/etc/thermal-chg-only.conf:vendor/etc/thermal-chg-only.conf
@@ -3639,23 +3658,8 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 # Xiaomi MAC address
 vendor/bin/nv_mac
 
-# Display
-odm/lib64/libMiDispDevManager.so
-odm/lib64/libmi_hdr_raw.so
-odm/lib64/libmi_llhdr_raw.so
-
 # vendor
-vendor/etc/vintf/manifest/android.hardware.radio.config.xml
-vendor/etc/vintf/manifest/android.hardware.radio.data.xml
-vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml
-vendor/etc/vintf/manifest/android.hardware.radio.modem.xml
-vendor/etc/vintf/manifest/android.hardware.radio.network.xml
-vendor/etc/vintf/manifest/android.hardware.radio.sim.xml
-vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
-vendor/etc/vintf/manifest/deviceinfo-saidl.xml
-vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
 vendor/etc/vintf/manifest/memtrack_qti.xml
-vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
@@ -3663,19 +3667,7 @@ vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
-vendor/app/EidService/EidService.apk
-vendor/app/TrustedUIService/TrustedUIService.apk
-vendor/bin/AnchorTest
 vendor/bin/COSNet_spatial_8bit_quantized.serialized.bin
-vendor/bin/DFtool
-vendor/bin/KmInstallKeybox
-vendor/bin/PalTest
-vendor/bin/PktRspTest
-vendor/bin/StoreKeybox
-vendor/bin/TrustedUISampleTAClient
-vendor/bin/TrustedUISampleTest
-vendor/bin/ar_util_in_test_example
-vendor/bin/athdiag
 vendor/bin/audioadsprpcd
 vendor/bin/audiodsd2pcmtest
 vendor/bin/audioflacapp
@@ -3685,9 +3677,7 @@ vendor/bin/charge_logger
 vendor/bin/chiaoncameratest
 vendor/bin/chimcxtest
 vendor/bin/chiofflinepostproctest
-vendor/bin/compatibilitytest
 vendor/bin/ctrlapp_dut
-vendor/bin/disp_factory_tool
 vendor/bin/e_loop
 vendor/bin/f2managertest
 vendor/bin/f2player
@@ -3702,13 +3692,10 @@ vendor/bin/ftmdaemon
 vendor/bin/hal_proxy_daemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
-vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
 vendor/bin/hw/android.hardware.nfc@1.2-service-st
-vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/fbo-test
 vendor/bin/hw/vendor.qti.hardware.lights.service
 vendor/bin/hw/vendor.qti.hardware.memtrack-service
-vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
 vendor/bin/hwinfo
 vendor/bin/iperf
 vendor/bin/iperf3
@@ -3739,7 +3726,6 @@ vendor/bin/qsap_qapeservice
 vendor/bin/qsap_sensors
 vendor/bin/qsap_voiceui
 vendor/bin/qwesd
-vendor/bin/show_reserved_mem
 vendor/bin/sigma_dut
 vendor/bin/slad
 vendor/bin/spectraltool
@@ -3756,7 +3742,6 @@ vendor/bin/vpplibraryunittest
 vendor/bin/vppserviceunittest
 vendor/bin/wificfrtool
 vendor/bin/wifilearner
-vendor/bin/wlanramdumpcollector
 vendor/etc/1-SN1X0_SPC.txt
 vendor/etc/charger_diag.cfg
 vendor/etc/charger_fw_fstab.qti
@@ -3765,10 +3750,8 @@ vendor/etc/hrtf5c.bin
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 vendor/etc/init/dcfd.rc
 vendor/etc/init/ddr_training.rc
-vendor/etc/init/dumpstate-xiaomi.rc
 vendor/etc/init/ffu.rc
 vendor/etc/init/hw/init.qcom.factory.rc
-vendor/etc/init/hw/init.qti.kernel.test.rc
 vendor/etc/init/hw/init.qti.ufs.rc
 vendor/etc/init/init.charge_logger.rc
 vendor/etc/init/init.hwinfo.rc
@@ -3788,17 +3771,12 @@ vendor/etc/init/vendor.qsap.qapeservice.rc
 vendor/etc/init/vendor.qsap.sensors.rc
 vendor/etc/init/vendor.qti.battery_stats.rc
 vendor/etc/init/vendor.qti.camera.provider-service_64.rc
-vendor/etc/init/vendor.qti.diag_userdebug.rc
 vendor/etc/init/vendor.qti.hardware.lights.service.rc
-vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
-vendor/etc/init/wlanramdumpcollector.rc
 vendor/etc/kvh2xml.xml
 vendor/etc/misound_asc_model.tflite
 vendor/etc/misound_res_spk.bin
 vendor/etc/permissions/camera_extensions.xml
 vendor/etc/qvirtmgr-vndr.json
-vendor/etc/res/images/default/charger/battery_fail.png
-vendor/etc/res/images/default/charger/battery_scale.png
 vendor/etc/seccomp_policy/qsap_dcfd.policy
 vendor/etc/seccomp_policy/qsap_qapeservice.policy
 vendor/etc/seccomp_policy/qsap_sensors.policy
@@ -3813,7 +3791,6 @@ vendor/etc/thermal-engine.conf
 vendor/etc/thermal-map.conf
 vendor/etc/thermald-devices.conf
 vendor/etc/tzlog.dict
-vendor/lib/android.hardware.authsecret@1.0.so
 vendor/lib/com.xiaomi.camhal.overlap.so
 vendor/lib/com.xiaomi.camhal.submodel.camxfrag.so
 vendor/lib/com.xiaomi.camhal.submodel.chifrag.so
@@ -3874,7 +3851,6 @@ vendor/lib/libmdmdetect.so
 vendor/lib/libmediautils_vendor.so
 vendor/lib/libmiClstc.so
 vendor/lib/libmidebuggerdimpl_vendor.so
-vendor/lib/libmispowerop.so
 vendor/lib/libnanopb.so
 vendor/lib/libnative-api.so
 vendor/lib/liboemaids_vendor.so
@@ -3890,9 +3866,6 @@ vendor/lib/libqvr_cam_cdsp_driver_stub.so
 vendor/lib/libqvr_cdsp_driver_stub.so
 vendor/lib/libqvr_eyetracking_plugin.so
 vendor/lib/libqvr_hostcontroller_plugin.so
-vendor/lib/librecovery_updater.so
-vendor/lib/librecovery_updater_msm.so
-vendor/lib/libreverse_rpc_tests_skel.so
 vendor/lib/libsamplefilterplugin.so
 vendor/lib/libsdmdal.so
 vendor/lib/libsecureui_svcsock.so
@@ -3941,9 +3914,6 @@ vendor/lib/vendor.qti.qesdhal@1.3.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib/vndk/libstagefright_foundation.so
 vendor/lib/vndk/libstagefright_omx.so
-vendor/lib64/android.hardware.authsecret@1.0.so
-vendor/lib64/android.system.net.netd@1.0.so
-vendor/lib64/android.system.net.netd@1.1.so
 vendor/lib64/com.xiaomi.camhal.overlap.so
 vendor/lib64/com.xiaomi.camhal.submodel.camxfrag.so
 vendor/lib64/com.xiaomi.camhal.submodel.chifrag.so
@@ -4034,10 +4004,7 @@ vendor/lib64/libqnnengine.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqsh_ble_pb.so
 vendor/lib64/libqti-qesdk-secure.so
-vendor/lib64/librecovery_updater.so
-vendor/lib64/librecovery_updater_msm.so
 vendor/lib64/libreffeature.so
-vendor/lib64/libreverse_rpc_tests_skel.so
 vendor/lib64/librmsclib1.so
 vendor/lib64/libsamplefilterplugin.so
 vendor/lib64/libsdmdal.so
@@ -4054,26 +4021,17 @@ vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libwvaidl.so
 vendor/lib64/libxmi_slow_motion_triger.so
 vendor/lib64/nfc_nci.st21nfc.st.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Will sort later
-odm/lib/libaudioroute_ext.so
 odm/lib/libclient2slpi.notifier.so
-odm/lib/libcrussp.so
 odm/lib/libssccalapi@2.0.so
 odm/lib/libteeclientjni.so
 odm/lib64/libaachaptics.so
-odm/lib64/libaudioroute_ext.so
 odm/lib64/libceresNM.so
 odm/lib64/libclient2slpi.notifier.so
-odm/lib64/libcrussp.so
 odm/lib64/libdeflickerNM.so
-odm/lib64/libellv.so
 odm/lib64/libmiface.so
 odm/lib64/libmiocr.so
 odm/lib64/libmituning_datacenter.so
