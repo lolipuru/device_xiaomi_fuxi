@@ -37,11 +37,12 @@
     <!-- Doze: Table that translates sensor values from the doze_brightness_sensor_type sensor
                to brightness values; -1 means keeping the current brightness. -->
     <integer-array name="config_doze_brightness_sensor_to_brightness">
-        <item>-1</item>
-        <item>2</item>
-        <item>5</item>
-        <item>27</item>
-        <item>28</item>
+        <item>-1</item>    <!-- 0.0: Never used -->
+        <item>-1</item>    <!-- 1.0: Never used -->
+        <item>-1</item>    <!-- 2.0: Never used -->
+        <item>-1</item>    <!-- 3.0: Never used -->
+        <item>24</item>    <!-- 4.0: Bright environment -->
+        <item>4</item>     <!-- 5.0: Dark environment -->
     </integer-array>
 
     <!-- Doze: Table that translates sensor values from the doze_brightness_sensor_type sensor
@@ -54,11 +55,8 @@
         <item>0</item>
         <item>0</item>
         <item>0</item>
+        <item>0</item>
     </integer-array>
-
-    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
-     vibrator is capable of subtle vibrations -->
-    <bool name="config_vibrateOnIconAnimation">true</bool>
 
     <!-- Determines whether the shell features all run on another thread. -->
     <bool name="config_enableShellMainThread">true</bool>

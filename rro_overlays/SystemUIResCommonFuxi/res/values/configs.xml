@@ -4,21 +4,10 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-
-    <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
-         Note that while rounded.xml includes the entire path (including the horizontal and vertical
-         corner edges), this pulls out just the curve.
-     -->
-    <string name="config_rounded_mask" translatable="false">
-        M8,0C3.6,0,0,3.6,0,8
-    </string>
+    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+    vibrator is capable of subtle vibrations -->
+    <bool name="config_vibrateOnIconAnimation">true</bool>
 
     <!-- The radius of the enrollment progress bar, in dp -->
-    <integer name="config_udfpsEnrollProgressBar" translatable="false">90</integer>
-
-    <!-- Location on the screen of the center of the physical power button. -->
-    <dimen name="physical_power_button_center_screen_location_y">620.0px</dimen>
-
-    <!-- Location on the screen of the center of the fingerprint sensor. -->
-    <dimen name="physical_fingerprint_sensor_center_screen_location_y">610.0px</dimen>
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">80</integer>
 </resources>
