@@ -352,6 +352,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Parts
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.3.vendor
@@ -399,6 +403,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
+    init.mi_touch.rc \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \

@@ -62,6 +62,7 @@
 
 import /vendor/etc/init/hw/init.qti.kernel.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
+import /vendor/etc/init/hw/init.mi_touch.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
 import /vendor/etc/init/init.charge_logger.rc
 
