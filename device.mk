@@ -414,6 +414,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0 \
     android.hardware.sensors-service.multihal \
     libsensorndkbridge \
     sensors.xiaomi
@@ -472,6 +473,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml
 
+# Tetheroffload
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \
@@ -511,6 +517,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-V1-ndk_platform.vendor
+
 $(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
 # WiFi
