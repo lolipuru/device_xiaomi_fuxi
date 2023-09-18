@@ -8,7 +8,7 @@
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <dimen name="config_screenBrightnessDimFloat">8.54597E-4</dimen>
+    <dimen name="config_screenBrightnessDimFloat">0.000854597</dimen>
 
     <!-- Default screen brightness setting set.
          -2 is invalid so setting will resort to int value specified above.
@@ -25,7 +25,7 @@
          -2 is invalid so setting will resort to int value specified above.
          Set this to 0.0 to allow screen to go to minimal brightness.
          The user is forbidden from setting the brightness below this level. -->
-    <dimen name="config_screenBrightnessSettingMinimumFloat">8.54597E-4</dimen>
+    <dimen name="config_screenBrightnessSettingMinimumFloat">0.000854597</dimen>
 
     <!-- Height of the status bar.
          Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
