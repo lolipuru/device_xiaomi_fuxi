@@ -37,7 +37,7 @@
         <item>-1</item>    <!-- 0.0: Never used -->
         <item>-1</item>    <!-- 1.0: Never used -->
         <item>-1</item>    <!-- 2.0: Never used -->
-        <item>-1</item>    <!-- 3.0: Never used -->
+        <item>2</item>     <!-- 3.0: Very dark environment -->
         <item>24</item>    <!-- 4.0: Bright environment -->
         <item>4</item>     <!-- 5.0: Dark environment -->
     </integer-array>
