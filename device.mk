@@ -350,6 +350,7 @@ PRODUCT_PACKAGES += \
     SettingsResCommonXiaomi \
     SystemUIResCommon \
     SystemUIResCommonFuxi \
+    TelephonyResCommon \
     WifiResTarget
 
 # Partitions
