@@ -1,2 +1,3 @@
 on property:persist.sys.fuxi.alwaysonudfps=*
+    exec /system/bin/xiaomi-touch 10 ${persist.sys.fuxi.alwaysonudfps}
     exec /system/bin/xiaomi-touch 16 ${persist.sys.fuxi.alwaysonudfps}
