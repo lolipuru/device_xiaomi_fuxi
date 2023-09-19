@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 13 (V14.0.7.0.TMCMIXM). 
+## are from Xiaomi 13 (V14.0.9.0.TMCMIXM). 
 
 # ACDBs
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -210,6 +210,7 @@ vendor/lib/libxlog.so
 -vendor/lib/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib/vendor.qti.hardware.pal@1.0.so
 vendor/lib64/hw/audio.primary.kalama.so
+vendor/lib64/lib_misound_asc.so
 vendor/lib64/libadm.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
@@ -900,8 +901,8 @@ vendor/etc/camera/127_Creamy.png
 vendor/etc/camera/128_Sepia.png
 vendor/etc/camera/129_Vivid.png
 vendor/etc/camera/130_Natural.png
-vendor/etc/camera/131_Monochrom.png
-vendor/etc/camera/132_MonochromHighContrast.png
+vendor/etc/camera/131_Monochrome.png
+vendor/etc/camera/132_MonochromeHighContrast.png
 vendor/etc/camera/GpuKernelRepo.pb
 vendor/etc/camera/af_class_all.dlc
 vendor/etc/camera/af_class_human.dlc
@@ -2750,14 +2751,14 @@ product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QtiTelephony/QtiTelephony.apk|568cffe4c34d675d8ba4057b0d507514a09e2cbf
+system_ext/app/QtiTelephony/QtiTelephony.apk|ad183cacb99abf8ddb28183720a2191083225a9a
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/framework/qcrilhook.jar
-system_ext/framework/qti-telephony-common.jar|e9fead71fadc54a2a64ee667902360d65ecd833d
+system_ext/framework/qti-telephony-common.jar|5632f28439491a1ff47b65d03210e38b43f61ecf
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
@@ -2777,7 +2778,7 @@ system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
-system_ext/priv-app/ims/ims.apk|6e6a277710acd3b795763db71a605a2223e06f7f
+system_ext/priv-app/ims/ims.apk|e7b582b9f51391f69be19025c0f5bb86ac1ac0ed
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/ATFWD-daemon
@@ -3149,6 +3150,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.1.so
 vendor/etc/ssg/ta_config.json
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
+vendor/lib64/libnative-api.so
 
 # Secure element
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
