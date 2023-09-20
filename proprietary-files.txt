@@ -2795,6 +2795,8 @@ vendor/bin/rmt_storage
 vendor/bin/shsusrd
 vendor/bin/ssgqmigd
 vendor/bin/tftp_server
+vendor/etc/xiaomi_ecc_list.xml
+vendor/etc/xiaomi_ecc_list_preference.xml
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/init/dataadpl.rc
