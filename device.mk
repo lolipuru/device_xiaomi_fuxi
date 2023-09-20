@@ -350,6 +350,7 @@ PRODUCT_PACKAGES += \
     SettingsResCommonXiaomi \
     SystemUIResCommon \
     SystemUIResCommonFuxi \
+    TelecommResCommon \
     TelephonyResCommon \
     WifiResTarget
 
