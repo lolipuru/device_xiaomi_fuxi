@@ -40,4 +40,6 @@ bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=false
 
 # Radio
-persist.vendor.radio.hidl_dev_service=true
+ro.vendor.radio.5g=3
+ro.vendor.radio.features_common=3
+

@@ -6,6 +6,7 @@ ro.sensor.pickup.lower.value=2
 persist.vendor.dpm.feature=11
 
 # Radio
+ro.telephony.sim_slots.count=2
 telephony.active_modems.max_count=2
 
 # Media

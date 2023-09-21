@@ -30,9 +30,9 @@ ro.vendor.qti.va_aosp.support=1
 
 # Radio
 DEVICE_PROVISIONED=1
+persist.vendor.radio.atfwd.start=true
 persist.vendor.data.mode=concurrent
 ril.subscription.types=NV,RUIM
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.telephony.default_network=33,33
 telephony.lteOnCdmaDevice=1
 
