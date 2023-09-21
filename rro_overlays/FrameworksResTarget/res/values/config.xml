@@ -114,4 +114,7 @@
     <!-- The battery current divider, some kernel report current value in mA other in µA.
          Leave 1 if you have mA, put 1000 if you have µA-->
     <integer name="config_battCurrentDivider" translatable="false">1</integer>
+
+    <!-- Support decoding of GSM 8 bit encoded SMS-->
+    <bool translatable="false" name="config_sms_decode_gsm_8bit_data">true</bool>
 </resources>
