@@ -8,5 +8,15 @@ persist.audio.fluence.voicerec=false
 ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.audio.ssr=false
 
+# displayfeature
+ro.vendor.touchfeature.type=247
+
+# NFC
+ro.vendor.nfc.disable.i2c=false
+ro.vendor.nfc.repair=1
+ro.vendor.nfc.dispatch_optim=1
+ro.vendor.se.chip.model=SN110T
+ro.vendor.se.type=HCE,UICC
+
 # Qti
 ro.vendor.qti.va_odm.support=1

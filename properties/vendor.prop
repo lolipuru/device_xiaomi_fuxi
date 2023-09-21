@@ -227,7 +227,6 @@ ro.vendor.localhbm.enable=true
 ro.vendor.soft_backlight.enable=true
 ro.vendor.standard.video.enable=true
 ro.vendor.thermal.dimming.enable=true
-ro.vendor.touchfeature.type=247
 ro.vendor.video_box.version=2
 ro.vendor.whitepoint_calibration_enable=false
 ro.vendor.xiaomi.bl.poll=true
@@ -367,17 +366,9 @@ vendor.media.vpp.aie.ltmsatgain=55
 vendor.media.vpp.aie.ltmsatoff=55
 vendor.media.vpp.debug.value.use=false
 vendor.mm.enable.qcom_parser=16777215
-ro.mediaserver.64b.enable=true
 
 # Misc
 sys.vendor.shutdown.waittime=500
-
-# NFC
-ro.vendor.nfc.disable.i2c=false
-ro.vendor.nfc.repair=1
-ro.vendor.nfc.dispatch_optim=1
-ro.vendor.se.chip.model=SN110T
-ro.vendor.se.type=HCE,UICC
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
