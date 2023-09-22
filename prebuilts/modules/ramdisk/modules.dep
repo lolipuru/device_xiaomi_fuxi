@@ -77,7 +77,7 @@
 /lib/modules/qcom-pmu-lib.ko: /lib/modules/qcom_llcc_pmu.ko
 /lib/modules/tmecom-intf.ko:
 /lib/modules/reboot-mode.ko:
-/lib/modules/repeater-qti-pmic-eusb2.ko: /lib/modules/repeater.ko
+/lib/modules/repeater-qti-pmic-eusb2.ko: /lib/modules/repeater.ko /lib/modules/hwid.ko /lib/modules/socinfo.ko /lib/modules/smem.ko
 /lib/modules/qcom_lpm.ko: /lib/modules/sched-walt.ko /lib/modules/metis.ko /lib/modules/mi_schedule.ko /lib/modules/qcom-cpufreq-hw.ko
 /lib/modules/millet_hs.ko: /lib/modules/millet_core.ko
 /lib/modules/qcom-cpufreq-hw.ko:

@@ -4,6 +4,7 @@ kernel/lib/xz/xz_dec.ko
 kernel/arch/arm64/kvm/kvm.ko
 kernel/arch/arm64/crypto/sha2-ce.ko
 kernel/arch/arm64/crypto/sha512-ce.ko
+kernel/arch/arm64/crypto/polyval-ce.ko
 kernel/arch/arm64/crypto/aes-ce-cipher.ko
 kernel/arch/arm64/crypto/aes-glue-ce.ko
 kernel/arch/arm64/crypto/sha256-arm64.ko
@@ -117,6 +118,8 @@ kernel/crypto/cbc.ko
 kernel/crypto/cts.ko
 kernel/crypto/xts.ko
 kernel/crypto/ctr.ko
+kernel/crypto/xctr.ko
+kernel/crypto/hctr2.ko
 kernel/crypto/adiantum.ko
 kernel/crypto/nhpoly1305.ko
 kernel/crypto/gcm.ko
@@ -139,6 +142,7 @@ kernel/crypto/ansi_cprng.ko
 kernel/crypto/drbg.ko
 kernel/crypto/jitterentropy_rng.ko
 kernel/crypto/ghash-generic.ko
+kernel/crypto/polyval-generic.ko
 kernel/crypto/zstd.ko
 kernel/crypto/ecc.ko
 kernel/crypto/essiv.ko
@@ -155,7 +159,6 @@ kernel/lib/math/rational.ko
 kernel/lib/crypto/libchacha.ko
 kernel/lib/crypto/libaes.ko
 kernel/lib/crypto/libarc4.ko
-kernel/lib/crypto/libblake2s-generic.ko
 kernel/lib/crypto/libblake2s.ko
 kernel/lib/crypto/libchacha20poly1305.ko
 kernel/lib/crypto/libcurve25519-generic.ko
@@ -292,6 +295,7 @@ kernel/drivers/net/usb/cdc_eem.ko
 kernel/drivers/net/usb/usbnet.ko
 kernel/drivers/net/usb/cdc_ncm.ko
 kernel/drivers/net/usb/aqc111.ko
+kernel/drivers/net/usb/r8153_ecm.ko
 kernel/drivers/uio/uio.ko
 kernel/drivers/usb/common/usb-common.ko
 kernel/drivers/usb/core/usbcore.ko
@@ -321,6 +325,7 @@ kernel/drivers/usb/gadget/function/usb_f_mass_storage.ko
 kernel/drivers/usb/gadget/function/usb_f_fs.ko
 kernel/drivers/usb/gadget/function/u_audio.ko
 kernel/drivers/usb/gadget/function/usb_f_uac2.ko
+kernel/drivers/usb/gadget/function/usb_f_uvc.ko
 kernel/drivers/usb/gadget/function/usb_f_midi.ko
 kernel/drivers/usb/gadget/function/usb_f_hid.ko
 kernel/drivers/usb/gadget/function/usb_f_accessory.ko
@@ -391,6 +396,7 @@ kernel/drivers/mmc/host/sdhci.ko
 kernel/drivers/mmc/host/sdhci-pltfm.ko
 kernel/drivers/leds/led-class.ko
 kernel/drivers/leds/led-class-flash.ko
+kernel/drivers/leds/led-class-multicolor.ko
 kernel/drivers/leds/trigger/ledtrig-timer.ko
 kernel/drivers/leds/trigger/ledtrig-transient.ko
 kernel/drivers/firmware/arm_scpi.ko
