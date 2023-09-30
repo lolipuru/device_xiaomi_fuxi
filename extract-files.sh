@@ -65,6 +65,9 @@ function blob_fixup() {
         odm/etc/camera/night_motiontuning.xml|odm/etc/camera/night_motiontuning.xml)
             sed -i 's/xml=version/xml version/g' "${2}"
             ;;
+        odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc)
+            sed -i 's/group system input/group system input\n    task_profiles ServiceCapacityLow/' "${2}"
+            ;;
     esac
 }
 
