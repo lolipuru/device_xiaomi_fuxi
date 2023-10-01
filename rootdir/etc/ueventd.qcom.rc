@@ -578,3 +578,6 @@ subsystem mem_buf_vm
 /sys/bus/coresight/devices/coresight-hwevent/setreg             0664   system   system
 /sys/bus/coresight/devices/coresight-swao-csr/timestamp         0664   system   system
 /sys/bus/coresight/devices/coresight-modem-diag/enable_source   0664   system   system
+
+# Battery
+/sys/class/qcom-battery                                 reverse_chg_mode                0644    system  system
