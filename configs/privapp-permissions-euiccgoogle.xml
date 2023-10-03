@@ -7,8 +7,10 @@
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
-        <permission name="android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="com.android.permission.INSTALL_EXISTING_PACKAGES"/>
+        <permission name="android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"/>
+        <permission name="com.android.permission.INSTALL_EXISTING_PACKAGES" />
+        <permission name="com.android.permission.WRITE_EMBEDDED_SUBSCRIPTIONS"/>
+        <permission name="com.google.android.permission.USE_GRIL" />
     </privapp-permissions>
 </permissions>

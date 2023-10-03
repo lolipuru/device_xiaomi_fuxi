@@ -1850,8 +1850,8 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
-# eUICC - from FP4 SKQ1.220201.001 SP29
-product/priv-app/EuiccGoogle/EuiccGoogle.apk|2d238bfe14473b8f578bf0d4ea61246f61d0f618;PRESIGNED
+# eUICC - from lynx-user 13 TQ3A.230805.001
+product/priv-app/EuiccGoogle/EuiccGoogle.apk|eb240e4707dd84f6fc248628d52395693c5359ff;PRESIGNED
 
 # Fingerprint
 odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
