@@ -1,0 +1,23 @@
+//
+// Copyright (C) 2023 Paranoid Android
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+aidl_interface {
+    name: "vendor.lineage.xiaomitouch",
+    srcs: ["vendor/lineage/xiaomitouch/*.aidl"],
+    vendor_available: true,
+    unstable: true,
+    backend: {
+        ndk: {
+            enabled: true,
+        },
+        cpp: {
+            enabled: true,
+        },
+        java: {
+            platform_apis: true,
+        },
+    },
+}

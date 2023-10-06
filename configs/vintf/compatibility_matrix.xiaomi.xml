@@ -283,4 +283,12 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <!-- XiaomiTouch -->
+    <hal format="aidl" optional="true">
+        <name>vendor.lineage.xiaomitouch</name>
+        <interface>
+            <name>IXiaomiTouch</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
