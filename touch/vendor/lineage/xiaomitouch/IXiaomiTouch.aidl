@@ -4,7 +4,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-package vendor.aospa.xiaomitouch;
+package vendor.lineage.xiaomitouch;
 
 interface IXiaomiTouch {
     oneway void setModeValue(int mode, int value);

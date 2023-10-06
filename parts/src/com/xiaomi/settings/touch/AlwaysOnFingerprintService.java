@@ -17,10 +17,13 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
+import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings.Secure;
 import android.util.Log;
+
+import vendor.lineage.xiaomitouch.IXiaomiTouch;
 
 public class AlwaysOnFingerprintService extends Service {
 
@@ -29,12 +32,15 @@ public class AlwaysOnFingerprintService extends Service {
 
     private static final String SECURE_KEY_TAP = "doze_tap_gesture";
     private static final String SECURE_KEY_UDFPS = "screen_off_udfps_enabled";
+    private static final String ITOUCHFEATUREL_AIDL_INTERFACE =
+            "vendor.lineage.xiaomitouch.IXiaomiTouch/default";
 
     private boolean mIsAofEnabled;
 
     private ContentResolver mContentResolver;
     private ScreenStateReceiver mScreenStateReceiver;
     private SettingsObserver mSettingsObserver;
+    private IXiaomiTouch mXiaomiTouch;
     private final Handler mHandler = new Handler();
 
     @Override
@@ -66,6 +72,37 @@ public class AlwaysOnFingerprintService extends Service {
         return null;
     }
 
+    private void setXiaomiTouchMode(int mode, int value) {
+        final IXiaomiTouch touchFeature = getXiaomiTouch();
+        if (touchFeature == null) {
+            Log.e(TAG, "setXiaomiTouchMode: touchFeature is null!");
+            return;
+        }
+        if (DEBUG) Log.d(TAG, "setXiaomiTouchMode: mode: " + mode + ", value: " + value);
+        try {
+            touchFeature.setModeValue(mode, value);
+        } catch (Exception e) {
+            Log.e(TAG, "setXiaomiTouchMode failed!", e);
+        }
+    }
+
+    private IXiaomiTouch getXiaomiTouch() {
+        if (mXiaomiTouch == null) {
+            if (DEBUG) Log.d(TAG, "getXiaomiTouch: mXiaomiTouch=null");
+            try {
+                IBinder binder = ServiceManager.getService(ITOUCHFEATUREL_AIDL_INTERFACE);
+                if (binder == null)
+                    throw new Exception("daemon binder null");
+                mXiaomiTouch = IXiaomiTouch.Stub.asInterface(binder);
+                if (mXiaomiTouch == null)
+                    throw new Exception("AIDL daemon interface null");
+            } catch (Exception e) {
+                Log.e(TAG, "getXiaomiTouch failed!", e);
+            }
+        }
+        return mXiaomiTouch;
+    }
+
     private final class ScreenStateReceiver extends BroadcastReceiver {
         public void register() {
             if (DEBUG) Log.d(TAG, "ScreenStateReceiver: register");
@@ -78,11 +115,13 @@ public class AlwaysOnFingerprintService extends Service {
             switch (intent.getAction()) {
                 case Intent.ACTION_SCREEN_ON:
                     if (DEBUG) Log.d(TAG, "Received ACTION_SCREEN_ON");
-                    SystemProperties.set("persist.sys.fuxi.alwaysonudfps", "0");
+                    setXiaomiTouchMode(10, 0);
+                    setXiaomiTouchMode(16, 0);
                     break;
                 case Intent.ACTION_SCREEN_OFF:
                     if (DEBUG) Log.d(TAG, "Received ACTION_SCREEN_OFF");
-                    SystemProperties.set("persist.sys.fuxi.alwaysonudfps", mIsAofEnabled ? "1" : "0");
+                    setXiaomiTouchMode(10, mIsAofEnabled ? 1 : 0);
+                    setXiaomiTouchMode(16, mIsAofEnabled ? 1 : 0);
                     break;
             }
         }

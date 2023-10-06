@@ -14,10 +14,11 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "SettingsLib",
+        "vendor.lineage.xiaomitouch-java",
     ],
     required: [
         "privapp_whitelist_com.xiaomi.settings.xml",
-        "xiaomi-touch"
+        "vendor.lineage.xiaomitouch-service",
     ],
 }
 
@@ -26,9 +27,4 @@ prebuilt_etc {
     src: "permissions/privapp_whitelist_com.xiaomi.settings.xml",
     sub_dir: "permissions",
     system_ext_specific: true,
-}
-
-cc_binary {
-	name: "xiaomi-touch",
-	srcs: ["xiaomi-touch.cpp"],
 }
