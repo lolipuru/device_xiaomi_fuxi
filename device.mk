@@ -163,10 +163,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
-# Dtb
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/dtb:dtb.img
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
