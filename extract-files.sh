@@ -68,6 +68,12 @@ function blob_fixup() {
         odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc)
             sed -i 's/group system input/group system input\n    task_profiles ServiceCapacityLow/' "${2}"
             ;;
+        vendor/bin/hw/android.hardware.security.keymint-service-qti)
+            "${PATCHELF}" --add-needed android.hardware.security.rkp-V1-ndk.so "${2}"
+            ;;
+         vendor/lib64/libqtikeymint.so)
+            "${PATCHELF}" --add-needed android.hardware.security.rkp-V1-ndk.so "${2}"
+            ;;
     esac
 }
 
