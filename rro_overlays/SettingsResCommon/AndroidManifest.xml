@@ -4,10 +4,10 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settings.overlay.xiaomi">
+    package="com.android.settings.overlay.common">
     <application android:hasCode="false" />
     <overlay
         android:isStatic="true"
-        android:priority="300"
+        android:priority="600"
         android:targetPackage="com.android.settings" />
 </manifest>

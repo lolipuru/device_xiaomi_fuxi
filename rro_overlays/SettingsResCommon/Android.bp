@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "FrameworksResTargetXiaomi",
+    name: "SettingsResCommon",
     product_specific: true
 }
