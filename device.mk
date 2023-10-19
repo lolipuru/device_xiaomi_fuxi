@@ -435,7 +435,8 @@ PRODUCT_PACKAGES += \
 
 # Secure element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2.vendor
+    android.hardware.secure_element@1.2.vendor \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Sensors
 PRODUCT_PACKAGES += \
