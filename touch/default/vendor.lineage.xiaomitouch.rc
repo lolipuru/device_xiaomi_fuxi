@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-service xiaomi.touchfeature-default /system/bin/vendor.lineage.xiaomitouch-service
+service vendor.xiaomitouch /vendor/bin/hw/vendor.lineage.xiaomitouch-service
     class hal
     user system
-    group system input uhid 
+    group system

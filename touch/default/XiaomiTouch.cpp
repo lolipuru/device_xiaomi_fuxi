@@ -4,7 +4,7 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-#define TAG "XiaomiTouchHAL"
+#define LOG_TAG "vendor.lineage.xiaomitouch-service"
 
 #include "XiaomiTouch.h"
 
@@ -32,29 +32,25 @@ using file_fd = android::base::unique_fd;
 
 namespace aidl::vendor::lineage::xiaomitouch {
 
-::ndk::ScopedAStatus XiaomiTouch::setModeValue(int32_t mode, int32_t value) {
-    if (!DISABLE_DEBUG) LOG(INFO) << TAG << ": " << "setModeValue called with value = " << value;
+ndk::ScopedAStatus XiaomiTouch::setModeValue(int32_t mode, int32_t value) {
+    LOG(INFO) << LOG_TAG << ": " << "setModeValue called with value = " << value;
 
     file_fd fd(open(TOUCH_DEV_PATH, O_RDWR));
 
     int buf[3] = {TOUCH_ID, mode, value};
 
     if (fd.get() == -1) {
-        if (!DISABLE_DEBUG) LOG(ERROR) << TAG << ": " << "Failed to open: " << TOUCH_DEV_PATH;
+        LOG(ERROR) << LOG_TAG << ": " << "Failed to open: " << TOUCH_DEV_PATH;
     } else {
         if (ioctl(fd.get(), TOUCH_IOC_SET_CUR_VALUE, &buf) == -1) {
-            if (!DISABLE_DEBUG) LOG(ERROR) << TAG << ": " << "Failed to write to: " << TOUCH_DEV_PATH;
+            LOG(ERROR) << LOG_TAG << ": " << "Failed to write to: " << TOUCH_DEV_PATH;
         } else {
-            if (!DISABLE_DEBUG) LOG(INFO) << TAG << ": " << "Wrote touch mode value as: " << value
+            LOG(INFO) << LOG_TAG << ": " << "Wrote touch mode value as: " << value
                 << " for mode: " << mode;
         }
     }
 
-    return ::ndk::ScopedAStatus::ok();
-}
-
-XiaomiTouch::XiaomiTouch(void) {
-    if (!DISABLE_DEBUG) LOG(INFO) << TAG << ": " << "XiaomiTouch: Constructor";
+    return ndk::ScopedAStatus::ok();
 }
 
 }

@@ -8,7 +8,8 @@ aidl_interface {
     name: "vendor.lineage.xiaomitouch",
     srcs: ["vendor/lineage/xiaomitouch/*.aidl"],
     vendor_available: true,
-    unstable: true,
+    stability: "vintf",
+    owner: "aospa",
     backend: {
         ndk: {
             enabled: true,
@@ -17,7 +18,10 @@ aidl_interface {
             enabled: true,
         },
         java: {
-            platform_apis: true,
+            sdk_version: "module_current",
+        },
+        rust: {
+            enabled: false,
         },
     },
 }

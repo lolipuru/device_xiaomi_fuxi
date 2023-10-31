@@ -7,3 +7,11 @@ attribute vendor_hal_displayfeature_xiaomi_server;
 attribute hal_touchfeature_xiaomi;
 attribute hal_touchfeature_xiaomi_client;
 attribute hal_touchfeature_xiaomi_server;
+
+# XiaomiTouch
+attribute hal_lineage_xiaomitouch;
+expandattribute hal_lineage_xiaomitouch true;
+attribute hal_lineage_xiaomitouch_client;
+expandattribute hal_lineage_xiaomitouch_client true;
+attribute hal_lineage_xiaomitouch_server;
+expandattribute hal_lineage_xiaomitouch_server false;

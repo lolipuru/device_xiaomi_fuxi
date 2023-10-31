@@ -142,3 +142,6 @@
 # Xiaomi thermal daemon
 /(vendor|system/vendor)/bin/mi_thermald     u:object_r:mi_thermald_exec:s0
 /data/vendor/thermal(/.*)?                  u:object_r:vendor_thermal_data_file:s0
+
+# XiaomiTouch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.xiaomitouch-service u:object_r:hal_lineage_xiaomitouch_default_exec:s0

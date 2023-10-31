@@ -8,19 +8,18 @@ cc_binary {
     name: "vendor.lineage.xiaomitouch-service",
     init_rc: ["vendor.lineage.xiaomitouch.rc"],
     vintf_fragments: ["vendor.lineage.xiaomitouch.xml"],
+    vendor: true,
+    relative_install_path: "hw",
     shared_libs: [
         "libbase",
         "libbinder_ndk",
         "libbinder",
-        "vendor.lineage.xiaomitouch-ndk",
-    ],
-
-    cflags: [
-        "-DDISABLE_DEBUG=1",
+        "libutils",
+        "vendor.lineage.xiaomitouch-V1-ndk",
     ],
 
     srcs: [
+        "main.cpp",
         "XiaomiTouch.cpp",
-        "service.cpp",
     ],
 }
