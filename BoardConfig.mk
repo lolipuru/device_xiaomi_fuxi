@@ -193,9 +193,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Vendor boot
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
-# System As Root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
-
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
