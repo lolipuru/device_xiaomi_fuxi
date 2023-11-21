@@ -40,6 +40,11 @@
             android:exported="true">
         </service>
 
+        <service
+            android:name=".touch.TouchPollingRateService"
+            android:exported="true">
+        </service>
+
     </application>
 </manifest>
 

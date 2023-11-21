@@ -13,6 +13,7 @@ import android.os.UserHandle;
 import android.util.Log;
 
 import com.xiaomi.settings.touch.AlwaysOnFingerprintService;
+import com.xiaomi.settings.touch.TouchPollingRateService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -27,6 +28,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
 
         context.startServiceAsUser(new Intent(context, AlwaysOnFingerprintService.class),
+                UserHandle.CURRENT);
+
+        context.startServiceAsUser(new Intent(context, TouchPollingRateService.class),
                 UserHandle.CURRENT);
     }
 }
