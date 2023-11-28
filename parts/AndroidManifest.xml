@@ -42,6 +42,11 @@
         </service>
 
         <service
+            android:name=".doze.PocketDetectionService"
+            android:exported="true">
+        </service>
+
+        <service
             android:name=".touch.AlwaysOnFingerprintService"
             android:exported="true">
         </service>

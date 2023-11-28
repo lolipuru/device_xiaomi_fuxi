@@ -17,6 +17,7 @@ import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
 import com.xiaomi.settings.display.ColorModeService;
+import com.xiaomi.settings.doze.PocketDetectionService;
 import com.xiaomi.settings.touch.AlwaysOnFingerprintService;
 import com.xiaomi.settings.touch.TouchPollingRateService;
 
@@ -34,6 +35,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Display
         context.startServiceAsUser(new Intent(context, ColorModeService.class),
+                UserHandle.CURRENT);
+
+        // Pocket
+        context.startServiceAsUser(new Intent(context, PocketDetectionService.class),
                 UserHandle.CURRENT);
 
         // Touchscreen
