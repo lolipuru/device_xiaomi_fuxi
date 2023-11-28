@@ -155,10 +155,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libdrm.vendor
 
-# Dolby
-PRODUCT_PACKAGES += \
-    XiaomiDolby
-
 # Doze
 PRODUCT_PACKAGES += \
     XiaomiDoze
