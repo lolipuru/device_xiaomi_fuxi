@@ -68,6 +68,9 @@ function blob_fixup() {
         odm/lib64/hw/displayfeature.default.so)
             "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
+        odm/lib64/libmt@1.3.so)
+            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+            ;;
         odm/etc/init/vendor.xiaomi.sensor.citsensorservice@2.0-service.rc)
             sed -i 's/group system input/group system input\n    task_profiles ServiceCapacityLow/' "${2}"
             ;;
