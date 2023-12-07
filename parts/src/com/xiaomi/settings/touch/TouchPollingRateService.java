@@ -20,10 +20,8 @@ import android.os.Looper;
 import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.os.UserHandle;
-import android.provider.Settings.Secure;
+import android.provider.Settings;
 import android.util.Log;
-
-import vendor.lineage.xiaomitouch.IXiaomiTouch;
 
 public class TouchPollingRateService extends Service {
 
@@ -31,15 +29,12 @@ public class TouchPollingRateService extends Service {
     private static final boolean DEBUG = true;
 
     private static final String SECURE_KEY_POLLING = "touch_polling_enabled";
-    private static final String ITOUCHFEATUREL_AIDL_INTERFACE =
-            "vendor.lineage.xiaomitouch.IXiaomiTouch/default";
 
     private boolean mIsPollingEnabled;
 
     private ContentResolver mContentResolver;
     private ScreenStateReceiver mScreenStateReceiver;
     private SettingsObserver mSettingsObserver;
-    private IXiaomiTouch mXiaomiTouch;
     private final Handler mHandler = new Handler();
 
     @Override
@@ -71,37 +66,6 @@ public class TouchPollingRateService extends Service {
         return null;
     }
 
-    private void setXiaomiTouchMode(int mode, int value) {
-        final IXiaomiTouch touchFeature = getXiaomiTouch();
-        if (touchFeature == null) {
-            Log.e(TAG, "setXiaomiTouchMode: touchFeature is null!");
-            return;
-        }
-        if (DEBUG) Log.d(TAG, "setXiaomiTouchMode: mode: " + mode + ", value: " + value);
-        try {
-            touchFeature.setModeValue(mode, value);
-        } catch (Exception e) {
-            Log.e(TAG, "setXiaomiTouchMode failed!", e);
-        }
-    }
-
-    private IXiaomiTouch getXiaomiTouch() {
-        if (mXiaomiTouch == null) {
-            if (DEBUG) Log.d(TAG, "getXiaomiTouch: mXiaomiTouch=null");
-            try {
-                IBinder binder = ServiceManager.getService(ITOUCHFEATUREL_AIDL_INTERFACE);
-                if (binder == null)
-                    throw new Exception("daemon binder null");
-                mXiaomiTouch = IXiaomiTouch.Stub.asInterface(binder);
-                if (mXiaomiTouch == null)
-                    throw new Exception("AIDL daemon interface null");
-            } catch (Exception e) {
-                Log.e(TAG, "getXiaomiTouch failed!", e);
-            }
-        }
-        return mXiaomiTouch;
-    }
-
     private final class ScreenStateReceiver extends BroadcastReceiver {
         public void register() {
             if (DEBUG) Log.d(TAG, "ScreenStateReceiver: register");
@@ -114,11 +78,11 @@ public class TouchPollingRateService extends Service {
             switch (intent.getAction()) {
                 case Intent.ACTION_SCREEN_ON:
                     if (DEBUG) Log.d(TAG, "Received ACTION_SCREEN_ON");
-                    setXiaomiTouchMode(0, mIsPollingEnabled ? 1 : 0);
+                    TfWrapper.setTouchFeature(new TfWrapper.TfParams(0, mIsPollingEnabled ? 1 : 0));
                     break;
                 case Intent.ACTION_SCREEN_OFF:
                     if (DEBUG) Log.d(TAG, "Received ACTION_SCREEN_OFF");
-                    setXiaomiTouchMode(0, 0);
+                    TfWrapper.setTouchFeature(new TfWrapper.TfParams(0, 0));
                     break;
             }
         }
@@ -131,19 +95,21 @@ public class TouchPollingRateService extends Service {
 
         public void register() {
             if (DEBUG) Log.d(TAG, "SettingsObserver: register");
-            mContentResolver.registerContentObserver(Secure.getUriFor(SECURE_KEY_POLLING), false, this);
+            mContentResolver.registerContentObserver(
+                    Settings.Secure.getUriFor(SECURE_KEY_POLLING), false, this);
         }
 
         void update() {
-            mIsPollingEnabled = Secure.getInt(mContentResolver, SECURE_KEY_POLLING, 0) != 0;
+            mIsPollingEnabled = Settings.Secure.getInt(mContentResolver, SECURE_KEY_POLLING, 0) != 0;
             if (DEBUG) Log.d(TAG, "SettingsObserver: SECURE_KEY_POLLING: " + mIsPollingEnabled);
-            setXiaomiTouchMode(0, mIsPollingEnabled ? 1 : 0);
+            TfWrapper.setTouchFeature(
+                    new TfWrapper.TfParams(/*TOUCH_GAME_MODE*/ 0, mIsPollingEnabled ? 1 : 0));
         }
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             if (DEBUG) Log.d(TAG, "SettingsObserver: onChange: " + uri.toString());
-            if (uri.equals(Secure.getUriFor(SECURE_KEY_POLLING))) {
+            if (uri.equals(Settings.Secure.getUriFor(SECURE_KEY_POLLING))) {
                 update();
             }
         }
