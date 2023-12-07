@@ -1575,12 +1575,8 @@ vendor/lib64/libclstc_tm.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libgpu_tonemapper.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
 vendor/lib64/libintervmipc.so
 vendor/lib64/libqseed3.so
-vendor/lib64/libqservice.so
 vendor/lib64/librcmask.so
 vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
