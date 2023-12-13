@@ -35,6 +35,7 @@
     <string name="dolby_bass_enhancer">Bass enhancer</string>
     <string name="dolby_dialogue_enhancer">Dialogue enhancer</string>
     <string name="dolby_virtualizer">Surround virtualizer</string>
+    <string name="dolby_stereo_widening">Stereo widening</string>
     <string name="dolby_volume_leveler">Volume leveler</string>
     <string name="dolby_connect_headphones">Connect headphones</string>
     <string name="dolby_reset_profile">Reset to defaults</string>
@@ -55,5 +56,7 @@
     <string name="dolby_preset_hiphop">Hip Hop</string>
     <string name="dolby_preset_blues">Blues</string>
     <string name="dolby_preset_electronic">Electronic</string>
+    <string name="dolby_preset_country">Country</string>
+    <string name="dolby_preset_dance">Dance</string>
     <string name="dolby_preset_metal">Metal</string>
 </resources>
