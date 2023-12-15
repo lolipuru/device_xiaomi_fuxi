@@ -40,10 +40,6 @@
         <fqname>@1.0::IGatekeeper/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.keymaster</name>
-        <transport>hwbinder</transport>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -501,25 +497,5 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ISlaService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.rongcard.hardware.eid</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IEidDevice</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IEidDevice/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.bgservice</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBGService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBGService/default</fqname>
     </hal>
 </manifest>
