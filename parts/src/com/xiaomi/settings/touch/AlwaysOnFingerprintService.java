@@ -109,7 +109,7 @@ public class AlwaysOnFingerprintService extends Service {
         }
 
         void update() {
-            boolean st2w = Settings.Secure.getInt(mContentResolver, SECURE_KEY_TAP, 0) != 0;
+            boolean st2w = Settings.Secure.getInt(mContentResolver, SECURE_KEY_TAP, 1) != 0;
             boolean udfps = Settings.Secure.getInt(mContentResolver, SECURE_KEY_UDFPS, 0) != 0;
             if (DEBUG) Log.d(TAG, "SettingsObserver: SECURE_KEY_TAP: " + st2w + ", SECURE_KEY_UDFPS: " + udfps);
             mIsAofEnabled = st2w || udfps;
