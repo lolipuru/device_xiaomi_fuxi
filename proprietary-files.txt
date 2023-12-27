@@ -1071,6 +1071,8 @@ odm/lib64/libdualcam_video_optical_zoom.so
 odm/lib64/libellv.so
 odm/lib64/libfastmessage.so
 odm/lib64/libhdr10plus.so
+odm/lib64/libhdr_stub.so
+odm/lib64/libhme.so
 odm/lib64/libipebpsstriping.so
 odm/lib64/libipebpsstriping170.so
 odm/lib64/libipebpsstriping480.so
