@@ -53,14 +53,6 @@ $(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
 
-EGL_LIB_SYMLINKS := $(TARGET_OUT_VENDOR)/lib
-$(EGL_LIB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "EGL lib symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf egl/libEGL_adreno.so $@/libEGL_adreno.so
-	$(hide) ln -sf egl/libGLESv2_adreno.so $@/libGLESv2_adreno.so
-	$(hide) ln -sf egl/libq3dtools_adreno.so $@/libq3dtools_adreno.so
-
 EGL_LIB64_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64
 $(EGL_LIB64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "EGL lib64 symlinks: $@"
@@ -154,7 +146,7 @@ $(CAMERA_LIB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /odm/lib64/camera/aon_front.pb $@/aon_front.pb
 
 ALL_DEFAULT_INSTALLED_MODULES += \
-        $(CAMERA_LIB_SYMLINKS) \
+    $(CAMERA_LIB_SYMLINKS) \
 	$(RFS_MDM_ADSP_SYMLINKS) \
 	$(RFS_MDM_CDSP_SYMLINKS) \
 	$(RFS_MDM_MPSS_SYMLINKS) \
