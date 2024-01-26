@@ -22,7 +22,7 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.6.5_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.5_0.0__3.0.0_0.0__3.1.1.0_0.0__3.2.0_0.0__eai_2.7_enpu_v3.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd
+vendor/etc/acdbdata/nn_ns_models/fai_f_2.7.8_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__4.8.2_0.0__3.0.0_0.0__3.1.1.0_0.0__3.2.0_0.0__eai_2.7_enpu_v3.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__4.8.3_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd
@@ -2694,7 +2694,6 @@ system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/framework/qcrilhook.jar
-system_ext/framework/qti-telephony-common.jar|5632f28439491a1ff47b65d03210e38b43f61ecf
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
