@@ -49,6 +49,8 @@ system_dlkm                                             /system_dlkm           e
 system_dlkm                                             /system_dlkm           ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount
 odm                                                     /odm                   erofs   ro                                                   wait,slotselect,avb=vbmeta,logical,first_stage_mount
 odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount
+overlay                                                 /vendor/etc/camera     overlay ro,lowerdir=/odm/etc/camera/:/vendor/etc/camera      check,nofail
+overlay                                                 /vendor/lib/rfsa/adsp  overlay ro,lowerdir=/odm/mount/camera/lib/rfsa/adsp/:/vendor/lib/rfsa/adsp check,nofail
 /dev/block/by-name/boot                                 /boot                  emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/init_boot                            /init_boot             emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/vendor_boot                          /vendor_boot           emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount

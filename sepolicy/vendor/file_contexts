@@ -41,6 +41,7 @@
 /odm/lib(64)?/libmiocr\.so u:object_r:same_process_hal_file:s0
 /odm/lib(64)?/libmialgo_utils\.so u:object_r:same_process_hal_file:s0
 /odm/lib(64)?/libxmi_slow_motion_mein\.so u:object_r:same_process_hal_file:s0
+/odm/bin/hw/vendor\.qti\.camera\.provider-service_64                          u:object_r:hal_camera_default_exec:s0
 
 # Display
 /sys/class/backlight(/.*)?                                                    u:object_r:vendor_sysfs_graphics:s0

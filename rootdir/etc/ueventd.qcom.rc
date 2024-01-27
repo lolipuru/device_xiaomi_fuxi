@@ -28,7 +28,7 @@
 #
 #
 # Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -107,6 +107,8 @@ subsystem mem_buf_vm
 /dev/synx_device          0660   root       camera
 /dev/hab                  0666   system     system
 /dev/iio:device*          0664   system     system
+/dev/qmc_dma              0660   radio      radio
+/dev/qmc_cma              0660   radio      radio
 
 #permissions for UFS RPMB BSG device node
 /dev/0:0:0:49476          0600   system     system
@@ -122,6 +124,8 @@ subsystem mem_buf_vm
 /dev/smd3                 0660   bluetooth  bluetooth
 /dev/btpower              0660   bluetooth  system
 /dev/btfmslim             0660   bluetooth  system
+/dev/bt_cp_ctrl           0660   bluetooth  system
+/dev/btfmcodec_dev        0660   bluetooth  system
 
 #permissions for pta
 /dev/pta                  0660   system     system
@@ -184,6 +188,7 @@ subsystem mem_buf_vm
 /dev/cvp*                 0660   system     camera
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
+/dev/hdmi_bdg_irq_handler 0660   system     camera
 /dev/qseecom              0660   system     drmrpc
 /dev/qce                  0660   system     drmrpc
 /dev/smcinvoke            0660   system     drmrpc
@@ -257,7 +262,6 @@ subsystem mem_buf_vm
 /dev/msm_vidc_dec_sec     0660   system     audio
 /dev/msm_vidc_enc         0660   system     audio
 /dev/msm_rotator          0660   system     system
-/dev/hw_random            0600   root       root
 /dev/sdsprpc-smd          0660   system     system
 
 #permissions for audio
@@ -400,6 +404,9 @@ subsystem mem_buf_vm
 # Ultrasound device
 /dev/usf1                 0660   system     system
 
+# xlog device
+/dev/xlog                 0660   system     audio
+
 # Ramdump devices
 /dev/ramdump*             0640   system     system
 
@@ -426,6 +433,9 @@ subsystem mem_buf_vm
 /dev/block/platform/soc/7c4000.sdhci/by-name/frp        0600   system     system
 /dev/block/platform/soc/4744000.sdhci/by-name/frp       0600   system     system
 /dev/block/platform/soc/4804000.ufshc/by-name/frp       0600   system     system
+/dev/block/platform/soc/7c4000.sdhci/by-name/rawdump    0660   root       system
+/dev/block/platform/soc/1d84000.ufshc/by-name/rawdump   0660   root       system
+/dev/block/platform/soc/4804000.ufshc/by-name/rawdump   0600   root       system
 
 # This is temporary while using SD card for initial bring-up
 /dev/block/platform/soc/8804000.sdhci/by-name/frp       0600   system     system
@@ -563,21 +573,9 @@ subsystem mem_buf_vm
 # devcoredump data attributes
 /sys/class/devcoredump/devcd*                           data                            0600    system  system
 
-# qdss sysfs node attributes
-/sys/bus/coresight/devices/coresight-tmc-etf/curr_sink          0664   system   system
-/sys/bus/coresight/devices/coresight-tmc-etf/enable_sink        0664   system   system
-/sys/bus/coresight/devices/coresight-tmc-etr/curr_sink          0664   system   system
-/sys/bus/coresight/devices/coresight-tmc-etr/enable_sink        0664   system   system
-/sys/bus/coresight/devices/coresight-tmc-etr/out_mode           0664   system   system
-/sys/bus/coresight/devices/coresight-tpiu/curr_sink             0664   system   system
-/sys/bus/coresight/devices/coresight-tpiu/out_mode              0664   system   system
-/sys/bus/coresight/devices/coresight-stm/enable                 0664   system   system
-/sys/bus/coresight/devices/coresight-stm/enable_source          0664   system   system
-/sys/bus/coresight/devices/coresight-hwevent/enable             0664   system   system
-/sys/bus/coresight/devices/coresight-stm/hwevent_enable         0664   system   system
-/sys/bus/coresight/devices/coresight-hwevent/setreg             0664   system   system
-/sys/bus/coresight/devices/coresight-swao-csr/timestamp         0664   system   system
-/sys/bus/coresight/devices/coresight-modem-diag/enable_source   0664   system   system
-
 # Battery
 /sys/class/qcom-battery                                 reverse_chg_mode                0644    system  system
+
+# hdmi cec hal
+/dev/cec*                                            0660    system  system
+/sys/devices/platform/soc/984000.i2c/i2c-0/0-002b    get_hpd_stat    0660   system   system

@@ -336,6 +336,9 @@ sys.haptic.device_type=agm
 # Incremental
 ro.incremental.enable=yes
 
+# Keystore
+ro.hardware.keystore_desede=true
+
 # LMK
 persist.sys.miui.camera.boost.killAdj_threshold=251:200:100:50
 persist.sys.lmkd.extend_reclaim.enable=false
@@ -366,6 +369,7 @@ vendor.media.vpp.aie.ltmsatgain=55
 vendor.media.vpp.aie.ltmsatoff=55
 vendor.media.vpp.debug.value.use=false
 vendor.mm.enable.qcom_parser=16777215
+vendor.media.omx=0
 
 # Misc
 sys.vendor.shutdown.waittime=500
