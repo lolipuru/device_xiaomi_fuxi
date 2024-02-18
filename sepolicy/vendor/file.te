@@ -1,50 +1,47 @@
 # Audio
-type sysfs_f0_value, fs_type, sysfs_type;
 type audio_socket, file_type;
 
 # Battery
+type persist_subsys_file, vendor_persist_type, file_type;
 type vendor_sysfs_qcom_battery, fs_type, sysfs_type;
 
 # Camera
 type camera_persist_file, file_type, mlstrustedobject, vendor_persist_type;
 
-# Consumer IR
+# IR
 type ir_spi_device, dev_type;
 
-# Diag
-type vendor_modem_data_file, data_file_type, file_type;
-
-# Display
+# Displayfeature
 type vendor_sysfs_displayfeature, fs_type, sysfs_type;
 
 # Fingerprint
+type sysfs_tp_fodstatus, fs_type, sysfs_type;
 type vendor_fingerprint_data_file, data_file_type, file_type;
 type vendor_fingerprint_data_file_fpdump, data_file_type, file_type;
 
-# GNSS
-type qx_oss_vendor_data_file, data_file_type, file_type;
-type vendor_ins_vendor_data_file, data_file_type, file_type;
+# last_kmsg
+type proc_last_kmsg, fs_type, proc_type;
 
-# Mac Address
-type vendor_mac_vendor_data_file, data_file_type, file_type, mlstrustedobject;
+# Ril
+type vendor_modem_data_file, data_file_type, file_type;
 
-# Mlipay
-type ta_data_file, data_file_type, file_type;
+# Sensors
+type vendor_sysfs_iio, fs_type, sysfs_type;
 
-# SLA
-type sla_data_file, data_file_type, file_type;
-type slad_socket, file_type;
+# Thermal data
+type vendor_thermal_data_file, file_type, data_file_type;
 
-# Thermal
-type sys_thermal_torch_real_level, fs_type, sysfs_type;
-type sys_thermal_wifi_limit, fs_type, sysfs_type;
-type sys_thermal_flash_state, fs_type, sysfs_type;
-type thermal_data_file, data_file_type, file_type;
-
-# Touchscreen
+# Touchfeature
 type proc_tp_file, fs_type, proc_type;
+type proc_tp_lockdown, fs_type, proc_type;
 type sysfs_touch_hostprocess, fs_type, sysfs_type;
 type sysfs_touch_suspend, fs_type, sysfs_type;
-type sysfs_tp_fodstatus, fs_type, sysfs_type;
 type sysfs_tp_virtual_prox, fs_type, sysfs_type;
 type vendor_data_touchreport_file, data_file_type, file_type;
+type touchreport_data_file, data_file_type, file_type;
+
+# UFS
+type ufs_sysfs, fs_type, sysfs_type;
+
+# Wifi
+type vendor_mac_vendor_data_file, data_file_type, file_type, mlstrustedobject;

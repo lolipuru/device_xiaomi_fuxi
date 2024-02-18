@@ -1,2 +1,0 @@
-userdebug_or_eng(`allow vendor_diag-router vendor_modem_data_file:dir search;');
-userdebug_or_eng(`allow vendor_diag-router vendor_modem_data_file:fifo_file { open write };');

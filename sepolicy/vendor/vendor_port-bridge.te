@@ -1,1 +1,0 @@
-allow vendor_port-bridge sysfs:file { read open };

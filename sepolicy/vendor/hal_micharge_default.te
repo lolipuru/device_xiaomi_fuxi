@@ -41,11 +41,13 @@ allow vendor_hal_micharge_xiaomi_default sysfs:dir r_dir_perms;
 allow vendor_hal_micharge_xiaomi_default sysfs:file rw_file_perms;
 allow vendor_hal_micharge_xiaomi_default sysfs_batteryinfo:dir r_dir_perms;
 allow vendor_hal_micharge_xiaomi_default sysfs_batteryinfo:file rw_file_perms;
-allow vendor_hal_micharge_xiaomi_default vendor_sysfs_battery_supply:{file lnk_file} r_file_perms;
+allow vendor_hal_micharge_xiaomi_default vendor_sysfs_battery_supply:{file lnk_file} rw_file_perms;
 allow vendor_hal_micharge_xiaomi_default vendor_sysfs_battery_supply:dir r_dir_perms;
-allow vendor_hal_micharge_xiaomi_default vendor_sysfs_usb_supply:{file lnk_file} r_file_perms;
+allow vendor_hal_micharge_xiaomi_default vendor_sysfs_qcom_battery:{file lnk_file} rw_file_perms;
+allow vendor_hal_micharge_xiaomi_default vendor_sysfs_qcom_battery:dir r_dir_perms;
+allow vendor_hal_micharge_xiaomi_default vendor_sysfs_usb_supply:{file lnk_file} rw_file_perms;
 allow vendor_hal_micharge_xiaomi_default vendor_sysfs_usb_supply:dir r_dir_perms;
-allow vendor_hal_micharge_xiaomi_default vendor_sysfs_usbpd_device:{file lnk_file} r_file_perms;
+allow vendor_hal_micharge_xiaomi_default vendor_sysfs_usbpd_device:{file lnk_file} rw_file_perms;
 allow vendor_hal_micharge_xiaomi_default vendor_sysfs_usbpd_device:dir r_dir_perms;
 
 wakelock_use(vendor_hal_micharge_xiaomi_default)

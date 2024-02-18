@@ -1,7 +1,7 @@
 type hal_quickcamera_default, domain;
 type hal_quickcamera_default_exec, exec_type, file_type, vendor_file_type;
 type hal_quickcamera_hwservice, hwservice_manager_type;
-hal_attribute(quickcamera)
+
 allow hal_quickcamera_client hal_quickcamera_server:binder { call transfer };
 allow hal_quickcamera_client hal_quickcamera_server:binder transfer;
 allow hal_quickcamera_client hal_quickcamera_server:fd *;

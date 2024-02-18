@@ -1,7 +1,7 @@
 type hal_mfidoca_default, domain;
 type hal_mfidoca_default_exec, exec_type, file_type, vendor_file_type;
 type hal_mfidoca_hwservice, hwservice_manager_type;
-hal_attribute(mfidoca)
+hal_server_domain(hal_mfidoca_default, hal_mfidoca)
 allow hal_mfidoca_client hal_mfidoca_server:binder { call transfer };
 allow hal_mfidoca_client hal_mfidoca_server:binder transfer;
 allow hal_mfidoca_client hal_mfidoca_server:fd *;
@@ -16,9 +16,8 @@ allow hal_mfidoca_default vendor_dmabuf_qseecom_heap_device:chr_file { ioctl ope
 allow hal_mfidoca_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { ioctl open read };
 allow hal_mfidoca_default hal_mtdservice_default:binder transfer;
 init_daemon_domain(hal_mfidoca_default)
-get_prop(hal_mfidoca_default, vendor_fp_prop)
+#get_prop(hal_mfidoca_default, vendor_fp_prop)
 get_prop(hal_mfidoca_default, vendor_system_prop)
 set_prop(hal_mfidoca_default, vendor_payment_security_prop)
 hwbinder_use(hal_mfidoca_default)
-hal_server_domain(hal_mfidoca_default, hal_mfidoca)
 add_hwservice(hal_mfidoca_server, hal_mfidoca_hwservice)

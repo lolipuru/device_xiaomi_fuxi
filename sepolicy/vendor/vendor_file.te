@@ -1,1 +1,0 @@
-allow init vendor_file:file execute;

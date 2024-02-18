@@ -1,1 +1,0 @@
-allow vendor_per_proxy sysfs:file { read open };

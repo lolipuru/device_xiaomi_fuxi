@@ -1,1 +1,0 @@
-allow hal_bootctl_default block_device:blk_file getattr;
