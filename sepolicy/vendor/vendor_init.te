@@ -1,8 +1,18 @@
+# Allow vendor_init to set audio prop
+set_prop(vendor_init, audio_prop)
+
+# Allow vendor_init to set fingerprint prop
+set_prop(vendor_init, vendor_fp_prop)
+
 # Allow vendor init to set SSR property
 set_prop(vendor_init, vendor_ssr_prop)
 
-# Allow vendor init to set SSR property
+# Allow vendor init to set NFC property
 set_prop(vendor_init, vendor_nfc_prop)
 
 # Allow vendor_init to set thermal prop
 set_prop(vendor_init, vendor_thermal_normal_prop)
+
+# Allow vendor_init to set/get vendor default prop
+set_prop(vendor_init, vendor_default_prop)
+get_prop(vendor_init, vendor_default_prop)

@@ -31,6 +31,7 @@ allow hal_fingerprint_default sysfs_tp_fodstatus:chr_file r_file_perms;
 allow hal_fingerprint_default sysfs_tp_fodstatus:file r_file_perms;
 allow hal_fingerprint_default touchfeature_device:chr_file rw_file_perms;
 allow hal_fingerprint_default surfaceflinger:binder transfer;
+get_prop(hal_fingerprint_default, vendor_camera_prop)
 get_prop(hal_fingerprint_default, vendor_panel_info_prop)
 set_prop(hal_fingerprint_default, vendor_fp_prop)
 set_prop(hal_fingerprint_default, vendor_fp_info_prop)
