@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">6dp</dimen>
+
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
+
+    <!-- Adjust the icon padding in status bar for rounded corners. -->
+    <dimen name="rounded_corner_content_padding">49.0px</dimen>
+
+    <!-- The width/height of the unlock icon view on keyguard. -->
+    <dimen name="keyguard_indication_margin_bottom">11dp</dimen>
+
+    <!-- Location on the screen of the center of the physical power button. -->
+    <dimen name="physical_power_button_center_screen_location_y">1040px</dimen>
+</resources>

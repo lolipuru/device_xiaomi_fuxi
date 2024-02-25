@@ -352,15 +352,16 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    CarrierConfigResCommon \
-    FrameworksResTarget \
-    FrameworksResTargetFuxi \
+    CarrierConfigRes \
+    CarrierConfigResMiui \
+    FrameworksResCommon \
+    FrameworksResFuxi \
     SettingsResCommon \
-    SystemUIResCommon \
-    SystemUIResCommonFuxi \
-    TelecommResCommon \
     TelephonyResCommon \
-    WifiResTarget
+    SystemUIResFuxi \
+    WifiResCommon \
+    WifiResTarget \
+    WifiResTarget_spf
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
