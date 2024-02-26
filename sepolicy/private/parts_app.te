@@ -1,0 +1,33 @@
+type parts_app, domain;
+typeattribute parts_app mlstrustedsubject;
+
+app_domain(parts_app)
+
+binder_use(parts_app)
+
+hal_client_domain(parts_app, hal_touchfeature_xiaomi)
+hal_client_domain(parts_app, vendor_hal_displayfeature_xiaomi)
+
+binder_call(parts_app, hal_touchfeature_xiaomi)
+binder_call(parts_app, vendor_hal_displayfeature_xiaomi)
+
+allow parts_app {
+  activity_service
+  content_capture_service
+  game_service
+  netstats_service
+  trust_service
+  sensorservice_service
+  vendor_perf_service
+}:service_manager find;
+
+allow parts_app {
+  hal_touchfeature_xiaomi_hwservice
+  vendor_hal_displayfeature_xiaomi_hwservice
+}:hwservice_manager find;
+
+allow parts_app system_app_data_file:dir create_dir_perms;
+allow parts_app system_app_data_file:{
+  file
+  lnk_file
+} create_file_perms;
