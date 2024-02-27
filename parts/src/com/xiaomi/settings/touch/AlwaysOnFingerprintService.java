@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2023-2024 Paranoid Android
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -76,22 +76,13 @@ public class AlwaysOnFingerprintService extends Service {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            switch (intent.getAction()) {
-                case Intent.ACTION_SCREEN_ON:
-                    if (DEBUG) Log.d(TAG, "Received ACTION_SCREEN_ON");
-                    TfWrapper.setTouchFeature(
-                            new TfWrapper.TfParams(/*TOUCH_FOD_ENABLE*/ 10, 0));
-                    TfWrapper.setTouchFeature(
-                            new TfWrapper.TfParams(/*TOUCH_FODICON_ENABLE*/16, 0));
-                    break;
-                case Intent.ACTION_SCREEN_OFF:
-                    if (DEBUG) Log.d(TAG, "Received ACTION_SCREEN_OFF");
-                    TfWrapper.setTouchFeature(
-                            new TfWrapper.TfParams(/*TOUCH_FOD_ENABLE*/ 10, mIsAofEnabled ? 1 : 0));
-                    TfWrapper.setTouchFeature(
-                            new TfWrapper.TfParams(/*TOUCH_FODICON_ENABLE*/16, mIsAofEnabled ? 1 : 0));
-                    break;
-            }
+            if (DEBUG) Log.d(TAG, "onReceive: " + intent.getAction());
+            int displayState = getDisplay().getState();
+            boolean displayStateAof = displayState != Display.STATE_ON && mIsAofEnabled;
+            TfWrapper.setTouchFeature(
+                    new TfWrapper.TfParams(/*TOUCH_FOD_ENABLE*/ 10, displayStateAof ? 1 : 0));
+            TfWrapper.setTouchFeature(
+                    new TfWrapper.TfParams(/*TOUCH_FODICON_ENABLE*/ 16, displayStateAof ? 1 : 0));
         }
     }
 
