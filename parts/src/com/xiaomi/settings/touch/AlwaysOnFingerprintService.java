@@ -22,6 +22,7 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.Display;
 
 public class AlwaysOnFingerprintService extends Service {
 
@@ -70,6 +71,7 @@ public class AlwaysOnFingerprintService extends Service {
     private final class ScreenStateReceiver extends BroadcastReceiver {
         public void register() {
             if (DEBUG) Log.d(TAG, "ScreenStateReceiver: register");
+            registerReceiver(mScreenStateReceiver, new IntentFilter(Intent.ACTION_DISPLAY_STATE_CHANGED));
             registerReceiver(mScreenStateReceiver, new IntentFilter(Intent.ACTION_SCREEN_ON));
             registerReceiver(mScreenStateReceiver, new IntentFilter(Intent.ACTION_SCREEN_OFF));
         }
@@ -79,10 +81,13 @@ public class AlwaysOnFingerprintService extends Service {
             if (DEBUG) Log.d(TAG, "onReceive: " + intent.getAction());
             int displayState = getDisplay().getState();
             boolean displayStateAof = displayState != Display.STATE_ON && mIsAofEnabled;
+            boolean displayStateDoze = displayState == Display.STATE_DOZE || displayState == Display.STATE_DOZE_SUSPEND;
             TfWrapper.setTouchFeature(
                     new TfWrapper.TfParams(/*TOUCH_FOD_ENABLE*/ 10, displayStateAof ? 1 : 0));
             TfWrapper.setTouchFeature(
                     new TfWrapper.TfParams(/*TOUCH_FODICON_ENABLE*/ 16, displayStateAof ? 1 : 0));
+            TfWrapper.setTouchFeature(
+                    new TfWrapper.TfParams(/*TOUCH_AOD_ENABLE*/ 11, displayStateDoze ? 1 : 0));
         }
     }
 
