@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2023-2024 Paranoid Android
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -23,6 +23,7 @@ import android.util.Log;
 import android.view.Display;
 
 import com.xiaomi.settings.display.DfWrapper;
+import com.xiaomi.settings.utils.FileUtils;
 
 public class AodBrightnessService extends Service {
 
@@ -33,6 +34,8 @@ public class AodBrightnessService extends Service {
     private static final float AOD_SENSOR_EVENT_BRIGHT = 4f;
     private static final float AOD_SENSOR_EVENT_DIM = 5f;
     private static final float AOD_SENSOR_EVENT_DARK = 3f;
+
+    private static final String FOD_PRESS_STATUS_PATH = "/sys/class/touch/touch_dev/fod_press_status";
 
     private static final int DOZE_HBM_BRIGHTNESS_THRESHOLD = 18;
 
@@ -140,6 +143,10 @@ public class AodBrightnessService extends Service {
     private void updateDozeBrightness() {
         Log.d(TAG, "updateDozeBrightness: mIsDozing=" + mIsDozing + " mDisplayState=" + mDisplayState
                 + " mIsDozeHbm=" + mIsDozeHbm);
+        if (FileUtils.readLineInt(FOD_PRESS_STATUS_PATH) == 1) {
+            if (DEBUG) Log.d(TAG, "updateDozeBrightness: FOD active, aborting!");
+            return;
+        }
         final boolean isDozeState = mIsDozing && (mDisplayState == Display.STATE_DOZE
                 || mDisplayState == Display.STATE_DOZE_SUSPEND);
         final int mode = !isDozeState ? 0 : (mIsDozeHbm ? 1 : 2);

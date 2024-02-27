@@ -31,3 +31,6 @@ allow parts_app system_app_data_file:{
   file
   lnk_file
 } create_file_perms;
+
+allow parts_app sysfs_tp_fodstatus:dir r_dir_perms;
+allow parts_app sysfs_tp_fodstatus:file r_file_perms;
