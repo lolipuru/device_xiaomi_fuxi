@@ -1526,7 +1526,6 @@ vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libbacklight-calib.so
 vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdpps.so
 vendor/lib64/libfeutils.so
 vendor/lib64/libgame_enhance.so

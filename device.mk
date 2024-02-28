@@ -190,6 +190,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
+    libdisplayconfig.qti \
     libgralloc.qti \
     libgui_vendor \
     libqdMetaData \
