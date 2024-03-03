@@ -2343,7 +2343,7 @@ product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
 product/framework/uimservicelibrary.jar
 system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QtiTelephony/QtiTelephony.apk|ad183cacb99abf8ddb28183720a2191083225a9a
+system_ext/app/QtiTelephony/QtiTelephony.apk|be3b1e02afb02854972c8493f82f88b0e0cd494c
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -2410,7 +2410,7 @@ system_ext/lib64/vendor.qti.ims.rcsuce@1.2.so
 system_ext/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
-system_ext/priv-app/ims/ims.apk|e7b582b9f51391f69be19025c0f5bb86ac1ac0ed
+system_ext/priv-app/ims/ims.apk|6e96fc448d1d90ba5120c3674761d97dab369a74
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/ATFWD-daemon
