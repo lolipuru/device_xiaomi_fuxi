@@ -93,8 +93,6 @@ public class AlwaysOnFingerprintService extends Service {
                         new TfWrapper.TfParams(/*TOUCH_FOD_ENABLE*/ 10, displayStateAof ? 1 : 0));
             }
             TfWrapper.setTouchFeature(
-                    new TfWrapper.TfParams(/*TOUCH_FODICON_ENABLE*/ 16, displayStateAof ? 1 : 0));
-            TfWrapper.setTouchFeature(
                     new TfWrapper.TfParams(/*TOUCH_AOD_ENABLE*/ 11, displayStateDoze ? 1 : 0));
         }
     }
