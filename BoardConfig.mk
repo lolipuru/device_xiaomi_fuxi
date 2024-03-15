@@ -200,7 +200,8 @@ BOOT_SECURITY_PATCH := 2023-10-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Sensors
-$(call soong_config_set, SENSORS_XIAOMI, USES_SINGLE_TAP_SENSOR, true, USES_UDFPS_SENSOR, true)
+$(call soong_config_set, SENSORS_XIAOMI, USES_SINGLE_TAP_SENSOR, true)
+$(call soong_config_set, SENSORS_XIAOMI, USES_UDFPS_SENSOR, true)
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
