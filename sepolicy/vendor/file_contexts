@@ -54,7 +54,8 @@
 /vendor/bin/hw/android\.hardware\.health-service\.fuxi                              u:object_r:hal_health_default_exec:s0
 
 # IR
-/dev/ir_spi                               u:object_r:ir_spi_device:s0
+/dev/lirc[0-9]+ u:object_r:lirc_device:s0
+/vendor/bin/hw/android\.hardware\.ir-service\.xiaomi u:object_r:hal_ir_default_exec:s0
 
 # Micharge
 /(vendor|system/vendor)/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service  u:object_r:vendor_hal_micharge_xiaomi_default_exec:s0

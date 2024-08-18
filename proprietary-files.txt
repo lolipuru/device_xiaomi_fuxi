@@ -1793,11 +1793,6 @@ vendor/lib64/libqtiidentitycredential.so
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 
-# IR
-odm/lib64/hw/consumerir.qcom.so
-vendor/etc/init/android.hardware.ir-service.example.rc
-vendor/bin/hw/android.hardware.ir-service.example
-
 # IRQ balance
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf

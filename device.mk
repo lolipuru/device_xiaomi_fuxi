@@ -168,7 +168,7 @@ PRODUCT_PACKAGES += \
 
 # Consumer IR AIDL
 PRODUCT_PACKAGES += \
-    android.hardware.ir-service.example
+    android.hardware.ir-service.xiaomi
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
