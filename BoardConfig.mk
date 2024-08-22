@@ -194,6 +194,9 @@ TARGET_USERIMAGES_SPARSE_EROFS_DISABLED := true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := true
 
+# Powershare
+TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop
@@ -276,6 +279,3 @@ WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-# PowerShare
-$(call soong_config_set, XIAOMI_POWERSHARE, WIRELESS_TX_ENABLE_PATH, /sys/class/qcom-battery/reverse_chg_mode)
