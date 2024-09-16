@@ -278,7 +278,6 @@ vendor/etc/init/vendor.qti.battery_stats.rc
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
-vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
@@ -1804,7 +1803,6 @@ vendor/lib64/libqtikeymaster4.so
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
-vendor/etc/permissions/android.hardware.hardware_keystore.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libqtikeymint.so
 
@@ -1817,8 +1815,6 @@ vendor/lib64/vendor.qti.hardware.limits@1.1.so
 vendor/lib64/vendor.qti.hardware.limits@1.2.so
 
 # Listen
-vendor/etc/vintf/manifest/manifest_non_qmaa.xml
-vendor/etc/vintf/manifest/manifest_non_qmaa_extn.xml
 vendor/lib64/hw/sound_trigger.primary.kalama.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
@@ -1910,8 +1906,6 @@ vendor/lib64/libdolbyottcameracontrol.so
 
 # Memtrack
 vendor/bin/hw/vendor.qti.hardware.memtrack-service
-vendor/etc/init/memtrack_qti.rc
-vendor/etc/vintf/manifest/memtrack_qti.xml
 
 # MiCharge
 vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service
