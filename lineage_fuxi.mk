@@ -28,7 +28,7 @@ PRODUCT_SYSTEM_NAME := 2211133G
 PRODUCT_SYSTEM_DEVICE := 2211133G
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="fuxi_global-user 13 TKQ1.221114.001 V816.0.5.0.UMCMIXM release-keys"
+    BuildDesc=$(call normalize-path-list, "fuxi_global-user 13 TKQ1.221114.001 V816.0.5.0.UMCMIXM release-keys")
 
 BUILD_FINGERPRINT := Xiaomi/fuxi_global/fuxi:13/TKQ1.221114.001/V816.0.5.0.UMCMIXM:user/release-keys
 
