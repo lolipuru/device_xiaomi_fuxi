@@ -1622,7 +1622,6 @@ product/priv-app/EuiccGoogle/EuiccGoogle.apk|29f8c2d4301cc1c0c023dd1c205cfdec5bf
 # Fingerprint
 odm/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 odm/lib64/libgf_hal.so
-odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
 vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
 vendor/etc/vintf/manifest/fod.xml
@@ -1943,8 +1942,6 @@ odm/lib64/libmt.so
 odm/lib64/libmt@1.3.so
 odm/lib64/libtida@1.2.so
 odm/lib64/libwvkeybox.so
-odm/lib64/vendor.xiaomi.hardware.mfidoca@1.0.so
-odm/lib64/vendor.xiaomi.hardware.mtdservice@1.3.so
 odm/lib64/vendor.xiaomi.hardware.tidaservice@1.0.so
 odm/lib64/vendor.xiaomi.hardware.tidaservice@1.1.so
 odm/lib64/vendor.xiaomi.hardware.tidaservice@1.2.so
