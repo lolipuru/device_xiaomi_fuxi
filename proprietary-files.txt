@@ -1005,15 +1005,10 @@ odm/lib64/libarc_sat.so
 odm/lib64/libarc_translate.so
 odm/lib64/libarccali_data.so
 odm/lib64/libarcsoft_beautyshot.so
-odm/lib64/libarcsoft_beautyshot.so
 odm/lib64/libarcsoft_hdr_detection.so
 odm/lib64/libarcsoft_mf_superresolution.so
-odm/lib64/libarcsoft_mf_superresolution.so
-odm/lib64/libarcsoft_qnnhtp.so
 odm/lib64/libarcsoft_qnnhtp.so
 odm/lib64/libarcsoft_super_night_detection.so
-odm/lib64/libarcsoft_super_night_detection.so
-odm/lib64/libarcsoft_super_night_raw.so
 odm/lib64/libarcsoft_super_night_raw.so
 odm/lib64/libbeauty_face_interface.so
 odm/lib64/libbitmlengine.so
@@ -1124,7 +1119,6 @@ odm/lib64/libqsegnet.so
 odm/lib64/libqshcamera.so
 odm/lib64/librawnrv2_shared.so
 odm/lib64/libremosaic_wrapper.so
-odm/lib64/libremosaic_wrapper.so
 odm/lib64/libremosaiclib.so
 odm/lib64/libsfeShiftExtrapolation.so
 odm/lib64/libsupermoon.so
@@ -1136,7 +1130,6 @@ odm/lib64/libubifocus.so
 odm/lib64/libvideoBokeh.so
 odm/lib64/libvideofilter_only.so
 odm/lib64/libvideoml.so
-odm/lib64/libvideomode.so
 odm/lib64/libvidhance.so
 odm/lib64/libvidhance_active_ois.so
 odm/lib64/libvidhance_face_stabilizer.so
@@ -1161,7 +1154,7 @@ vendor/etc/camera/placeholder_camera.txt
 vendor/etc/init/android.hardware.camera.provider@2.7-virtual-camera-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.vcamera.provider.xml
-vendor/lib64/camera/libPlatformValidatorShared.so;MODULE_PREFIX=-camera
+vendor/lib64/camera/libPlatformValidatorShared.so;MODULE_SUFFIX=-camera
 vendor/lib64/hw/android.hardware.camera.provider@2.7-impl-vcamera.so
 vendor/lib64/hw/vendor.xiaomi.hardware.quickcamera@1.0-impl.so
 vendor/lib64/libPlatformValidatorShared.so
@@ -1540,6 +1533,7 @@ vendor/etc/clstc_config_library.xml
 vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libclstc_tm.so
+vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libintervmipc.so
@@ -2030,7 +2024,6 @@ vendor/etc/sn100u_pnx_sst.pnscr
 vendor/lib64/libsn100u_fw.so;FIX_SONAME
 vendor/lib64/libsn220u_fw.so;FIX_SONAME
 vendor/lib64/libvui_dmgr.so
-vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
@@ -2094,7 +2087,7 @@ vendor/etc/init/qguard.rc
 vendor/etc/qguard.json
 
 # QMI
-system/etc/sysconfig/qti_whitelist.xml
+system/system/etc/sysconfig/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 vendor/bin/irsc_util
@@ -2107,7 +2100,6 @@ vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
 vendor/etc/sec_config
 vendor/etc/seccomp_policy/qti-systemd.policy
-vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
@@ -2399,9 +2391,6 @@ vendor/lib64/vendor.qti.hardware.data.connectionfactory-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.dataactivity-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.ka-V1-ndk.so
 vendor/lib64/vendor.qti.data.mwqem@1.0.so
-vendor/lib64/vendor.qti.hardware.data.connectionfactory-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.data.dataactivity-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.data.ka-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.am-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
