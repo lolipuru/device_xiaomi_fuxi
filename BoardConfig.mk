@@ -219,11 +219,6 @@ PRODUCT_COPY_FILES += $(DEVICE_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VE
 BOOT_SECURITY_PATCH := 2023-10-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
-# Sensors
-$(call soong_config_set, SENSORS_XIAOMI, USES_SINGLE_TAP_SENSOR, true)
-$(call soong_config_set, SENSORS_XIAOMI, USES_DOUBLE_TAP_SENSOR, true)
-$(call soong_config_set, SENSORS_XIAOMI, USES_UDFPS_SENSOR, true)
-
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
