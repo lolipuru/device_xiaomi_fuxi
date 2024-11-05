@@ -87,6 +87,13 @@ ro.camera.enableCamera1MaxZsl=1
 ro.hardware.camera=xiaomi
 
 # Display
+ro.vendor.sre.enable=true
+ro.vendor.display.fod_monitor_default_fps=120
+ro.vendor.display.dolbyvision.support=true
+ro.vendor.mi_sf.gallery_p3_dolby_opt=true
+ro.vendor.display.video_or_camera_fps.support=true
+ro.vendor.display.set_fps_stat_timer_ms=1000
+vendor.display.force_tonemapping=1
 vendor.display.comp_mask=0
 vendor.display.disable_3d_adaptive_tm=0
 vendor.display.disable_excl_rect=0
@@ -111,6 +118,7 @@ vendor.display.vds_allow_hwc=1
 
 # displayfeature
 persist.sys.sf.native_mode=258
+persist.sys.miui_resolution=1080x2400
 persist.vendor.dc_backlight.enable=false
 persist.vendor.dc_backlight.threshold=0
 ro.vendor.bcbc.enable=true
