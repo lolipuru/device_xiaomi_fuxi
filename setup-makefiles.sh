@@ -51,7 +51,8 @@ function lib_to_package_fixup_vendor_variants() {
         audio.primary.kalama | \
         libagmclient | \
         libpalclient | \
-        libwpa_client) ;;
+        libwpa_client | \
+        vendor.qti.qspmhal@1.0) ;;
         *)
             return 1
             ;;

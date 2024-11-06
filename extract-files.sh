@@ -78,10 +78,6 @@ function blob_fixup() {
         odm/lib64/hw/vendor.xiaomi.sensor.citsensorservice@2.0-impl.so)
             sed -i 's/_ZN13DisplayConfig10ClientImpl13ClientImplGetENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEPNS_14ConfigCallbackE/_ZN13DisplayConfig10ClientImpl4InitENSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEPNS_14ConfigCallbackE\x0\x0\x0\x0\x0\x0\x0\x0\x0\x0/g' "${2}"
             ;;
-        odm/lib64/hw/displayfeature.default.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
-            ;;
         odm/lib64/libmt@1.3.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
@@ -93,7 +89,7 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed android.hardware.security.rkp-V3-ndk.so "${2}"
             ;;
-        vendor/bin/hw/dolbycodec2 | vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service | vendor/bin/hw/vendor.dolby.media.c2@1.0-service | vendor/lib64/hw/audio.primary.kalama.so)
+        vendor/bin/hw/dolbycodec2 | vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service | vendor/bin/hw/vendor.dolby.media.c2@1.0-service)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;

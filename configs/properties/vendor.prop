@@ -332,7 +332,6 @@ persist.vendor.rcs.singlereg.feature=1
 # USB
 ro.usb.uvc.enabled=true
 sys.usb.mtp.batchcancel=1
-vendor.usb.product_string=Xiaomi 13
 vendor.usb.rndis.func.name=gsi
 vendor.usb.rmnet.func.name=gsi
 vendor.usb.rmnet.inst.name=rmnet
