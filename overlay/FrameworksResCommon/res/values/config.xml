@@ -109,13 +109,6 @@
          regularly selected color mode will be used if this value is negative. -->
     <integer name="config_accessibilityColorMode">2</integer>
 
-    <!-- Expected value from fast charging status file  -->
-    <string name="config_oemFastChargerStatusValue" translatable="false">1</string>
-
-    <!-- The battery current divider, some kernel report current value in mA other in µA.
-         Leave 1 if you have mA, put 1000 if you have µA-->
-    <integer name="config_battCurrentDivider" translatable="false">1</integer>
-
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
@@ -148,25 +141,20 @@
 
     <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
          device from the display on/off state.
-
          When false, autosuspend_disable() will be called before the display is turned on
          and autosuspend_enable() will be called after the display is turned off.
          
          This mode provides best compatibility for devices using legacy power management
          features such as early suspend / late resume.
-
          When true, autosuspend_display() and autosuspend_enable() will be called
          independently of whether the display is being turned on or off.  This mode
          enables the power manager to suspend the application processor while the
          display is on.
-
          This resource should be set to "true" when a doze component has been specified
          to maximize power savings but not all devices support it.
-
          Refer to autosuspend.h for details.
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
-
     <!-- Power Management: Specifies whether to decouple the interactive state of the
          device from the display on/off state.
          When false, setInteractive(..., true) will be called before the display is turned on
@@ -237,12 +225,6 @@
          * The device must be provisioned with HDCP keys (for protected content).
     -->
     <bool name="config_enableWifiDisplay">true</bool>
-    
-    <!-- Whether devices suports in-display fingerprint when screen is off -->
-    <bool name="config_supportsScreenOffUdfps">true</bool>
-
-    <!-- Whether device supports double tap to wake -->
-    <bool name="config_supportDoubleTapWake">true</bool>
 
     <!-- Vibrator pattern for feedback about a long screen/key press. -->
     <integer-array name="config_longPressVibePattern">
@@ -358,34 +340,6 @@
         <item>EvDo_A:4094,87380,524288,4096,16384,262144</item>
         <item>EvDo_B:4094,87380,524288,4096,16384,262144</item>
     </string-array>
-
-    <!-- The default journal mode to use use when Write-Ahead Logging is not active.
-         Choices are: OFF, DELETE, TRUNCATE, PERSIST and MEMORY.
-         PERSIST may improve performance by reducing how often journal blocks are
-         reallocated (compared to truncation) resulting in better data block locality
-         and less churn of the storage media.
-         The PERSIST mode results in data persisting in the journal beyond the life of
-         a transaction, so it interacts poorly with SECURE_DELETE. -->
-    <string name="db_default_journal_mode" translatable="false">MEMORY</string>
-
-    <!-- The database synchronization mode when using the default journal mode.
-         FULL is safest and preserves durability at the cost of extra fsyncs.
-         NORMAL also preserves durability in non-WAL modes and uses checksums to ensure
-         integrity although there is a small chance that an error might go unnoticed.
-         Choices are: FULL, NORMAL, OFF. -->
-    <string name="db_default_sync_mode" translatable="false">OFF</string>
-
-    <!-- The database synchronization mode when using Write-Ahead Logging.
-         From https://www.sqlite.org/pragma.html#pragma_synchronous:
-         WAL mode is safe from corruption with synchronous=NORMAL, and probably DELETE mode is safe
-         too on modern filesystems. WAL mode is always consistent with synchronous=NORMAL, but WAL
-         mode does lose durability. A transaction committed in WAL mode with
-         synchronous=NORMAL might roll back following a power loss or system crash.
-         Transactions are durable across application crashes regardless of the synchronous setting
-         or journal mode. The synchronous=NORMAL setting is a good choice for most applications
-         running in WAL mode.
-         Choices are: FULL, NORMAL, OFF. -->
-    <string name="db_wal_sync_mode" translatable="false">OFF</string>
 
     <!-- set to false if we need to show user confirmation
          when alpha identifier is not provided by the UICC -->

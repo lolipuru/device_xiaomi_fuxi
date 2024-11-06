@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 13 (OS1.0.5.0.UMCMIXM). 
+## are from Xiaomi 13 (OS1.0.8.0.UMCMIXM). 
 
 # ACDBs
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -1741,7 +1741,7 @@ vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.s
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
-vendor/lib64/libadreno_app_profiles.so
+vendor/lib64/libadreno_app_profiles.so;DISABLE_CHECKELF
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libgpudataproducer.so
 vendor/lib64/libgsl.so
@@ -1775,6 +1775,11 @@ vendor/etc/init/android.hardware.identity-service-qti.rc
 vendor/etc/vintf/manifest/manifest_identity_credential.xml
 vendor/lib64/libqtiidentitycredential.so
 
+# Init
+vendor/bin/init.class_main.sh
+vendor/bin/init.qcom.early_boot.sh
+vendor/bin/init.qcom.sh
+
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 
@@ -1784,6 +1789,7 @@ vendor/etc/msm_irqbalance.conf
 
 # Kernel
 vendor/bin/init.kernel.post_boot.sh
+vendor/bin/init.qcom.class_core.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
@@ -2157,13 +2163,6 @@ vendor/lib64/libqvrservice_ov9282_hvx_tuning.so
 vendor/lib64/libqvrservice_v4l_ov7251_hvx_tuning.so
 vendor/lib64/libtracker_6dof_impl.so
 
-# QSPM
-vendor/bin/vendor.qti.qspmhal@1.0-service
-vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
-vendor/etc/seccomp_policy/qspm.policy
-vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
-vendor/lib64/vendor.qti.qspmhal@1.0.so
-
 # QXR
 vendor/etc/vintf/manifest/vendor.qti.hardware.qxr-service.xml
 vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
@@ -2461,6 +2460,9 @@ vendor/lib64/vendor.qti.ims.rcsuce@1.2.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=-vendor
 vendor/lib64/vendor.qti.imsrtpservice@3.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE_SUFFIX=-vendor
+
+# Rootdir
+odm/etc/ueventd.rc
 
 # SMC Invoke
 vendor/etc/ssg/ta_config.json
