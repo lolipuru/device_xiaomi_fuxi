@@ -1976,7 +1976,6 @@ vendor/bin/nqnfcinfo
 vendor/bin/pnscr
 vendor/bin/pnscr-mi
 vendor/bin/pnscr-rf
-vendor/bin/qsap_voiceui
 vendor/etc/init/android.hardware.nfc@1.2-service-st.rc
 vendor/etc/libnfc-SN220_19_2MHZ.conf
 vendor/etc/libnfc-SN220_38_4MHZ.conf
@@ -2009,7 +2008,6 @@ vendor/etc/sn100u_pnx_pcv.pnscr
 vendor/etc/sn100u_pnx_sst.pnscr
 vendor/lib64/libsn100u_fw.so;FIX_SONAME
 vendor/lib64/libsn220u_fw.so;FIX_SONAME
-vendor/lib64/libvui_dmgr.so
 vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
@@ -2438,7 +2436,6 @@ vendor/lib64/libnative-api.so
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
-vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/se_nq_extn_client.so
 
 # Sensor communicate
