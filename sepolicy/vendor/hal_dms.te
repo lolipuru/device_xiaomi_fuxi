@@ -1,6 +1,15 @@
-# HwBinder IPC from client to server, and callbacks
-binder_call(hal_dms_client, hal_dms_server)
-binder_call(hal_dms_server, hal_dms_client)
+type hal_dms_default, domain;
+type hal_dms_default_exec, exec_type, file_type, vendor_file_type;
+type hal_dms_hwservice, hwservice_manager_type;
 
+add_hwservice(hal_dms_default, hal_dms_hwservice)
 add_hwservice(hal_dms_server, hal_dms_hwservice)
 allow hal_dms_client hal_dms_hwservice:hwservice_manager find;
+allow hal_dms_default hal_dms_hwservice:hwservice_manager add;
+allow hal_dms_default vendor_data_file:dir rw_dir_perms;
+allow hal_dms_default vendor_data_file:file rw_file_perms;
+binder_call(hal_dms_client, hal_dms_server)
+binder_call(hal_dms_server, hal_dms_client)
+hal_server_domain(hal_dms_default, hal_dms)
+init_daemon_domain(hal_dms_default)
+set_prop(hal_dms_default, vendor_audio_prop)

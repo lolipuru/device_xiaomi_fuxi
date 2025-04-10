@@ -1,0 +1,23 @@
+on boot
+    chown system system /sys/class/qcom-battery/reverse_chg_mode
+    chmod 0644 /sys/class/qcom-battery/reverse_chg_mode
+
+    chown system system /sys/class/touch/touch_dev/fod_longpress_gesture_enabled
+    chmod 0660 /sys/class/touch/touch_dev/fod_longpress_gesture_enabled
+
+    chown system system /sys/class/touch/touch_dev/gesture_single_tap_enabled
+    chmod 0660 /sys/class/touch/touch_dev/gesture_single_tap_enabled
+
+    chown system system /sys/class/touch/touch_dev/gesture_double_tap_enabled
+    chmod 0660 /sys/class/touch/touch_dev/gesture_double_tap_enabled
+    chown system system /sys/class/touch/touch_dev/gesture_double_tap_state
+    chmod 0664 /sys/class/touch/touch_dev/gesture_double_tap_state
+
+on property:ro.vendor.sensors.xiaomi.single_tap=true
+    write /sys/class/touch/touch_dev/gesture_single_tap_enabled 1
+
+on property:ro.vendor.sensors.xiaomi.double_tap=true
+    write /sys/class/touch/touch_dev/gesture_double_tap_enabled 1
+
+on property:ro.vendor.sensors.xiaomi.udfps=true
+    write /sys/class/touch/touch_dev/fod_longpress_gesture_enabled 1

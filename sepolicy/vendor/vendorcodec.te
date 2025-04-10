@@ -1,0 +1,16 @@
+type vendorcodec, domain;
+type vendorcodec_exec, exec_type, file_type, vendor_file_type;
+
+allow vendorcodec dmabuf_system_heap_device:chr_file rw_file_perms;
+allow vendorcodec fwk_sensor_hwservice:hwservice_manager find;
+allow vendorcodec gpu_device:chr_file rw_file_perms;
+allow vendorcodec hal_configstore_default:binder call;
+allow vendorcodec hal_sensors_hwservice:hwservice_manager find;
+allow vendorcodec vendor_sysfs_kgsl:file r_file_perms;
+get_prop(vendorcodec, vendor_display_prop)
+hal_client_domain(vendorcodec, hal_allocator)
+hal_client_domain(vendorcodec, hal_graphics_allocator)
+hal_client_domain(vendorcodec, hal_sensors)
+hal_server_domain(vendorcodec, hal_codec2)
+init_daemon_domain(vendorcodec)
+vndbinder_use(vendorcodec)

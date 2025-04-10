@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lineageos.carrierconfigoverlay.xiaomi">
+    <application android:hasCode="false" />
+    <overlay android:isStatic="true"
+             android:priority="100"
+             android:targetPackage="com.android.carrierconfig"
+             android:targetName="XiaomiCarrierConfigOverlay" />
+</manifest>

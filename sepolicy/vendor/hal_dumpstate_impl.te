@@ -1,0 +1,10 @@
+type hal_dumpstate_impl, domain;
+type hal_dumpstate_impl_exec, exec_type, file_type, vendor_file_type;
+
+allow hal_dumpstate_impl device:dir r_dir_perms;
+allow hal_dumpstate_impl dumpstate:fifo_file w_file_perms;
+allow hal_dumpstate_impl vfat:dir r_dir_perms;
+allow hal_dumpstate_impl vfat:file rw_file_perms;
+binder_use(hal_dumpstate_impl)
+hal_server_domain(hal_dumpstate_impl, hal_dumpstate)
+init_daemon_domain(hal_dumpstate_impl)

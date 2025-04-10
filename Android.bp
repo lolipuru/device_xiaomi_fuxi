@@ -1,18 +1,27 @@
 //
-// Copyright (C) 2023 The LineageOS Project
+// Copyright (C) 2024 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
 
 soong_namespace {
     imports: [
-        "hardware/google/interfaces",
-        "hardware/google/pixel",
-        "hardware/lineage/interfaces/power-libperfmgr",
-        "hardware/qcom-caf/bootctrl",
-        "hardware/qcom-caf/common/libqti-perfd-client",
         "hardware/xiaomi",
     ],
+}
+
+install_symlink {
+    name: "libqesdk_manager_32bit_stub",
+    vendor: true,
+    installed_location: "lib/libqesdk_manager.so",
+    symlink_target: "/dev/null",
+}
+
+install_symlink {
+    name: "libqesdk2_0_32bit_stub",
+    vendor: true,
+    installed_location: "lib/libqesdk2_0.so",
+    symlink_target: "/dev/null",
 }
 
 install_symlink {

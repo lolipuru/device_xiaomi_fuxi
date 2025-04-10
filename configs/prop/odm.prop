@@ -1,0 +1,165 @@
+# Audio
+ro.vendor.audio.soundtrigger=sva
+ro.vendor.audio.soundtrigger.lowpower=true
+ro.vendor.audio.soundtrigger.training.level=50
+ro.vendor.audio.soundtrigger.xatx.gmm.level=60
+ro.vendor.audio.soundtrigger.xatx.gmm.user.level=60
+ro.vendor.audio.soundtrigger.xatx.cnn.level=79
+ro.vendor.audio.soundtrigger.xatx.vop.level=37
+ro.vendor.audio.soundtrigger.xanzn.gmm.level=80
+ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=80
+ro.vendor.audio.soundtrigger.xanzn.cnn.level=158
+ro.vendor.audio.soundtrigger.xanzn.vop.level=41
+ro.vendor.audio.soundtrigger.appdefine.gmm.level=65
+ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=55
+ro.vendor.audio.soundtrigger.appdefine.cnn.level=77
+ro.vendor.audio.soundtrigger.appdefine.vop.level=10
+ro.vendor.audio.soundtrigger.snr=16
+persist.vendor.audio.spf_restart=true
+ro.vendor.audio.soundtrigger.xiaomievent=1
+ro.vendor.audio.soundtrigger.permian=1
+ro.vendor.audio.soundtrigger.sva-7.0=1
+vendor.audio.dolby.control.support=true
+ro.vendor.audio.shortvideo.index=80
+
+# Bluetooth
+bluetooth.device.default_name=Xiaomi 13
+
+# Camera
+ro.vendor.camera.interpolation.mialgo.support=true
+
+# Display
+vendor.display.disable_3d_adaptive_tm=0
+persist.sys.miui_resolution=1080x2400
+ro.vendor.colorpick_adjust=true
+ro.vendor.all_modes.colorpick_adjust=true
+ro.vendor.display.type=oled
+ro.vendor.xiaomi.bl.poll=true
+ro.vendor.whitepoint_calibration_enable=false
+ro.vendor.histogram.enable=true
+ro.vendor.cabc.enable=fasle
+ro.vendor.bcbc.enable=true
+ro.vendor.dfps.enable=false
+ro.vendor.fps.switch.default=true
+ro.vendor.gcp.enable=1
+ro.vendor.display.default_fps=60
+ro.vendor.sre.enable=true
+ro.vendor.localhbm.enable=true
+ro.vendor.video_box.version=2
+ro.vendor.soft_backlight.enable=true
+ro.vendor.hbm_backlight.enable=true
+ro.vendor.display.nature_mode.enable=true
+ro.vendor.display.ai_disp.enable=true
+ro.vendor.standard.video.enable=true
+vendor.display.use_layer_ext=0
+ro.vendor.display.mi_calib.enable=true
+ro.vendor.thermal.dimming.enable=true
+sys.displayfeature_hidl=true
+sys.displayfeature.entry.enable=true
+persist.vendor.dc_backlight.enable=false
+persist.vendor.dc_backlight.threshold=0
+vendor.display.enable_fb_scaling=1
+ro.vendor.display.touch.idle.enable=true
+ro.vendor.display.fod_monitor_default_fps=120
+ro.vendor.fps.switch.thermal=true
+ro.vendor.display.dolbyvision.support=true
+vendor.display.disable_stc_dimming=1
+ro.vendor.mi_sf.gallery_p3_dolby_opt=true
+ro.vendor.display.video_or_camera_fps.support=true
+ro.vendor.display.set_fps_stat_timer_ms=1000
+debug.sf.set_idle_timer_ms=1100
+vendor.display.force_tonemapping=1
+
+# Fingerprint
+persist.vendor.sys.fp.dump_data=0
+ro.hardware.fp.fod=true
+persist.vendor.sys.fp.expolevel=0x88
+ro.hardware.fp.fod.location=low
+ro.hardware.fp.fod.touch.ctl.version=2.0
+ro.hardware.fp.fod.lowlight.lux.threshold=3
+ro.hardware.fp.fod.lowlight.brightness.threshold=411
+
+# Framework detect
+ro.vendor.qti.va_odm.support=1
+
+# Health
+persist.vendor.battery.health=true
+
+# Media
+debug.media.video.frc=false
+debug.media.video.vpp=false
+ro.vendor.media.video.frc.support=true
+ro.vendor.media.video.vpp.support=true
+debug.config.media.video.frc.support=true
+debug.config.media.video.aie.support=true
+debug.config.media.video.ais.support=true
+debug.media.video.chipset=6
+vendor.media.vpp.debug.value.use=false
+vendor.media.vpp.aie.cade=100
+vendor.media.vpp.aie.ltm=1
+vendor.media.vpp.aie.ltmsatgain=55
+vendor.media.vpp.aie.ltmsatoff=55
+vendor.media.vpp.aie.ltmacestr=37
+vendor.media.vpp.aie.ltmacebril=20
+vendor.media.vpp.aie.ltmacebrih=0
+debug.config.media.video.dolby_vision_suports=true
+
+# USB
+vendor.usb.product_string=Xiaomi 13
+
+# Vibrator
+sys.haptic.motor=linear
+sys.haptic.infinitelevel=true
+sys.haptic.dynamiceffect=true
+sys.haptic.dynamiceffect.richtap=true
+sys.haptic.down.weak=0
+sys.haptic.down.normal=2
+sys.haptic.down.strong=5
+sys.haptic.down=5,2
+sys.haptic.tap.normal=3,2
+sys.haptic.tap.light=5,2
+sys.haptic.flick=5,2
+sys.haptic.flick.light=7,2
+sys.haptic.switch=9,2
+sys.haptic.mesh.heavy=8,2
+sys.haptic.mesh.normal=5,2
+sys.haptic.mesh.light=5,1
+sys.haptic.long.press=0,1
+sys.haptic.popup.normal=6,2
+sys.haptic.popup.light=6,1
+sys.haptic.pickup=2,2
+sys.haptic.scroll.edge=7,0
+sys.haptic.trigger.drawer=2,0
+sys.haptic.hold=4,0
+sys.haptic.runin=13
+sys.haptic.intensityforkeyboard=true
+sys.haptic.device_type=agm
+ro.odm.mm.vibrator.sys_path=/sys/class/qcom-haptics
+ro.odm.mm.vibrator.device_type=agm
+ro.odm.mm.vibrator.ffactorDefault=175
+
+# NFC
+ro.vendor.se.type=eSE,HCE,UICC
+ro.vendor.se.chip.model=SN110T
+ro.vendor.nfc.repair=1
+ro.vendor.nfc.dispatch_optim=1
+ro.vendor.nfc.wallet_fusion=1
+ro.vendor.nfc.disable.i2c=false
+ro.vendor.se.info=17-673904
+ro.vendor.nfc.secure_display_optim=1
+ro.vendor.nfc.aclog=1
+ro.vendor.nfc.debounce_field_on=1
+ro.vendor.nfc.field_on_debounce=200
+
+# Properties
+ro.product.property_source_order=odm,vendor,product,system_ext,system
+
+# Radio
+ro.vendor.net.enable_dual_wifi=1
+persist.vendor.radio.dynamic_sar=1
+persist.vendor.radio.game_hand=1
+
+# Sensors
+persist.vendor.sensor.onetrack=true
+persist.vendor.sensor.deviceorient=true
+persist.vendor.ssr.restart_level=ALL_ENABLE

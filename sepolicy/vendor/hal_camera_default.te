@@ -1,0 +1,16 @@
+add_hwservice(hal_camera_server, vendor_hal_camerapostproc_xiaomi_hwservice)
+allow hal_camera_default camera_persist_file:dir r_dir_perms;
+allow hal_camera_default mnt_vendor_file:dir r_dir_perms;
+allow hal_camera_default self:capability sys_resource;
+allow hal_camera_default self:unix_stream_socket create_socket_perms;
+allow hal_camera_default sysfs_csiphy_umd_paras:file rw_file_perms;
+allow hal_camera_default sys_thermal_flash_state:file rw_file_perms;
+allow hal_camera_default sys_thermal_torch_real_level:file rw_file_perms;
+allow hal_camera_default vendor_persist_sensors_file:dir r_dir_perms;
+get_prop(hal_camera_default, exported_system_prop)
+set_prop(hal_camera_default, vendor_camera_p3enable_prop)
+set_prop(hal_camera, vendor_camera_sensor_prop)
+hal_attribute_service(hal_camera, hal_camera_service)
+r_dir_file(hal_camera_default, camera_persist_file)
+r_dir_file(hal_camera_default, mnt_vendor_file)
+r_dir_file(hal_camera_default, vendor_persist_sensors_file)

@@ -1,0 +1,37 @@
+on early-boot
+    chown system graphics /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
+    chmod 0664 /sys/bus/platform/devices/soc:xiaomi_fingerprint/fingerdown
+
+on boot
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+
+    chown system system /sys/class/touch/touch_dev/fod_press_status
+    chmod 0664 /sys/class/touch/touch_dev/fod_press_status
+
+    chown system system /sys/devices/platform/goodix_ts.0/double_tap_enable
+    chown system system /sys/devices/platform/goodix_ts.0/fod_enable
+    chown system system /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param
+    chown system system /sys/class/touch/touch_dev/fod_press_status
+
+    chmod 0664 /sys/devices/platform/goodix_ts.0/double_tap_enable
+    chmod 0664 /sys/devices/platform/goodix_ts.0/fod_enable
+    chmod 0664 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param
+    chmod 0664 /sys/class/touch/touch_dev/fod_press_status
+
+
+on post-fs-data
+    mkdir /data/vendor/misc 01771 system system
+    mkdir /data/vendor/misc/mi_fp 0770 system system
+    mkdir /persist/mi_fp 0770 system system
+    mkdir /mnt/vendor/persist/mi_fp 0770 system system
+    mkdir /data/vendor/fpc 0770 system system
+    mkdir /data/vendor/fpdump 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /data/vendor/fingerprint 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
+    mkdir /mnt/vendor/persist/fpc 0770 system system
+
+service touch_report /odm/bin/touch_report
+    disabled
+    override
