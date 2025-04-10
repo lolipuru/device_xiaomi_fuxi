@@ -6,6 +6,26 @@ vendor.camera.sensor.                           u:object_r:vendor_camera_sensor_
 persist.vendor.fingerprint. u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp. u:object_r:vendor_fp_prop:s0
 
+# Mfidoca
+persist.vendor.sys.pay.fido               u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.fido2              u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.fido2pass          u:object_r:vendor_payment_security_prop:s0
+
+# Mlipay
+persist.vendor.sys.pay.ifaa               u:object_r:vendor_payment_security_prop:s0
+
+# Mtdservice
+ro.boot.cpuid                             u:object_r:vendor_cpuid_prop:s0
+ro.vendor.oem.boot_completed              u:object_r:vendor_deviceid_prop:s0
+ro.vendor.oem.serialno                    u:object_r:vendor_deviceid_prop:s0
+persist.vendor.sys.attestation.status     u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.soter              u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.widevine           u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.provision.status       u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.rkp.status             u:object_r:vendor_payment_security_prop:s0
+vendor.sys.feature_state                  u:object_r:vendor_payment_security_prop:s0
+vendor.sys.rpmb_state                     u:object_r:vendor_payment_security_prop:s0
+
 # Thermal
 vendor.sys.thermal.data.path u:object_r:vendor_thermal_normal_prop:s0
 

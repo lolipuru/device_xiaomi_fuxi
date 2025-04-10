@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2024 The LineageOS Project
+# Copyright (C) 2023 The Android Open Source Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,7 +8,7 @@ DEVICE_PATH := device/xiaomi/fuxi
 
 # A/B
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS := \
+AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     init_boot \
@@ -16,8 +16,8 @@ AB_OTA_PARTITIONS := \
     product \
     recovery \
     system \
-    system_dlkm \
     system_ext \
+    system_dlkm \
     vbmeta \
     vbmeta_system \
     vendor \
@@ -27,9 +27,7 @@ AB_OTA_PARTITIONS := \
 # API level
 BOARD_SHIPPING_API_LEVEL := 33
 
-SOONG_CONFIG_NAMESPACES += ufsbsg
-SOONG_CONFIG_ufsbsg += ufsframework
-SOONG_CONFIG_ufsbsg_ufsframework := bsg
+$(call soong_config_set, ufsbsg, ufsframework, bsg)
 
 # Architecture
 TARGET_ARCH := arm64
@@ -59,7 +57,8 @@ $(call soong_config_set, android_hardware_audio, run_64bit, true)
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 440
+$(call soong_config_set, qtidisplay, use_ycrcb_camera_encode, true)
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
@@ -87,7 +86,7 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8550
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/kalama_GKI.config \
-    vendor/$(PRODUCT_DEVICE)_GKI.config
+    vendor/fuxi_GKI.config
 KERNEL_LTO := none
 
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
@@ -136,6 +135,16 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/m
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules/modules.load.first_stage))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(strip $(shell cat $(DEVICE_PATH)/configs/modules/modules.load.recovery))
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_fuxi
+TARGET_RECOVERY_DEVICE_MODULES := libinit_fuxi
+
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/qcom-battery/input_suspend
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED := 1
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := fuxi
 
@@ -159,16 +168,15 @@ $(foreach p, $(call to-upper, $(BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST))
     $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4) \
     $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
-BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
-include vendor/aosp/config/BoardConfigReservedSize.mk
-WITH_GMS := true
-
 BOARD_ROOT_EXTRA_FOLDERS += vendor/firmware vendor/firmware_mnt
 BOARD_ROOT_EXTRA_SYMLINKS += /lib/modules:/vendor/lib/modules
 
+BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
+include vendor/lineage/config/BoardConfigReservedSize.mk
+
 # Platform
 TARGET_BOARD_PLATFORM := kalama
-TARGET_BOOTLOADER_BOARD_NAME := kalama
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno740
 
 # Powershare
 TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode
@@ -183,15 +191,16 @@ TARGET_USERIMAGES_USE_F2FS := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# SEPolicy
+# Sepolicy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 # System properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/configs/prop/odm.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/prop/product.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/prop/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/prop/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
 # Vibrator
 TARGET_QTI_VIBRATOR_EFFECT_LIB := libqtivibratoreffect.xiaomi
@@ -202,10 +211,10 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/configs/vintf/framework_matrix.xml \
     $(DEVICE_PATH)/configs/vintf/product_framework_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
+    vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/configs/vintf/manifest_kalama.xml \
-    $(DEVICE_PATH)/configs/vintf/manifest_socrates.xml
+    $(DEVICE_PATH)/configs/vintf/manifest_xiaomi.xml
 
 # Vendor security patch
 VENDOR_SECURITY_PATCH := 2025-01-01

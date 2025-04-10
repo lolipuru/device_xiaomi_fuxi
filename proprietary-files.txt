@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 13 (OS2.0.3.0.VMCCNXM)
+## are from Xiaomi 13 (OS2.0.3.0.VMCCNXM). 
 
 # ACDBs
 odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb
@@ -26,6 +26,11 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
 
 # ADSP (Modules)
+odm/etc/audio/misound_karaoke_res.bin
+odm/etc/audio/misound_karaokemix_res.bin
+odm/etc/audio/misound_res_headphone.bin
+odm/etc/audio/misound_res_spk.bin
+odm/etc/audio/misound_res_spk4ch.bin
 odm/etc/audio/misound_res_spk_power_game.bin
 odm/etc/audio/misound_res_spk_power_video.bin
 odm/lib/rfsa/adsp/libarcsoft_beauty_hvx_skel.so
@@ -97,6 +102,7 @@ odm/mount/camera/lib/rfsa/adsp/libapn_dsp_skel.so:vendor/lib/rfsa/adsp/libapn_ds
 odm/mount/camera/lib/rfsa/adsp/libarc_htp_driver_skel.so:vendor/lib/rfsa/adsp/libarc_htp_driver_skel.so
 odm/mount/camera/lib/rfsa/adsp/libbitml_nsp_skel.so:vendor/lib/rfsa/adsp/libbitml_nsp_skel.so
 odm/mount/camera/lib/rfsa/adsp/libbitml_nsp_v2_skel.so:vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel.so
+odm/mount/camera/lib/rfsa/adsp/libcalculator_skel.so:vendor/lib/rfsa/adsp/libcalculator_skel.so
 odm/mount/camera/lib/rfsa/adsp/libdsp_streamer_binning.so:vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 odm/mount/camera/lib/rfsa/adsp/libhdr_cdsp_skel.so:vendor/lib/rfsa/adsp/libhdr_cdsp_skel.so
 odm/mount/camera/lib/rfsa/adsp/libhdr_skel.so:vendor/lib/rfsa/adsp/libhdr_skel.so
@@ -109,7 +115,6 @@ odm/mount/camera/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so:vendor/lib/rfsa/adsp/l
 odm/mount/camera/lib/rfsa/adsp/libmialgo_slow_motion_cdsp_skel.so:vendor/lib/rfsa/adsp/libmialgo_slow_motion_cdsp_skel.so
 vendor/lib/rfsa/adsp/capi_cirrus_sp.so
 vendor/lib/rfsa/adsp/chre_qsh_shim.so
-vendor/lib/rfsa/adsp/hrtf5c.bin
 vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
 vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
 vendor/lib/rfsa/adsp/libVppAisQnnHtp.so
@@ -195,11 +200,11 @@ vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
+vendor/lib64/libdlbpreg.so
 vendor/lib64/libdsd2pcm.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
 vendor/lib64/libfcsam.so;FIX_SONAME
-vendor/lib64/libdlbpreg.so
 vendor/lib64/libkaraokepal.so;DISABLE_CHECKELF
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblx-ar_util.so
@@ -207,6 +212,7 @@ vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
 vendor/lib64/libmiam.so;FIX_SONAME
 vendor/lib64/libmisfpsop.so
+vendor/lib64/libmisight.so
 vendor/lib64/libmisoundsa.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libqtigefar.so
@@ -226,26 +232,28 @@ vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so|f0fc53c87cf6e0fd504c929af889c69
 vendor/lib64/libagm.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 
-# Audio FX modules
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libdlbvol.so
-vendor/lib64/soundfx/libhwdap.so
-vendor/lib64/soundfx/libmisoundfx.so
-vendor/lib64/soundfx/libquasar.so
-vendor/lib64/soundfx/libshoebox.so
-vendor/lib64/soundfx/libspatializer.so
-vendor/lib64/soundfx/libswgamedap.so
-vendor/lib64/soundfx/libswspatializer.so
-vendor/lib64/soundfx/libswvqe.so
-
-# Audio (Configs)
+# Audio (Config)
 odm/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
 odm/etc/audio/sku_kalama/mixer_paths_overlay_dynamic.xml
 odm/etc/audio/sku_kalama/mixer_paths_overlay_static.xml
-odm/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
 odm/etc/backend_conf.xml
+vendor/etc/audio/sku_kalama/audio_effects.conf
+vendor/etc/audio/sku_kalama/audio_effects.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_grd.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_grd.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
+vendor/etc/audio_policy_volumes.xml
+vendor/etc/batching.conf
+vendor/etc/card-defs.xml
+vendor/etc/kvh2xml.xml
+vendor/etc/microphone_characteristics.xml
 
-# Audio (Firmware)
+# Audio firmware (Fuxi)
 odm/firmware/B-cs35l41-dsp1-spk-cali.bin
 odm/firmware/B-cs35l41-dsp1-spk-prot.bin
 odm/firmware/B-handfree.txt
@@ -257,6 +265,18 @@ odm/firmware/T-handset.txt
 odm/firmware/T-music.txt
 odm/firmware/cs35l41-dsp1-spk-cali.wmfw
 odm/firmware/cs35l41-dsp1-spk-prot.wmfw
+
+# Audio FX modules
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libdlbvol.so
+vendor/lib64/soundfx/libhwdap.so
+vendor/lib64/soundfx/libmisoundfx.so
+vendor/lib64/soundfx/libquasar.so
+vendor/lib64/soundfx/libshoebox.so
+vendor/lib64/soundfx/libspatializer.so
+vendor/lib64/soundfx/libswgamedap.so
+vendor/lib64/soundfx/libswspatializer.so
+vendor/lib64/soundfx/libswvqe.so
 
 # BatterySecret
 vendor/bin/batterysecret
@@ -294,8 +314,94 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
+# CDSP
+vendor/bin/cdsprpcd
+vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libcdsprpc.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libsdsprpc.so
+
+# CNE
+vendor/app/CACertService/CACertService.apk
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
+vendor/app/IWlanService/IWlanService.apk
+vendor/bin/cnd
+vendor/etc/cne/mwqem.conf
+vendor/etc/cne/profileMwqem.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile7.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
+vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
+vendor/etc/init/cnd.rc
+vendor/lib64/libcne.so;DISABLE_CHECKELF
+vendor/lib64/libcneapiclient.so
+vendor/lib64/libcneoplookup.so
+vendor/lib64/libcneqmiutils.so
+vendor/lib64/libmasc.so;DISABLE_CHECKELF
+vendor/lib64/libshsc.so
+vendor/lib64/libwms.so
+vendor/lib64/libwqe.so
+vendor/lib64/libxml.so
+vendor/lib64/vendor.libmwqemiptablemgr.so
+vendor/lib64/vendor.qti.data.factory@2.0.so
+vendor/lib64/vendor.qti.data.factory@2.1.so
+vendor/lib64/vendor.qti.data.factory@2.2.so
+vendor/lib64/vendor.qti.data.factory@2.3.so
+vendor/lib64/vendor.qti.data.factory@2.4.so
+vendor/lib64/vendor.qti.data.factory@2.5.so
+vendor/lib64/vendor.qti.data.factory@2.6.so
+vendor/lib64/vendor.qti.data.factory@2.7.so
+vendor/lib64/vendor.qti.data.mwqem@1.0.so
+vendor/lib64/vendor.qti.data.slm@1.0.so
+vendor/lib64/vendor.qti.hardware.cacert@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.1.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.2.so
+vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.3.so
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.1.so
+vendor/lib64/vendor.qti.hardware.data.flow@1.0.so
+vendor/lib64/vendor.qti.hardware.data.flow@1.1.so
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib64/vendor.qti.hardware.data.lce@1.0.so
+vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
+vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
+vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
+vendor/lib64/vendor.qti.latency@2.0.so
+vendor/lib64/vendor.qti.latency@2.1.so
+vendor/lib64/vendor.qti.latency@2.2.so
+
 # Camera
-system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so:vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
+system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so:odm/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
 odm/bin/hw/vendor.qti.camera.provider-service_64
 odm/etc/camera/102_SummerDay.png
 odm/etc/camera/103_Fantasy.png
@@ -356,8 +462,8 @@ odm/etc/camera/com.xiaomi.dcal.wu.golden
 odm/etc/camera/deblur_txt_dsp.dlc
 odm/etc/camera/deblur_txt_gpu.dlc
 odm/etc/camera/denoise_qat.dlc
-odm/etc/camera/dualcam_bokeh_params_pro_front.json
 odm/etc/camera/dualcam_bokeh_params_pro.json
+odm/etc/camera/dualcam_bokeh_params_pro_front.json
 odm/etc/camera/dualcam_depth_params_pro.json
 odm/etc/camera/dualcam_mdbokeh_params_depth.json
 odm/etc/camera/dualcam_mdbokeh_params_pro.json
@@ -416,11 +522,11 @@ odm/etc/camera/night_align_lsc_tbl_40962304.bin
 odm/etc/camera/night_align_lsc_tbl_40963072.bin
 odm/etc/camera/night_motiontuning.xml
 odm/etc/camera/ocr_aio
+odm/etc/camera/portrait_segmentation_qat.dlc
 odm/etc/camera/portraitrepaire_front_class.json
 odm/etc/camera/portraitrepaire_front_live.json
 odm/etc/camera/portraitrepaire_rear_class.json
 odm/etc/camera/portraitrepaire_rear_live.json
-odm/etc/camera/portrait_segmentation_qat.dlc
 odm/etc/camera/preview_bokeh_params_mono.json
 odm/etc/camera/preview_bokeh_params_pro.json
 odm/etc/camera/preview_mdbokeh_params_pro.json
@@ -432,14 +538,17 @@ odm/etc/camera/ultrazoom.bin
 odm/etc/camera/ultrazoom_ii.bin
 odm/etc/camera/video_stabilizer.xml
 odm/etc/camera/vidhance_calibration
+odm/etc/camera/xiaomiSceneDetection.xml
+odm/etc/camera/xmi_slmt_4x_1080p.dlc
+odm/etc/camera/xmi_slmt_4x_720p.dlc
+odm/etc/camera/xiaomi/EcoCloudInfo.json
 odm/etc/camera/xiaomi/dualbokehjpegsnapshot.json
 odm/etc/camera/xiaomi/dualbokehsnapshot.json
-odm/etc/camera/xiaomi/EcoCloudInfo.json
 odm/etc/camera/xiaomi/ecovendorstreamconfig.json
 odm/etc/camera/xiaomi/frontbokehsnapshot.json
 odm/etc/camera/xiaomi/frontsinglesnapshot.json
-odm/etc/camera/xiaomi/frontsupernightsnapshotjpeg.json
 odm/etc/camera/xiaomi/frontsupernightsnapshot.json
+odm/etc/camera/xiaomi/frontsupernightsnapshotjpeg.json
 odm/etc/camera/xiaomi/manualsnapshot.json
 odm/etc/camera/xiaomi/miuicamerayuv2heic.json
 odm/etc/camera/xiaomi/miuicamerayuv2jpeg.json
@@ -450,22 +559,24 @@ odm/etc/camera/xiaomi/normalsnapshot.json
 odm/etc/camera/xiaomi/overridesettings.json
 odm/etc/camera/xiaomi/rearsupernightsnapshot.json
 odm/etc/camera/xiaomi/satburstsnapshot.json
-odm/etc/camera/xiaomi/satsnapshotjpeg.json
 odm/etc/camera/xiaomi/satsnapshot.json
-odm/etc/camera/xiaomiSceneDetection.xml
+odm/etc/camera/xiaomi/satsnapshotjpeg.json
 odm/etc/camera/xiaomi/settings.json
 odm/etc/camera/xiaomi/superhdsnapshot.json
 odm/etc/camera/xiaomi/thirdpartydualbokehyuvsnapshot.json
 odm/etc/camera/xiaomi/thirdpartyjpegsnapshot.json
-odm/etc/camera/xiaomi/thirdpartyrawsupernightjpeg_ext.json
 odm/etc/camera/xiaomi/thirdpartyrawsupernightjpeg.json
-odm/etc/camera/xiaomi/thirdpartyrawsupernightyuv_ext.json
+odm/etc/camera/xiaomi/thirdpartyrawsupernightjpeg_ext.json
 odm/etc/camera/xiaomi/thirdpartyrawsupernightyuv.json
+odm/etc/camera/xiaomi/thirdpartyrawsupernightyuv_ext.json
 odm/etc/camera/xiaomi/thirdpartysnapshot.json
 odm/etc/init/vendor.qti.camera.provider-service_64.rc
+odm/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
+odm/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
+odm/etc/vintf/manifest/vendor.qti.camera.provider.xml
 odm/etc/cit_camera_resolution.json
 odm/etc/cit_param_config.json
-odm/lib64/camera/aon_front.pb
+odm/lib64/camera/aon_front.pb;SYMLINK=vendor/lib64/camera/aon_front.pb
 odm/lib64/camera/fdconfigpreview.bin
 odm/lib64/camera/fdconfigpreviewlite.bin
 odm/lib64/camera/fdconfigsecure.bin
@@ -680,12 +791,20 @@ odm/lib64/vendor.xiaomi.hardware.bgservice@1.0-impl.so
 # Camera Vendor
 vendor/bin/hw/vendor.xiaomi.hardware.quickcamera@1.0-service
 vendor/bin/hw/android.hardware.camera.provider@2.7-virtual-camera-service
+vendor/etc/camera/placeholder_camera.txt
+vendor/etc/init/init.hwinfo.rc
+vendor/etc/init/qvrd_vndr.rc
 vendor/etc/init/android.hardware.camera.provider@2.7-virtual-camera-service.rc
+vendor/etc/permissions/camera_extensions.xml
+vendor/etc/seccomp_policy/qvr@2.0.policy
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.vcamera.provider.xml
+vendor/framework/androidx.camera.extensions.impl.jar
 vendor/lib64/hw/android.hardware.camera.provider@2.7-impl-vcamera.so
 vendor/lib64/hw/vendor.xiaomi.hardware.quickcamera@1.0-impl.so
 vendor/lib64/camera/libPlatformValidatorShared.so;MODULE_SUFFIX=-camera
+vendor/lib64/libDspIOProxy_stub.so
+vendor/lib64/libMapService.so
 vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libQnnChrometraceProfilingReader.so
 vendor/lib64/libQnnGpu.so
@@ -707,12 +826,14 @@ vendor/lib64/libSnpeHtpV69Stub.so
 vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/libStereoRectifyWrapper.so
 vendor/lib64/libbitmlenginev2.so
+vendor/lib64/libc++_shared.so
 vendor/lib64/libcalculator.so
 vendor/lib64/libcalculator_htp.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libhta_hexagon_runtime_snpe.so
 vendor/lib64/libmicuttlefish_fs.so
 vendor/lib64/libmivsock_utils.so
+vendor/lib64/libnanopb.so
 vendor/lib64/libos.so
 vendor/lib64/libquickcamera.so
 vendor/lib64/libqvr_cam_cdsp_driver_stub.so
@@ -782,8 +903,8 @@ odm/lib64/camera/components/com.qti.hvx.binning.so
 odm/lib64/camera/components/com.qti.node.afbfusion.so
 odm/lib64/camera/components/com.qti.node.aon.so
 odm/lib64/camera/components/com.qti.node.customhwnode.so
-odm/lib64/camera/components/com.qti.node.depthprovider.so
 odm/lib64/camera/components/com.qti.node.depth.so
+odm/lib64/camera/components/com.qti.node.depthprovider.so
 odm/lib64/camera/components/com.qti.node.dewarp.so
 odm/lib64/camera/components/com.qti.node.dummydepth.so
 odm/lib64/camera/components/com.qti.node.dummyrtb.so
@@ -818,35 +939,35 @@ odm/lib64/camera/components/com.qti.node.swpdpc.so
 odm/lib64/camera/components/com.qti.node.swpreprocess.so
 odm/lib64/camera/components/com.qti.node.swregistration.so
 odm/lib64/camera/components/com.qti.node.swvrt.so
-odm/lib64/camera/components/com.qtistatic.stats.aec.so
-odm/lib64/camera/components/com.qtistatic.stats.af.so
-odm/lib64/camera/components/com.qtistatic.stats.awb.so
-odm/lib64/camera/components/com.qtistatic.stats.pdlib.so
 odm/lib64/camera/components/com.qti.stats.aec.so
 odm/lib64/camera/components/com.qti.stats.aecwrapper.so
 odm/lib64/camera/components/com.qti.stats.aecxcore.so
-odm/lib64/camera/components/com.qti.stats.afd.so
 odm/lib64/camera/components/com.qti.stats.af.so
+odm/lib64/camera/components/com.qti.stats.afd.so
 odm/lib64/camera/components/com.qti.stats.afwrapper.so
 odm/lib64/camera/components/com.qti.stats.asd.so
 odm/lib64/camera/components/com.qti.stats.awb.so
 odm/lib64/camera/components/com.qti.stats.awbwrapper.so
 odm/lib64/camera/components/com.qti.stats.cnndriver.so
-odm/lib64/camera/components/com.qti.stats.hafoverride.so
 odm/lib64/camera/components/com.qti.stats.haf.so
+odm/lib64/camera/components/com.qti.stats.hafoverride.so
 odm/lib64/camera/components/com.qti.stats.localhistogram.so
 odm/lib64/camera/components/com.qti.stats.pdlib.so
 odm/lib64/camera/components/com.qti.stats.pdlibsony.so
 odm/lib64/camera/components/com.qti.stats.pdlibwrapper.so
 odm/lib64/camera/components/com.qti.stats.statsgenerator.so
 odm/lib64/camera/components/com.qti.stats.tracker.so
+odm/lib64/camera/components/com.qtistatic.stats.aec.so
+odm/lib64/camera/components/com.qtistatic.stats.af.so
+odm/lib64/camera/components/com.qtistatic.stats.awb.so
+odm/lib64/camera/components/com.qtistatic.stats.pdlib.so
 odm/lib64/camera/components/com.xiaomi.node.gme.so
 odm/lib64/camera/components/com.xiaomi.node.misv2.so
 odm/lib64/camera/components/com.xiaomi.node.misv3.so
 odm/lib64/camera/components/com.xiaomi.node.smooth_transition.so
 odm/lib64/camera/components/libdepthmapwrapper_secure.so
 
-# Camera Firmware
+# Camera firmware
 odm/firmware/fuxi_imx800_bu24721_ois.coeff
 odm/firmware/fuxi_imx800_bu24721_ois.mem
 odm/firmware/fuxi_imx800_bu24721_ois.prog
@@ -885,17 +1006,16 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.supermoon.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.tsskinbeautifier.so
 
 # Camera Resources
-odm/etc/camera/resources/default_param.json
+odm/etc/camera/resources/kernel/32/s31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
+odm/etc/camera/resources/kernel/32/t31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
+odm/etc/camera/resources/kernel/64/s31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
+odm/etc/camera/resources/kernel/64/t31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
 odm/etc/camera/resources/kernel/1720888_32.bin
 odm/etc/camera/resources/kernel/1720888_64.bin
 odm/etc/camera/resources/kernel/2821809890_32.bin
 odm/etc/camera/resources/kernel/2821809890_64.bin
-odm/etc/camera/resources/kernel/32/s31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
-odm/etc/camera/resources/kernel/32/t31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
 odm/etc/camera/resources/kernel/3711416411_32.bin
 odm/etc/camera/resources/kernel/3711416411_64.bin
-odm/etc/camera/resources/kernel/64/s31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
-odm/etc/camera/resources/kernel/64/t31bc24e5f6c4ef1752c77f3a22ad1ffcs0cc175b9c0f1b6a831c399e269772661t92eb5ffee6ae2fec3ad71c777531578fn92eb5ffee6ae2fec3ad71c777531578fn.bin
 odm/etc/camera/resources/model/1031135984
 odm/etc/camera/resources/model/1711078354
 odm/etc/camera/resources/model/1966560729
@@ -905,24 +1025,6 @@ odm/etc/camera/resources/model/2405225402
 odm/etc/camera/resources/model/2722133617
 odm/etc/camera/resources/model/3606267036
 odm/etc/camera/resources/model/982209079
-odm/etc/camera/resources/render/1068495261
-odm/etc/camera/resources/render/1202823203
-odm/etc/camera/resources/render/1587396406
-odm/etc/camera/resources/render/183601851
-odm/etc/camera/resources/render/1846660881
-odm/etc/camera/resources/render/2135547585
-odm/etc/camera/resources/render/2199122872
-odm/etc/camera/resources/render/2532213662
-odm/etc/camera/resources/render/2611148883
-odm/etc/camera/resources/render/2644822710
-odm/etc/camera/resources/render/3171791906
-odm/etc/camera/resources/render/33333333
-odm/etc/camera/resources/render/3533515369
-odm/etc/camera/resources/render/3626370065
-odm/etc/camera/resources/render/4183165925
-odm/etc/camera/resources/render/4224303816
-odm/etc/camera/resources/render/837151146
-odm/etc/camera/resources/render/858912661
 odm/etc/camera/resources/render/Effect/10_ColorTone/Effects/0_ModeClassical/effect.json
 odm/etc/camera/resources/render/Effect/10_ColorTone/Effects/0_ModeClassical/filter.bin
 odm/etc/camera/resources/render/Effect/10_ColorTone/Effects/1_ModeNative/effect.json
@@ -933,25 +1035,25 @@ odm/etc/camera/resources/render/Effect/15_DLRetouch/mode_classical.json
 odm/etc/camera/resources/render/Effect/15_DLRetouch/mode_native.json
 odm/etc/camera/resources/render/Effect/15_DLRetouch/mode_none.json
 odm/etc/camera/resources/render/Effect/15_DLRetouch/mode_rear.json
-odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/effect.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/FaceMask.bin
+odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/0_Spotless/effect.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothClassical/effect.json
-odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothNative/effect_capture.json
-odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothNative/effect_preview.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothNative/FaceMask.bin
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothNative/FaceMask_Capture.bin
+odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothNative/effect_capture.json
+odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/1_SkinSmoothNative/effect_preview.json
+odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/FaceMask.bin
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/effect_capture.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/effect_preview.json
-odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/2_SkinSmoothRear/FaceMask.bin
-odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/4_Hessian/effect.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/4_Hessian/FaceMask.bin
+odm/etc/camera/resources/render/Effect/20_FaceRetouch/Effects/4_Hessian/effect.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/mode_classical.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/mode_light.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/mode_native.json
 odm/etc/camera/resources/render/Effect/20_FaceRetouch/mode_rear.json
-odm/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/effect.json
 odm/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/LeftEye.bin
 odm/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/RightEye.bin
+odm/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEye/effect.json
 odm/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/effect.json
 odm/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/eye_pupil.bin
 odm/etc/camera/resources/render/Effect/30_BasicRetouch/Effects/0_BrightEyeV3/left_eye.bin
@@ -975,16 +1077,16 @@ odm/etc/camera/resources/render/Effect/50_SkinTone/Effects/1_ModeNative/effect.j
 odm/etc/camera/resources/render/Effect/50_SkinTone/Effects/1_ModeNative/filter.bin
 odm/etc/camera/resources/render/Effect/50_SkinTone/mode_classical.json
 odm/etc/camera/resources/render/Effect/50_SkinTone/mode_native.json
+odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeClassical/Eyebrow.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeClassical/effect_capture.json
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeClassical/effect_preview.json
-odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeClassical/Eyebrow.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeClassical/sh.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeClassical/yyy.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeClassical/yyz.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeClassical/zc.bin
+odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeNative/Eyebrow.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeNative/effect_capture.json
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeNative/effect_preview.json
-odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeNative/Eyebrow.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeNative/sh.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeNative/yyy.bin
 odm/etc/camera/resources/render/Effect/60_Makeup/Effects/0_ModeNative/yyz.bin
@@ -1023,9 +1125,8 @@ odm/etc/camera/resources/render/Effect/effect_mode_native.json
 odm/etc/camera/resources/render/Effect/effect_mode_otherFront.json
 odm/etc/camera/resources/render/Effect/effect_mode_otherRear.json
 odm/etc/camera/resources/render/Effect/effect_mode_video.json
-odm/etc/camera/resources/render/GlobalConfig.json
-odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_1D_GAUSS_BILATERAL_BLUR.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_1D_GAUSSBLUR.bin
+odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_1D_GAUSS_BILATERAL_BLUR.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_ADVANCE_BRIGHT_EYE.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_ADVANCE_BRIGHT_EYEV3_PROC_PUPIL.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_GLPROGRAM_ADVANCE_GUIDE.bin
@@ -1105,8 +1206,8 @@ odm/etc/camera/resources/render/glsl/binShaders32/shader_YUV2RGBAUtils_SWAP_UV.b
 odm/etc/camera/resources/render/glsl/binShaders32/shader_YUV2RGBAUtils_SWAP_UV_DEHAZE.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_YUV2YUVUtils.bin
 odm/etc/camera/resources/render/glsl/binShaders32/shader_YUV2YUVUtils_SWAP_UV.bin
-odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_1D_GAUSS_BILATERAL_BLUR.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_1D_GAUSSBLUR.bin
+odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_1D_GAUSS_BILATERAL_BLUR.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_ADVANCE_BRIGHT_EYE.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_ADVANCE_BRIGHT_EYEV3_PROC_PUPIL.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_GLPROGRAM_ADVANCE_GUIDE.bin
@@ -1186,8 +1287,28 @@ odm/etc/camera/resources/render/glsl/binShaders64/shader_YUV2RGBAUtils_SWAP_UV.b
 odm/etc/camera/resources/render/glsl/binShaders64/shader_YUV2RGBAUtils_SWAP_UV_DEHAZE.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_YUV2YUVUtils.bin
 odm/etc/camera/resources/render/glsl/binShaders64/shader_YUV2YUVUtils_SWAP_UV.bin
-odm/etc/camera/resources/truesight_param_debug.json
+odm/etc/camera/resources/render/1068495261
+odm/etc/camera/resources/render/1202823203
+odm/etc/camera/resources/render/1587396406
+odm/etc/camera/resources/render/183601851
+odm/etc/camera/resources/render/1846660881
+odm/etc/camera/resources/render/2135547585
+odm/etc/camera/resources/render/2199122872
+odm/etc/camera/resources/render/2532213662
+odm/etc/camera/resources/render/2611148883
+odm/etc/camera/resources/render/2644822710
+odm/etc/camera/resources/render/3171791906
+odm/etc/camera/resources/render/33333333
+odm/etc/camera/resources/render/3533515369
+odm/etc/camera/resources/render/3626370065
+odm/etc/camera/resources/render/4183165925
+odm/etc/camera/resources/render/4224303816
+odm/etc/camera/resources/render/837151146
+odm/etc/camera/resources/render/858912661
+odm/etc/camera/resources/render/GlobalConfig.json
+odm/etc/camera/resources/default_param.json
 odm/etc/camera/resources/truesight_param.json
+odm/etc/camera/resources/truesight_param_debug.json
 
 # Camera Sensors
 odm/lib64/camera/com.qti.actuator.fuxi_semco_imx800_ak7314_wide_actuator.so
@@ -1229,109 +1350,8 @@ odm/lib64/camera/com.qti.tuned.fuxi_sunny_ov32c_front.bin
 odm/lib64/camera/com.qti.tuned.fuxi_sunny_ov32c_front_global.bin
 odm/lib64/camera/com.qti.tuned.tpg.bin
 
-# CDSP
-vendor/bin/cdsprpcd
-vendor/etc/init/vendor.qti.cdsprpc-service.rc
-vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libcdsprpc.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
-
-# CNE
-vendor/app/CACertService/CACertService.apk
-vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
-vendor/app/IWlanService/IWlanService.apk
-vendor/bin/cnd
-vendor/etc/cne/mwqem.conf
-vendor/etc/cne/profileMwqem.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
-vendor/etc/cne/wqeclient/ATT/ATT_profile7.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
-vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
-vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
-vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
-vendor/etc/init/cnd.rc
-vendor/lib64/libcne.so;DISABLE_CHECKELF
-vendor/lib64/libcneapiclient.so
-vendor/lib64/libcneoplookup.so
-vendor/lib64/libcneqmiutils.so
-vendor/lib64/libmasc.so;DISABLE_CHECKELF
-vendor/lib64/libshsc.so
-vendor/lib64/libwms.so
-vendor/lib64/libwqe.so
-vendor/lib64/libxml.so
-vendor/lib64/vendor.libmwqemiptablemgr.so
-vendor/lib64/vendor.qti.data.factory@2.0.so
-vendor/lib64/vendor.qti.data.factory@2.1.so
-vendor/lib64/vendor.qti.data.factory@2.2.so
-vendor/lib64/vendor.qti.data.factory@2.3.so
-vendor/lib64/vendor.qti.data.factory@2.4.so
-vendor/lib64/vendor.qti.data.factory@2.5.so
-vendor/lib64/vendor.qti.data.factory@2.6.so
-vendor/lib64/vendor.qti.data.factory@2.7.so
-vendor/lib64/vendor.qti.data.mwqem@1.0.so
-vendor/lib64/vendor.qti.data.slm@1.0.so
-vendor/lib64/vendor.qti.hardware.cacert@1.0.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.1.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.2.so
-vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.3.so
-vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
-vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.1.so
-vendor/lib64/vendor.qti.hardware.data.flow@1.0.so
-vendor/lib64/vendor.qti.hardware.data.flow@1.1.so
-vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
-vendor/lib64/vendor.qti.hardware.data.lce@1.0.so
-vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
-vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
-vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
-vendor/lib64/vendor.qti.latency@2.0.so
-vendor/lib64/vendor.qti.latency@2.1.so
-vendor/lib64/vendor.qti.latency@2.2.so
-
-# Camera
-odm/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
-odm/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
-odm/etc/vintf/manifest/vendor.qti.camera.provider.xml
-vendor/etc/camera/placeholder_camera.txt
-vendor/etc/init/init.hwinfo.rc
-vendor/etc/init/qvrd_vndr.rc
-vendor/etc/permissions/camera_extensions.xml
-vendor/etc/seccomp_policy/qvr@2.0.policy
-vendor/framework/androidx.camera.extensions.impl.jar
-vendor/lib64/libDspIOProxy_stub.so
-vendor/lib64/libMapService.so
-vendor/lib64/libc++_shared.so
-vendor/lib64/libnanopb.so
-
 # Charger
-vendor/etc/charger_fw_fstab.qti
+vendor/etc/charger_diag.cfg
 
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
@@ -1416,13 +1436,10 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 # Diag
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag_userdebug.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=-vendor
-
-# Display (Calibration)
-odm/etc/display/qdcm_calib_data_xiaomi_m3_38_0c_0a_sec_cmd_mode_dsc_dsi_panel.json
-odm/etc/mdss_dsi_m3_38_0c_0a_dsc_cmd_mi.xml
 
 # Display (Config)
 product/etc/displayconfig/display_id_4630947006070067843.xml:vendor/etc/displayconfig/display_id_4630947006070067843.xml
@@ -1431,7 +1448,8 @@ vendor/etc/displayconfig/display_layout_configuration.xml
 vendor/etc/clstc_config_library.xml
 vendor/etc/snapdragon_color_libs_config.xml
 
-# Displayfeature (Config)
+# Displayfeature
+odm/etc/df_default.xml
 odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/ClstcLut0.txt
 odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/ClstcLutInfo.txt
 odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/clstc/PicHDRLchIn.txt
@@ -1463,7 +1481,27 @@ odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_0.txt
 odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_1.txt
 odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_2.txt
 odm/etc/disp0/mdss_dsi_m3_38_0c_0a_dsc_cmd/mi_gc_3.txt
-odm/etc/df_default.xml
+odm/lib64/libMiDispDevManager.so
+odm/lib64/libcolortempmode.so
+odm/lib64/libdisplaycount.so
+odm/lib64/libdisplaylog.so
+odm/lib64/libdither.so
+odm/lib64/libflatmode.so
+odm/lib64/libfpsmonitor.so
+odm/lib64/libhdrmode.so
+odm/lib64/libhistprocess.so
+odm/lib64/libmiBrightness.so
+odm/lib64/libmiSensorCtrl.so
+odm/lib64/libmi_dspp.so
+odm/lib64/libpaperMode.so
+odm/lib64/librhytheyecare.so
+odm/lib64/libsdr2hdr.so
+odm/lib64/libsre.so
+odm/lib64/libtruetone.so
+odm/lib64/libvideomode.so
+vendor/lib64/libeyecare.so
+vendor/lib64/libmi-stc-HW-modulate.so
+vendor/lib64/libmilut.so
 
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
@@ -1519,6 +1557,8 @@ vendor/lib64/libvmfilexfer.so
 vendor/lib64/libsdm-color.so|c36b857c03f1ac8e89882fd59812ae501e4c9772
 
 # Display calibration data
+odm/etc/display/qdcm_calib_data_xiaomi_m3_38_0c_0a_sec_cmd_mode_dsc_dsi_panel.json
+odm/etc/mdss_dsi_m3_38_0c_0a_dsc_cmd_mi.xml
 vendor/etc/display/LUT0.txt
 vendor/etc/display/LUT1.txt
 vendor/etc/display/LUT2.txt
@@ -1566,6 +1606,7 @@ odm/etc/dolby_vision.cfg
 vendor/bin/hw/dolbycodec2
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/bin/hw/vendor.dolby.media.c2@1.0-service
+vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/dolby/dax-default.xml
 vendor/etc/init/dolbycodec2.rc
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
@@ -1594,6 +1635,9 @@ vendor/bin/hw/android.hardware.dumpstate-service.xiaomi
 vendor/etc/init/dumpstate-xiaomi.rc
 vendor/etc/vintf/manifest/dumpstate-xiaomi.xml
 vendor/lib64/vendor.xiaomi.hardware.blackbox-V1-ndk.so
+
+# eUICC - from lynx-user 14 UQ1A.240105.004
+product/priv-app/EuiccGoogle/EuiccGoogle.apk|29f8c2d4301cc1c0c023dd1c205cfdec5bfc73aa;PRESIGNED
 
 # EVA
 vendor/etc/eva/facedetection/model3.dat
@@ -1961,6 +2005,7 @@ odm/lib64/libmt.so
 odm/lib64/libmt@1.3.so
 
 # MLIPAY
+mi_ext/product/app/IFAAService/IFAAService.apk:system_ext/app/IFAAService/IFAAService.apk|52d466ee0904560039f755ca36e7ed3ab355257b
 odm/bin/mlipayd@1.1
 odm/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
@@ -1996,6 +2041,8 @@ vendor/etc/init/init.qti.media.rc
 vendor/etc/init/qconfig.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
+vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
+vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
@@ -2032,6 +2079,7 @@ vendor/lib64/qti.video.utils.videobufferlayout.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
 # Media configs
+odm/etc/media_profiles_kalama.xml:vendor/etc/media_profiles_kalama.xml
 odm/etc/media_profiles_kalama.xml
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_c2_audio.xml
@@ -2087,7 +2135,7 @@ vendor/lib64/libstfactory-vendor.so
 vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
-# NFC Beam (from socrates)
+# NFC beam permission (from socrates)
 odm/etc/permissions/android.hardware.nfc.beam.xml|83ec935d3c92936ff7c71e2f4ed8d43095cb4183
 
 # Native public libraries
@@ -2273,6 +2321,14 @@ vendor/etc/seccomp_policy/qms.policy
 vendor/etc/vintf/manifest/vendor.xiaomi.modem.qms.xml
 vendor/lib64/vendor.xiaomi.modem.qms@1.0.so
 
+# QVR configs
+vendor/etc/qvr/cfg/519/0/65536/mtpkailua.txt
+vendor/etc/qvr/cfg/519/0/65536/mtpkailua_6dof_config.xml
+vendor/etc/qvr/cfg/519/0/65536/mtpkailua_qvr_3dof_tracker_config.txt
+vendor/etc/qvr/qvr_hid_device_list.txt
+vendor/etc/qvr/qvr_usb_device_list.txt
+vendor/etc/qvr/qvrservice_config.txt
+
 # QSEECOM
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
@@ -2305,14 +2361,6 @@ vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
-
-# QVR configs
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua.txt
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua_6dof_config.xml
-vendor/etc/qvr/cfg/519/0/65536/mtpkailua_qvr_3dof_tracker_config.txt
-vendor/etc/qvr/qvr_hid_device_list.txt
-vendor/etc/qvr/qvr_usb_device_list.txt
-vendor/etc/qvr/qvrservice_config.txt
 
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -2496,7 +2544,6 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Sensors
-odm/lib64/sensors.touch.detect.so
 odm/etc/sensors/config/ak991x_dri_0.json
 odm/etc/sensors/config/kailua_qsh_ble_0.json
 odm/etc/sensors/config/lightSensorConfig.json
@@ -2553,6 +2600,9 @@ odm/etc/sensors/config/sx933x_0.json
 odm/etc/sensors/config/sx937x_0.json
 odm/etc/sensors/config/sx937x_reg_0.json
 odm/etc/sensors/config/tcs3408.json
+vendor/etc/sensors/config/chre_dynamic_sensors.json
+vendor/etc/sensors/sns_reg_config
+odm/lib64/sensors.touch.detect.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
@@ -2563,8 +2613,6 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/sensors/hals.conf
-vendor/etc/sensors/config/chre_dynamic_sensors.json
-vendor/etc/sensors/sns_reg_config
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libSensorsInterface.so
 vendor/lib64/libsensorcal.so
@@ -2588,6 +2636,7 @@ vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice@2.0.so
 
 # Soter
+mi_ext/product/app/SoterService/SoterService.apk:system_ext/app/SoterService/SoterService.apk|ca6bd536d8a7e8cc5983c8f2fb05be643ada92a5
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
@@ -2634,8 +2683,6 @@ odm/etc/thermal-tgame.conf
 odm/etc/thermal-video.conf
 odm/etc/thermal-videochat.conf
 vendor/etc/thermal-engine.conf
-vendor/etc/thermal-map.conf
-vendor/etc/thermald-devices.conf
 
 # Thermal (Xiaomi)
 vendor/bin/mi_thermald
@@ -2656,7 +2703,7 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Touchscreen (Firmware)
+# Touchscreen Firmware
 odm/firmware/st_fts_m3.ftb
 odm/firmware/stm_fts_production_limits.csv
 
@@ -2726,7 +2773,7 @@ vendor/firmware/vpu30_4v_unsigned.mbn
 vendor/firmware/vpu33_4v.mbn
 vendor/firmware/vpu33_4v_unsigned.mbn
 
-# Vibrator firmware
+# Vibrator
 odm/firmware/0_click_P_RTP.bin:vendor/etc/vibrator/effect_0.bin
 odm/firmware/1_doubelClick_P_RTP.bin:vendor/etc/vibrator/effect_1.bin
 odm/firmware/2_tick_P_RTP.bin:vendor/etc/vibrator/effect_2.bin
@@ -2796,5 +2843,6 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvaidl.so
 
-# Xiaomi
-vendor/lib64/libmisight.so
+# Xiaomi MAC address
+vendor/bin/nv_mac
+vendor/lib64/libxiaomi_qmi.so

@@ -7,6 +7,16 @@ allow hal_camera_default sysfs_csiphy_umd_paras:file rw_file_perms;
 allow hal_camera_default sys_thermal_flash_state:file rw_file_perms;
 allow hal_camera_default sys_thermal_torch_real_level:file rw_file_perms;
 allow hal_camera_default vendor_persist_sensors_file:dir r_dir_perms;
+allow hal_camera_default vendor_sysfs_battery_supply:file rw_file_perms;
+allow hal_camera_default hal_quickcamera_hwservice:hwservice_manager { add find };
+allow hal_camera_default cgroup:file { getattr map open read write };
+allow hal_camera_default vendor_sysfs_battery_supply:dir search;
+allow hal_camera_default vendor_sysfs_battery_supply:file { getattr open read };
+allow hal_camera_default proc_pressure_cpu:file { getattr open read write };
+allow hal_camera_default proc_pressure_io:file { getattr open read write };
+allow hal_camera_default proc_pressure_mem:file { getattr open read write };
+allow hal_camera_default vendor_sysfs_devfreq:dir search;
+get_prop(hal_camera_default, exported_camera_prop)
 get_prop(hal_camera_default, exported_system_prop)
 set_prop(hal_camera_default, vendor_camera_p3enable_prop)
 set_prop(hal_camera, vendor_camera_sensor_prop)

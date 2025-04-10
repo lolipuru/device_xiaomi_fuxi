@@ -1,0 +1,11 @@
+# Global
+ro.miui.build.region                u:object_r:exported_system_prop:s0
+
+# Camera
+ro.camera.req.fmq.size              u:object_r:exported_camera_prop:s0
+ro.camera.res.fmq.size              u:object_r:exported_camera_prop:s0
+persist.camera.aiasd.isovalue       u:object_r:exported_camera_prop:s0
+persist.camera.LEUELCPPLO           u:object_r:exported_camera_prop:s0
+persist.camera.miai.inference.loglevel      u:object_r:exported_camera_prop:s0
+persist.vendor.algo.aivs.debug      u:object_r:exported_camera_prop:s0
+persist.vendor.aiie_capture_log.debug       u:object_r:vendor_camera_sensor_prop:s0

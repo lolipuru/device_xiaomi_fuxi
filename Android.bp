@@ -1,11 +1,12 @@
 //
-// Copyright (C) 2024 The LineageOS Project
+// Copyright (C) 2023 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
 
 soong_namespace {
     imports: [
+        "hardware/qcom-caf/bootctrl",
         "hardware/xiaomi",
     ],
 }
@@ -43,4 +44,25 @@ install_symlink {
     vendor: true,
     installed_location: "firmware/wlan/qca_cld/kiwi_v2/WCNSS_qcom_cfg.ini",
     symlink_target: "/vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini",
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_bgservice_interface",
+    interfaces: [
+        "vendor.xiaomi.hardware.bgservice@1.0::IBGService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_campostproc_interface",
+    interfaces: [
+        "vendor.xiaomi.hardware.campostproc@1.0::IMiPostProcService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_quickcamera_interface",
+    interfaces: [
+        "vendor.xiaomi.hardware.quickcamera@1.0::IQuickCameraService",
+    ],
 }

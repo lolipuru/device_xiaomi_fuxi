@@ -6,6 +6,9 @@
          is no longer indicative, and a separate config now exists for each band -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
 
+    <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
+     <bool translatable="false" name="config_wifi_softap_sae_supported">true</bool>
+
     <!-- Boolean indicating that enable roaming between linked networks -->
     <bool name="config_wifiEnableLinkedNetworkRoaming">false</bool>
 
