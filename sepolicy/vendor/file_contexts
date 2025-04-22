@@ -16,6 +16,10 @@
 # DisplayFeature
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)? u:object_r:vendor_sysfs_displayfeature:s0
 
+# Dolby
+/data/vendor/dolby(/.*)?                    u:object_r:vendor_data_file:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                                   u:object_r:hal_dms_default_exec:s0
+
 # Dumpstate
 /vendor/bin/hw/android\.hardware\.dumpstate-service.xiaomi u:object_r:hal_dumpstate_impl_exec:s0
 

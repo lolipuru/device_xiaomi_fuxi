@@ -8,6 +8,10 @@ allow hal_dms_client hal_dms_hwservice:hwservice_manager find;
 allow hal_dms_default hal_dms_hwservice:hwservice_manager add;
 allow hal_dms_default vendor_data_file:dir rw_dir_perms;
 allow hal_dms_default vendor_data_file:file rw_file_perms;
+binder_call(hal_dms_default, mediacodec)
+binder_call(hal_dms_default, hal_audio_default)
+binder_call(hal_dms_default, platform_app)
+binder_call(hal_dms_default, priv_app)
 binder_call(hal_dms_client, hal_dms_server)
 binder_call(hal_dms_server, hal_dms_client)
 hal_server_domain(hal_dms_default, hal_dms)
