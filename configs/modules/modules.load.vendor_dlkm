@@ -12,7 +12,6 @@ bt_fm_slim.ko
 btpower.ko
 camcc-crow.ko
 camera.ko
-cameralog.ko
 cdsp-loader.ko
 cdsprm.ko
 cfg80211.ko
