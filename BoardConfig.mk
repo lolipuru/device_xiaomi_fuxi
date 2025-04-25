@@ -178,9 +178,6 @@ include vendor/lineage/config/BoardConfigReservedSize.mk
 TARGET_BOARD_PLATFORM := kalama
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno740
 
-# Powershare
-TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode
-
 # Recovery
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
