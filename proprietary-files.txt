@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 13 (OS2.0.101.0.VMCMIXM). 
+## are from Xiaomi 13 (OS2.0.200.7.VMCCNXM). 
 
 # ACDBs
 odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb
@@ -404,32 +404,6 @@ vendor/lib64/vendor.qti.latency@2.2.so
 # Camera
 system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so:odm/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
 odm/bin/hw/vendor.qti.camera.provider-service_64
-odm/etc/camera/102_SummerDay.png
-odm/etc/camera/103_Fantasy.png
-odm/etc/camera/104_Meet.png
-odm/etc/camera/105_WindSing.png
-odm/etc/camera/106_Lost.png
-odm/etc/camera/107_Central.png
-odm/etc/camera/108_NorthernEurope.png
-odm/etc/camera/109_Rome.png
-odm/etc/camera/110_BlackGold.png
-odm/etc/camera/111_GreenOrange.png
-odm/etc/camera/112_CyberPunk.png
-odm/etc/camera/113_BlackIce.png
-odm/etc/camera/121_Bleach.png
-odm/etc/camera/122_Thriller.png
-odm/etc/camera/123_TealOrange.png
-odm/etc/camera/124_JapaneseStyle.png
-odm/etc/camera/125_Latin.png
-odm/etc/camera/126_Fantasy2.png
-odm/etc/camera/127_Creamy.png
-odm/etc/camera/128_Sepia.png
-odm/etc/camera/129_Vivid.png
-odm/etc/camera/130_Natural.png
-odm/etc/camera/131_Monochrome.png
-odm/etc/camera/132_MonochromeHighContrast.png
-odm/etc/camera/133_MonochromeBrown.png
-odm/etc/camera/134_MonochromeBlue.png
 odm/etc/camera/af_class_all.dlc
 odm/etc/camera/af_class_human.dlc
 odm/etc/camera/af_classify.dlc
@@ -472,6 +446,34 @@ odm/etc/camera/eisoverridesettings.txt
 odm/etc/camera/ellv.bin
 odm/etc/camera/ellv_params.xml
 odm/etc/camera/enhance_motiontuning.xml
+odm/etc/camera/videofilter/110_BlackGold.png
+odm/etc/camera/videofilter/129_LeicaVivid.png
+odm/etc/camera/videofilter/130_LeicaNatural.png
+odm/etc/camera/videofilter/131_MonochromeTrue.png
+odm/etc/camera/videofilter/132_MonochromeHighContrast.png
+odm/etc/camera/videofilter/133_MonochromeBrown.png
+odm/etc/camera/videofilter/134_MonochromeBlue.png
+odm/etc/camera/videofilter/144_RedHero.png
+odm/etc/camera/videofilter/146_TactileGreen.png
+odm/etc/camera/videofilter/148_Mild.png
+odm/etc/camera/videofilter/149_LilyWhite.png
+odm/etc/camera/videofilter/150_Bright.png
+odm/etc/camera/videofilter/151_Fresh.png
+odm/etc/camera/videofilter/152_Limpid.png
+odm/etc/camera/videofilter/153_KC64.png
+odm/etc/camera/videofilter/154_V250.png
+odm/etc/camera/videofilter/155_H400.png
+odm/etc/camera/videofilter/156_ColdWhite.png
+odm/etc/camera/videofilter/157_Native.png
+odm/etc/camera/videofilter/158_BWClassical.png
+odm/etc/camera/videofilter/159_Flowers.png
+odm/etc/camera/videofilter/160_Vivid.png
+odm/etc/camera/videofilter/161_KP160.png
+odm/etc/camera/videofilter/162_Natural.png
+odm/etc/camera/videofilter/163_KG200.png
+odm/etc/camera/videofilter/164_FC400.png
+odm/etc/camera/videofilter/165_C50D.png
+odm/etc/camera/videofilter/166_F50.png
 odm/etc/camera/VideoNight4K/ellv.bin
 odm/etc/camera/VideoNight4K/ellv_params.xml
 odm/etc/camera/facefocus_models/detlmk.dlc
@@ -769,7 +771,7 @@ odm/lib64/libtriplecam_optical_zoom_control.so
 odm/lib64/libtriplecam_video_optical_zoom.so
 odm/lib64/libubifocus.so
 odm/lib64/libvideoBokeh.so
-odm/lib64/libvideofilter_only.so
+odm/lib64/libMiVideoFilter.so
 odm/lib64/libvideoml.so
 odm/lib64/libvidhance.so
 odm/lib64/libvidhance_active_ois.so
@@ -2271,6 +2273,13 @@ vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 # QCV
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
+
+# QEGAHAL
+vendor/bin/vendor.qti.qegahal-service
+vendor/etc/init/vendor.qti.qegahal-service.rc
+vendor/etc/vintf/manifest/vendor.qti.qegahal-service.xml
+vendor/lib64/vendor.qti.qegahal-impl.so
+vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 
 # QESDK
 vendor/bin/qesdk-manager
